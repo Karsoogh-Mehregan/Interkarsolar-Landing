@@ -81,150 +81,120 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(10, 2),
     zIndex: 5,
     position: 'relative',
-  },
-  eventDescriptionSection: {
     backgroundColor: FirstColor,
     color: FirstColorBackText,
   },
-  featuresSection: {
-    backgroundColor: FirstColor,
-    color: FirstColorBackText,
-  },
-  featuresSectionPaper: {
-    padding: theme.spacing(2),
-    '& img': {
-      width: '100%',
-    },
-  },
-  RastaDescriptionSection: {
-    backgroundColor: SecondColor,
-    color: SecondColorBackText,
-  },
-  kaftar: {
-    maxHeight: '30vh',
-    maxWidth: '100%',
-  },
-  moreButton: {
-    margin: theme.spacing(2, 'auto', 0),
-    textAlign: 'center',
-    display: 'table',
-  },
-  workshopsSection: {
-    backgroundColor: SecondColor,
-    color: SecondColorBackText,
-  },
+
+
 }));
 
 function SummerSchool() {
   const classes = useStyles();
   return (
-    <>
-      <section
-        className={`${classes.eventDescriptionSection} ${classes.Section}`}>
-        <Typography
-          component="h2"
-          variant="h2"
-          gutterBottom
-          className={classes.sectionTitle}>
-          چه خبره؟
-        </Typography>
-        <Grid container justify="space-evenly" alignItems="center" spacing={4}>
-          <Grid
-            item
-            container
-            justify="left"
-            order={{ sm: 1, md: 2 }}
-            spacing={2}
-            xs={12}
-            md={6}>
-            <Grid item>
-              <Typography variant="subtitle1">
-                توی این رویداد قراره که ۵تا کارگاه علمی مختلف رو بگذرونیم و روز
-                آخر هم یه بازی خفن داریم!
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                امسال کارگاه‌های علمی‌مون، گشت و گذاری هست در موضوعات علمی مختلف
-                و حتی شاخه‌های بین رشته‌ای؛ از علوم کامپیوتر و فیزیک گرفته تا
-                زیست‌شناسی که به زودی اطلاعات بیشتری درباره‌شون منتشر می‌کنیم :)
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                نکته‌ی مهم کارگاه‌ها اینه که در بستری که رستا اون رو توسعه داده،
-                اجرا می‌شه. این بستر به نوعی طراحی شده که روحیه‌ی تعاملی و
-                مسئله‌محوری کارگاه‌ها رو در شرایط مجازی هم حفظ کنه.
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                امسال توی کارگاه‌ها دو بخش مختلف داریم. توی بخش اول شما توی
-                گروه‌های سه نفره و به همراه همیارها محتواهای علمی کارگاه رو
-                می‌گذرونید و در قسمت دوم قراره از چیزهایی که یادگرفتید بیشتر
-                استفاده کنید؛ ممکنه نیاز باشه در نقش دانشمندان یه شرکت نظرات‌تون
-                رو بیان کنید یا با همیارهاتون بازی‌های مرتبط با محتوای علمی
-                کارگاه رو بگذرونید.
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                به جز کارگاه‌ها که توی چهار روز برگزار می‌شن و بازی انتهایی که
-                در روز پنجم هست، توی رویداد دورهمی و شهربازی هم داریم که به زودی
-                بیشتر درباره‌شون توضیح می‌دیم.
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                {
-                  'برای اطلاع از اخباری که در آینده‌ای نزدیک منتشر می‌شه می‌تونید به کانال تلگراممون مراجعه کنید:'
-                }
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://t.me/rastaihaOnline"
-                  className={classes.telegramLink}
-                  style={{ direction: 'ltr' }}>
-                  {'@RastaihaOnline'}
-                </a>
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">
-                {
-                  'و همچنین می‌تونید ویژه‌نامه نیم نیم‌خط رو که برای مخاطبان مدرسه تابستانه رستا آماده شده از این لینک دانلود کنید:'
-                }
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href={process.env.PUBLIC_URL + 'ویژه‌نامه_نیم_نیم‌خط.pdf'}
-                  className={classes.telegramLink}
-                  style={{ direction: 'ltr' }}>
-                  {'دانلود'}
-                </a>
-              </Typography>
-            </Grid>
+
+    <section className={classes.Section}>
+      <Typography
+        component="h2"
+        variant="h2"
+        gutterBottom
+        className={classes.sectionTitle}>
+        چه خبره؟
+      </Typography>
+      <Grid container justify="space-evenly" alignItems="center" spacing={4}>
+        <Grid
+          item
+          container
+          justify="left"
+          order={{ sm: 1, md: 2 }}
+          spacing={2}
+          xs={12}
+          md={6}>
+          <Grid item>
+            <Typography variant="subtitle1">
+              توی این رویداد قراره که ۵تا کارگاه علمی مختلف رو بگذرونیم و روز
+              آخر هم یه بازی خفن داریم!
+            </Typography>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={7}
-            md={5}
-            order={{ sm: 2, md: 1 }}
-            className={classes.video}>
-            <div className={classes.h_iframe_aparat_embed_frame}>
-              <span></span>
-              <iframe
-                title="مدرسه تابستانه رستا"
-                src="https://www.aparat.com/video/video/embed/videohash/aH08d/vt/frame"
-                allowFullScreen
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"></iframe>
-            </div>
+          <Grid item>
+            <Typography variant="subtitle1">
+              امسال کارگاه‌های علمی‌مون، گشت و گذاری هست در موضوعات علمی مختلف
+              و حتی شاخه‌های بین رشته‌ای؛ از علوم کامپیوتر و فیزیک گرفته تا
+              زیست‌شناسی که به زودی اطلاعات بیشتری درباره‌شون منتشر می‌کنیم :)
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1">
+              نکته‌ی مهم کارگاه‌ها اینه که در بستری که رستا اون رو توسعه داده،
+              اجرا می‌شه. این بستر به نوعی طراحی شده که روحیه‌ی تعاملی و
+              مسئله‌محوری کارگاه‌ها رو در شرایط مجازی هم حفظ کنه.
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1">
+              امسال توی کارگاه‌ها دو بخش مختلف داریم. توی بخش اول شما توی
+              گروه‌های سه نفره و به همراه همیارها محتواهای علمی کارگاه رو
+              می‌گذرونید و در قسمت دوم قراره از چیزهایی که یادگرفتید بیشتر
+              استفاده کنید؛ ممکنه نیاز باشه در نقش دانشمندان یه شرکت نظرات‌تون
+              رو بیان کنید یا با همیارهاتون بازی‌های مرتبط با محتوای علمی
+              کارگاه رو بگذرونید.
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1">
+              به جز کارگاه‌ها که توی چهار روز برگزار می‌شن و بازی انتهایی که
+              در روز پنجم هست، توی رویداد دورهمی و شهربازی هم داریم که به زودی
+              بیشتر درباره‌شون توضیح می‌دیم.
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1">
+              {
+                'برای اطلاع از اخباری که در آینده‌ای نزدیک منتشر می‌شه می‌تونید به کانال تلگراممون مراجعه کنید:'
+              }
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://t.me/rastaihaOnline"
+                className={classes.telegramLink}
+                style={{ direction: 'ltr' }}>
+                {'@RastaihaOnline'}
+              </a>
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="subtitle1">
+              {
+                'و همچنین می‌تونید ویژه‌نامه نیم نیم‌خط رو که برای مخاطبان مدرسه تابستانه رستا آماده شده از این لینک دانلود کنید:'
+              }
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={process.env.PUBLIC_URL + 'ویژه‌نامه_نیم_نیم‌خط.pdf'}
+                className={classes.telegramLink}
+                style={{ direction: 'ltr' }}>
+                {'دانلود'}
+              </a>
+            </Typography>
           </Grid>
         </Grid>
-      </section>
-    </>
+        <Grid
+          item
+          xs={12}
+          sm={7}
+          md={5}
+          order={{ sm: 2, md: 1 }}>
+          <div className={classes.h_iframe_aparat_embed_frame}>
+            <span></span>
+            <iframe
+              title="مدرسه تابستانه رستا"
+              src="https://www.aparat.com/video/video/embed/videohash/4twoM/vt/frame"
+              allowFullScreen
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"></iframe>
+          </div>
+        </Grid>
+      </Grid>
+    </section>
   );
 }
 
