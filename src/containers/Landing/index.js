@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 
 import Header from './Header';
 import Section from './Section';
+import Galley from './Gallery';
 
 const useStyles = makeStyles((theme) => ({
 }));
@@ -17,6 +18,7 @@ function Index() {
       <div id="back-to-top-anchor"></div>
       <Header />
       <Section />
+      <Galley />
     </>
   );
 }

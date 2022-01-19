@@ -1,63 +1,13 @@
 import {
+  Container,
   Grid,
   makeStyles,
   Typography,
 } from '@material-ui/core';
 import { React } from 'react';
-import { connect } from 'react-redux';
 
-const FirstColor = '#c89c2f';
-const FirstColorBackText = 'black';
-const SecondColor = '#e8332a';
-const SecondColorBackText = 'white';
 
 const useStyles = makeStyles((theme) => ({
-  centerItems: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  titleSection: {
-    height: '100vh',
-    color: 'black',
-    position: 'relative',
-  },
-  landingBackground: {
-    height: '100vh',
-    width: '100%',
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    background: `#ffc301 no-repeat 50% fixed`,
-    filter: 'blur(4px)',
-    webkitFilter: 'blur(4px)',
-    opacity: 0.9,
-    backgroundSize: 'cover',
-    zIndex: -3,
-  },
-  firstPageContent: {
-    height: '100vh',
-  },
-  title: {
-    fontSize: 110,
-    lineHeight: '80px',
-    fontWeight: 900,
-    color: '#e8332a',
-    textShadow: '-2px 2px #bd0d01',
-    textAlign: 'center',
-    marginBottom: theme.spacing(3),
-    fontFamily: 'VIP Cartoon !important',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 60,
-      lineHeight: '50px',
-      marginBottom: theme.spacing(1),
-    },
-  },
-  telegramLink: {
-    display: 'inline-block',
-    marginRight: 10,
-    color: 'inherit',
-  },
   h_iframe_aparat_embed_frame: {
     position: 'relative',
     '& iframe': {
@@ -77,125 +27,52 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: '57%',
     },
   },
-  Section: {
-    padding: theme.spacing(10, 2),
+
+  section: {
+    padding: theme.spacing(20, 0, 20, 0),
     zIndex: 5,
     position: 'relative',
-    backgroundColor: FirstColor,
-    color: FirstColorBackText,
+    background: 'linear-gradient(to top right, #8204D5, #59A6FF)',
   },
-
-
 }));
 
-function SummerSchool() {
+function Index() {
   const classes = useStyles();
   return (
+    <section className={classes.section}>
+      {/* <div style={{ position: 'absolute', top: 0, right: 0, width: '100%' }}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#31256A" fillOpacity="1" d="M0,32L26.7,80C53.3,128,107,224,160,261.3C213.3,299,267,277,320,245.3C373.3,213,427,171,480,138.7C533.3,107,587,85,640,112C693.3,139,747,213,800,229.3C853.3,245,907,203,960,165.3C1013.3,128,1067,96,1120,80C1173.3,64,1227,64,1280,69.3C1333.3,75,1387,85,1413,90.7L1440,96L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+      </div> */}
 
-    <section className={classes.Section}>
-      <Typography
-        component="h2"
-        variant="h2"
-        gutterBottom
-        className={classes.sectionTitle}>
-        چه خبره؟
-      </Typography>
-      <Grid container justify="space-evenly" alignItems="center" spacing={4}>
-        <Grid
-          item
-          container
-          justify="left"
-          order={{ sm: 1, md: 2 }}
-          spacing={2}
-          xs={12}
-          md={6}>
-          <Grid item>
-            <Typography variant="subtitle1">
-              توی این رویداد قراره که ۵تا کارگاه علمی مختلف رو بگذرونیم و روز
-              آخر هم یه بازی خفن داریم!
+      <Container maxWidth='lg'>
+        <Typography component="h2" variant="h2" gutterBottom>
+          {'اینجا چه خبره؟'}
+        </Typography>
+        <Grid container justify="space-evenly" alignItems="center" spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Typography style={{ fontSize: 20 }}>
+              {'کارسوق آقا! کارسوق. معلومه دیگه! سوق یعنی بازار و کار هم که یعنی کار اصلاً بذار این‌جوری بگم، یه بازار قدیمی و با صفا رو تصور کن! هرکسی یه دکّه داره و توی اون دکّه به جای دارچین و پارچه اطلسی، یه در داره! یه در به دنیای ریاضی! دستتو می‌گیره می‌بردت به جاهایی که تا حالا نرفتی و چیزایی یادت میده که تا الان نمی‌دونستی. ما اینجا کلاً هدف‌مون اینه که بهتون ثابت کنیم ریاضی نه تنها زشت و وحشتناک نیس بلکه اتفاقاً خیلی هم دوست داشتنیه! باور کن! جان من! کلی هم دلیل داریم واسه اینکه بهتون ثابت کنیم حق با ماعه! بعله... ما کارمون رو خوب بلدیم.'}
             </Typography>
           </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              امسال کارگاه‌های علمی‌مون، گشت و گذاری هست در موضوعات علمی مختلف
-              و حتی شاخه‌های بین رشته‌ای؛ از علوم کامپیوتر و فیزیک گرفته تا
-              زیست‌شناسی که به زودی اطلاعات بیشتری درباره‌شون منتشر می‌کنیم :)
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              نکته‌ی مهم کارگاه‌ها اینه که در بستری که رستا اون رو توسعه داده،
-              اجرا می‌شه. این بستر به نوعی طراحی شده که روحیه‌ی تعاملی و
-              مسئله‌محوری کارگاه‌ها رو در شرایط مجازی هم حفظ کنه.
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              امسال توی کارگاه‌ها دو بخش مختلف داریم. توی بخش اول شما توی
-              گروه‌های سه نفره و به همراه همیارها محتواهای علمی کارگاه رو
-              می‌گذرونید و در قسمت دوم قراره از چیزهایی که یادگرفتید بیشتر
-              استفاده کنید؛ ممکنه نیاز باشه در نقش دانشمندان یه شرکت نظرات‌تون
-              رو بیان کنید یا با همیارهاتون بازی‌های مرتبط با محتوای علمی
-              کارگاه رو بگذرونید.
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              به جز کارگاه‌ها که توی چهار روز برگزار می‌شن و بازی انتهایی که
-              در روز پنجم هست، توی رویداد دورهمی و شهربازی هم داریم که به زودی
-              بیشتر درباره‌شون توضیح می‌دیم.
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              {
-                'برای اطلاع از اخباری که در آینده‌ای نزدیک منتشر می‌شه می‌تونید به کانال تلگراممون مراجعه کنید:'
-              }
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://t.me/rastaihaOnline"
-                className={classes.telegramLink}
-                style={{ direction: 'ltr' }}>
-                {'@RastaihaOnline'}
-              </a>
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1">
-              {
-                'و همچنین می‌تونید ویژه‌نامه نیم نیم‌خط رو که برای مخاطبان مدرسه تابستانه رستا آماده شده از این لینک دانلود کنید:'
-              }
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={process.env.PUBLIC_URL + 'ویژه‌نامه_نیم_نیم‌خط.pdf'}
-                className={classes.telegramLink}
-                style={{ direction: 'ltr' }}>
-                {'دانلود'}
-              </a>
-            </Typography>
+          <Grid item xs={12} md={5}>
+            <div className={classes.h_iframe_aparat_embed_frame}>
+              <span></span>
+              <iframe
+                title="مدرسه تابستانه رستا"
+                src="https://www.aparat.com/video/video/embed/videohash/4twoM/vt/frame"
+                allowFullScreen
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"></iframe>
+            </div>
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={7}
-          md={5}
-          order={{ sm: 2, md: 1 }}>
-          <div className={classes.h_iframe_aparat_embed_frame}>
-            <span></span>
-            <iframe
-              title="مدرسه تابستانه رستا"
-              src="https://www.aparat.com/video/video/embed/videohash/4twoM/vt/frame"
-              allowFullScreen
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"></iframe>
-          </div>
-        </Grid>
-      </Grid>
+      </Container>
+
+      {/* <div style={{ position: 'absolute', bottom: 0, right: 0, width: '100%' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fillOpacity="1" d="M0,224L60,197.3C120,171,240,117,360,128C480,139,600,213,720,218.7C840,224,960,160,1080,138.7C1200,117,1320,139,1380,149.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        </div> */}
     </section>
   );
 }
 
-export default connect()(SummerSchool);
+export default Index;
