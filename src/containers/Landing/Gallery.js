@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(20, 0, 20, 0),
     zIndex: 5,
     position: 'relative',
-    background: 'linear-gradient(to bottom, #FD6DAE, #3F37CA)',
+    background: '#EDEDED',
 
   }
 }));

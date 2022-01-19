@@ -43,13 +43,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
+  manBehindLaptop: {
+    height: '80%',
+    maxHeight: 400,
+    width: '80%',
+    maxWidth: 400,
+  },
+
   arrowText: {
     color: '#FFFFFF',
     fontSize: 30,
-    marginBottom: -50,
+    marginBottom: -20,
     [theme.breakpoints.down('xs')]: {
       fontSize: 20,
-      marginBottom: -20
+      marginBottom: -10
     },
   },
 
@@ -71,8 +78,7 @@ function Index() {
         <Grid item container justifyContent='center'>
           <img
             src={process.env.PUBLIC_URL + '/spaceman-behind-laptop.png'}
-            alt=""
-            style={{ width: '80%', maxWidth: 400 }}
+            alt="" className={classes.manBehindLaptop}
           />
         </Grid>
         <Grid item>
@@ -91,8 +97,7 @@ function Index() {
           </Typography>
           <img
             src={process.env.PUBLIC_URL + '/scroll-bottom.gif'}
-            alt=""
-            className={classes.arrowBottom}
+            alt="" className={classes.arrowBottom}
           />
         </Grid>
       </Grid>
