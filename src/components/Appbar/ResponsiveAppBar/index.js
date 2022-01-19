@@ -15,6 +15,7 @@ import {
 import { Menu as MenuIcon } from '@material-ui/icons';
 import clsx from 'clsx';
 import React, { useState } from 'react';
+import { connect } from 'react-redux'
 
 import HideOnScroll from './components/HideOnScroll';
 import modes from './modes';
@@ -35,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.2s',
   },
   menuButton: {
-    marginRight: 5,
     color: theme.palette.primary.main,
     display: 'none',
     [theme.breakpoints.down('xs')]: {
@@ -53,9 +53,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ResponsiveAppBar({
-  mode = 'LANDING',
+  workshop,
+  mode = 'WORKSHOP',
   showBackOnScroll = false,
   hideOnScroll = false,
+  position = 'fixed',
   width,
 }) {
   const classes = useStyles();
@@ -68,7 +70,7 @@ function ResponsiveAppBar({
     mobileLeftItems,
     mobileRightItems,
     mobileMenuListItems,
-  } = modes[mode]();
+  } = modes[mode]({ workshop });
 
   const rightItems = width === 'xs' ? mobileRightItems : desktopRightItems;
   const leftItems = width === 'xs' ? mobileLeftItems : desktopLeftItems;
@@ -77,50 +79,49 @@ function ResponsiveAppBar({
     <>
       <HideOnScroll disable={!hideOnScroll}>
         <AppBar
-          id="appBar"
+          id='appBar'
           className={clsx(
             classes.appBar,
             showBackOnScroll && !trigger && classes.hideBack
           )}
-          color="inherit">
+          position={position}
+          color='inherit'>
           <Container>
             <Toolbar className={classes.toolbar} disableGutters>
-              {mobileMenuListItems.length > 0 && (
-                <IconButton
-                  edge="start"
-                  color="inherit"
-                  aria-label="open drawer"
-                  className={classes.menuButton}
-                  onClick={() => setDrawerOpen(true)}>
-                  <MenuIcon />
-                </IconButton>
-              )}
-              <Grid container justify="space-between">
-                <Grid item>
-                  <Grid
-                    spacing={1}
-                    container
-                    justify="flex-start"
-                    alignItems="center">
-                    {rightItems.map((item, index) => (
-                      <Grid key={index} item>
-                        {item}
-                      </Grid>
-                    ))}
-                  </Grid>
+              <Grid container justifyContent="space-between">
+                <Grid
+                  xs={6}
+                  spacing={1}
+                  container item
+                  justifyContent="flex-start"
+                  alignItems="center">
+                  {mobileMenuListItems.length > 0 && (
+                    <IconButton
+                      edge="start"
+                      color="inherit"
+                      aria-label="open drawer"
+                      className={classes.menuButton}
+                      onClick={() => setDrawerOpen(true)}>
+                      <MenuIcon />
+                    </IconButton>
+                  )}
+                  {rightItems.map((item, index) => (
+                    <Grid key={index} item>
+                      {item}
+                    </Grid>
+                  ))}
                 </Grid>
-                <Grid item>
-                  <Grid
-                    spacing={1}
-                    container
-                    justify="flex-end"
-                    alignItems="center">
-                    {leftItems.map((item, index) => (
-                      <Grid key={index} item>
-                        {item}
-                      </Grid>
-                    ))}
-                  </Grid>
+                <Grid
+                  xs={6}
+                  spacing={1}
+                  container item
+                  justifyContent="flex-end"
+                  alignItems="center">
+                  {leftItems.map((item, index) => (
+                    <Grid key={index} item>
+                      {item}
+                    </Grid>
+                  ))}
                 </Grid>
               </Grid>
             </Toolbar>
@@ -130,8 +131,7 @@ function ResponsiveAppBar({
       {mobileMenuListItems.length > 0 && (
         <Hidden smUp>
           <Drawer
-            anchor="left"
-            open={drawerOpen}
+            anchor="left" open={drawerOpen}
             onClose={() => setDrawerOpen(false)}>
             <div className={classes.list}>
               <List>
@@ -147,4 +147,8 @@ function ResponsiveAppBar({
   );
 }
 
-export default withWidth()(ResponsiveAppBar);
+const mapStateToProps = (state) => ({
+  workshop: state.workshop.workshop,
+})
+
+export default withWidth()(connect(mapStateToProps)(ResponsiveAppBar));

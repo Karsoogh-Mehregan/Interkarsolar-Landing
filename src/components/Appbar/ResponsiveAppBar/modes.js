@@ -1,9 +1,9 @@
-import ArticleAppBarItems from './ArticleAppBarItems';
-import LandingAppBarItems from './LandingAppBarItems';
+import StudentDashboardItems from './DashboardItems';
+import WorkshopAppBarItems from './WorkshopAppBarItems';
 
 const AppbarModes = {
-  LANDING: LandingAppBarItems,
-  ARTICLE: ArticleAppBarItems,
+  STUDENT_DASHBOARD: StudentDashboardItems,
+  WORKSHOP: WorkshopAppBarItems,
 };
 
 export default AppbarModes;
