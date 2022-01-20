@@ -53,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ResponsiveAppBar({
-  workshop,
   mode = 'WORKSHOP',
   showBackOnScroll = false,
   hideOnScroll = false,
@@ -70,7 +69,7 @@ function ResponsiveAppBar({
     mobileLeftItems,
     mobileRightItems,
     mobileMenuListItems,
-  } = modes[mode]({ workshop });
+  } = modes[mode]();
 
   const rightItems = width === 'xs' ? mobileRightItems : desktopRightItems;
   const leftItems = width === 'xs' ? mobileLeftItems : desktopLeftItems;
@@ -148,7 +147,6 @@ function ResponsiveAppBar({
 }
 
 const mapStateToProps = (state) => ({
-  workshop: state.workshop.workshop,
 })
 
 export default withWidth()(connect(mapStateToProps)(ResponsiveAppBar));

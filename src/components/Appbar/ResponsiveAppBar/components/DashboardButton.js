@@ -9,11 +9,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function DashboardButton({ name, iconImage, to }) {
+export default function DashboardButton({ name, iconImage, to, ...props }) {
   const classes = useStyles();
   return (
     <Button
-      variant="outlined"
+      variant="contained"
+      {...props}
       component={Link}
       to={to}
       startIcon={
@@ -29,7 +30,7 @@ export default function DashboardButton({ name, iconImage, to }) {
           ''
         )
       }>
-      <Typography variant="caption">{name}</Typography>
+      {name}
     </Button>
   );
 }
