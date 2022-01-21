@@ -9,6 +9,8 @@ import Comments from './Comments';
 import Galley from './Gallery';
 import Header from './Header';
 import Section from './Section';
+import Footer from './Footer';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,6 +26,7 @@ function Index() {
       <Section />
       <Galley />
       <Comments />
+      <Footer />
     </>
   );
 }

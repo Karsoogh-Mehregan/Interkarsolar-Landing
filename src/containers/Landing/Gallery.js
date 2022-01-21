@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 5,
     position: 'relative',
     background: '#EDEDED',
-
   }
 }));
 

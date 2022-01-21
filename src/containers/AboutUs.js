@@ -2,7 +2,7 @@ import { Container, makeStyles, Paper, Typography } from '@material-ui/core';
 import React from 'react';
 
 import ResponsiveAppBar from '../components/Appbar/ResponsiveAppBar';
-import Footer from '../components/SpecialComponents/Homepage/Footer';
+import Footer from './Landing/Footer';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
