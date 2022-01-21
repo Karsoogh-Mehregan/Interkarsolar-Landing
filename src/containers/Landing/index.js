@@ -4,10 +4,12 @@ import {
 import { React } from 'react';
 import { connect } from 'react-redux';
 
+import Appbar from '../../components/Appbar/ResponsiveAppBar'
+import Comments from './Comments';
+import Galley from './Gallery';
 import Header from './Header';
 import Section from './Section';
-import Galley from './Gallery';
-import Appbar from '../../components/Appbar/ResponsiveAppBar'
+
 
 const useStyles = makeStyles((theme) => ({
 }));
@@ -21,6 +23,7 @@ function Index() {
       <Header />
       <Section />
       <Galley />
+      <Comments />
     </>
   );
 }

@@ -39,7 +39,7 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography component="h2" variant="h2" gutterBottom>
+        <Typography variant="h1" gutterBottom>
           {'نگارخانه'}
         </Typography>
         <ImageGallery isRTL={true} showPlayButton={false} showBullets={true} showFullscreenButton={false} items={images} />

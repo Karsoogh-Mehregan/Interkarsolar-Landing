@@ -1,5 +1,6 @@
 import './Theme/Styles/App.css';
 import "react-image-gallery/styles/css/image-gallery.css";
+import "react-multi-carousel/lib/styles.css";
 
 import { CssBaseline } from '@material-ui/core';
 import { StylesProvider } from '@material-ui/core/styles';

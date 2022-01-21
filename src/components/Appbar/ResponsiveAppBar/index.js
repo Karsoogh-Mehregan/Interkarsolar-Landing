@@ -130,7 +130,7 @@ function ResponsiveAppBar({
       {mobileMenuListItems.length > 0 && (
         <Hidden smUp>
           <Drawer
-            anchor="left" open={drawerOpen}
+            anchor="right" open={drawerOpen}
             onClose={() => setDrawerOpen(false)}>
             <div className={classes.list}>
               <List>

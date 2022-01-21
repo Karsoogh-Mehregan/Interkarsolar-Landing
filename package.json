@@ -23,6 +23,7 @@
     "react-graph-network": "^1.0.6",
     "react-image-gallery": "^1.2.7",
     "react-konva": "^17.0.2-4",
+    "react-multi-carousel": "^2.6.5",
     "react-redux": "^7.2.4",
     "react-redux-multilingual": "^2.0.4",
     "react-router": "^5.2.0",
