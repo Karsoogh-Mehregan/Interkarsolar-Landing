@@ -29,8 +29,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(20, 0, 20, 0),
     zIndex: 5,
     position: 'relative',
-    background: '#0076C5',
+    background: 'linear-gradient(to top right, #FF44E0, #013D56)',
   },
+
 
   manBehindLaptop: {
     height: '100%',
@@ -46,11 +47,12 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1" gutterBottom style={{ color: '#FFFFFF' }}>
           {'نظر اینترکارسولاری‌های گذشته'}
         </Typography>
         <div dir='ltr'>
           <Carousel
+            keyBoardControl={true}
             draggable={false}
             responsive={responsive}
             renderDotsOutside={true}>
