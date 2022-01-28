@@ -91,7 +91,7 @@ function Index() {
             {'سومین دوره رویداد برخط'}
           </Typography>
         </Grid>
-        <Grid item style={{ position: 'absolute', bottom: 0, left: 0 }}>
+        <Grid item style={{ position: 'absolute', bottom: 0, right: 0 }}>
           <Typography align='center' component='p' variant="h4" className={classes.arrowText}>
             {'چه خبره؟'}
           </Typography>
