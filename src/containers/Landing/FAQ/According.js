@@ -5,6 +5,8 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
 
+import questions from './Questions';
+
 const useStyles = makeStyles(() => ({
   text: {
     textAlign: 'justify',
@@ -54,7 +56,7 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-const FAQ = ({ questions }) => {
+const FAQ = () => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -69,30 +71,10 @@ const FAQ = ({ questions }) => {
       expanded={expanded === 'panel' + index}
       onChange={handleChange('panel' + index)}>
       <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-        <Typography variant="h6">{question.text}</Typography>
+        <Typography variant="h4">{question.text}</Typography>
       </AccordionSummary>
-
       <AccordionDetails>
-        <Grid container direction="column" spacing={2}>
-          {question.answerParagraphs &&
-            question.answerParagraphs.map((answer, index) => {
-              return (
-                <Grid key={index} item>
-                  <Typography className={classes.text}>{answer}</Typography>
-                </Grid>
-              );
-            })}
-          {question.answerItems &&
-            question.answerItems.map((item, index) => {
-              return (
-                <Grid key={index} item>
-                  <Typography className={classes.text}>
-                    <li>{item}</li>
-                  </Typography>
-                </Grid>
-              );
-            })}
-        </Grid>
+        <Typography className={classes.text}>{question.answer}</Typography>
       </AccordionDetails>
     </Accordion>
   ));

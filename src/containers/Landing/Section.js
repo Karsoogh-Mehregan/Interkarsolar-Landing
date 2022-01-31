@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   whiteDescription: {
     fontSize: 20,
     color: '#FFFFFF',
+    textAlign: 'justify',
+    textJustify: 'inter-word',
   },
 }));
 
@@ -53,9 +55,9 @@ function Index() {
         <Typography variant="h1" gutterBottom>
           {'اینجا چه خبره؟'}
         </Typography>
-        <Grid container justify="space-evenly" alignItems="center" spacing={2}>
+        <Grid container justify="space-between" alignItems="center" spacing={2}>
           <Grid item xs={12} md={6}>
-            <Typography className={classes.whiteDescription}>
+            <Typography className={classes.whiteDescription} gutterBottom>
               {'کارسوق آقا! کارسوق. معلومه دیگه! سوق یعنی بازار و کار هم که یعنی کار اصلاً بذار این‌جوری بگم، یه بازار قدیمی و با صفا رو تصور کن! هرکسی یه دکّه داره و توی اون دکّه به جای دارچین و پارچه اطلسی، یه در داره! یه در به دنیای ریاضی! دستتو می‌گیره می‌بردت به جاهایی که تا حالا نرفتی و چیزایی یادت میده که تا الان نمی‌دونستی. ما اینجا کلاً هدف‌مون اینه که بهتون ثابت کنیم ریاضی نه تنها زشت و وحشتناک نیس بلکه اتفاقاً خیلی هم دوست داشتنیه! باور کن! جان من! کلی هم دلیل داریم واسه اینکه بهتون ثابت کنیم حق با ماعه! بعله... ما کارمون رو خوب بلدیم.'}
             </Typography>
           </Grid>

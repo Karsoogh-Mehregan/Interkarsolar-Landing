@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Galley from './Gallery';
 import Header from './Header';
 import Section from './Section';
+import FAQ from './FAQ';
 
 
 
@@ -24,6 +25,7 @@ function Index() {
       <div id="back-to-top-anchor"></div>
       <Header />
       <Section />
+      <FAQ />
       <Galley />
       <Comments />
       <Footer />

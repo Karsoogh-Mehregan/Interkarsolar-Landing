@@ -9,9 +9,9 @@ const WorkshopAppBarItems = () => {
 
   const desktopLeftItems = [registerButton, loginButton];
   const desktopRightItems = [];
-  const mobileLeftItems = [];
+  const mobileLeftItems = [registerButton, loginButton];
   const mobileRightItems = [];
-  const mobileMenuListItems = [registerButton, loginButton];
+  const mobileMenuListItems = [];
 
   return {
     desktopLeftItems,
