@@ -11,7 +11,7 @@ import Galley from './Gallery';
 import Header from './Header';
 import Section from './Section';
 import Staff from './Staff';
-
+import Steps from './Steps';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +25,7 @@ function Index() {
       <div id="back-to-top-anchor"></div>
       <Header />
       <Section />
+      <Steps />
       <FAQ />
       <Galley />
       <Comments />
