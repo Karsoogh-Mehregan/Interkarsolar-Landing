@@ -2,15 +2,15 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import { React } from 'react';
-import { connect } from 'react-redux';
 
 import Appbar from '../../components/Appbar/ResponsiveAppBar'
 import Comments from './Comments';
+import FAQ from './FAQ';
 import Footer from './Footer';
 import Galley from './Gallery';
 import Header from './Header';
 import Section from './Section';
-import FAQ from './FAQ';
+import Staff from './Staff';
 
 
 
@@ -28,9 +28,10 @@ function Index() {
       <FAQ />
       <Galley />
       <Comments />
+      <Staff />
       <Footer />
     </>
   );
 }
 
-export default connect()(Index);
+export default Index;

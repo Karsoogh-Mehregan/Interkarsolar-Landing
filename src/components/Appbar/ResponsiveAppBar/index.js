@@ -15,7 +15,6 @@ import {
 import { Menu as MenuIcon } from '@material-ui/icons';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { connect } from 'react-redux'
 
 import HideOnScroll from './components/HideOnScroll';
 import modes from './modes';
@@ -146,7 +145,4 @@ function ResponsiveAppBar({
   );
 }
 
-const mapStateToProps = (state) => ({
-})
-
-export default withWidth()(connect(mapStateToProps)(ResponsiveAppBar));
+export default withWidth()(ResponsiveAppBar);

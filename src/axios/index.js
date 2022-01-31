@@ -1,23 +1,24 @@
-import Axios from 'axios';
+import jsonToFormData from '../utils/jsonToFromDate';
+import baseAxios from './Base';
 
-export const baseURL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://utility.rastaiha.ir'
-    : 'https://utility.rastaiha.ir/'
+const postApi = async (url, body) => (await baseAxios.post(url, body)).data;
 
-const baseAxios = Axios.create({
-  baseURL: baseURL,
-  timeout: 20000,
-  maxRedirects: 5,
-});
+const postFormDataApi = async (url, body) =>
+  (
+    await baseAxios.post(url, jsonToFormData(body), {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+  ).data;
 
-export const updateToken = ({ token }) => {
-  if (token) {
-    baseAxios.defaults.headers.common['Authorization'] = 'JWT ' + token;
-  } else {
-    baseAxios.defaults.headers.common['Authorization'] = null;
-    delete baseAxios.defaults.headers.common['Authorization'];
-  }
+const getApi = async (url) => (await baseAxios.get(url)).data;
+
+const deleteApi = async (url, body) => (await baseAxios.delete(url, body)).data;
+
+export default {
+  POST: postApi,
+  POST_FORM_DATA: postFormDataApi,
+  GET: getApi,
+  DELETE: deleteApi,
 };
-
-export default baseAxios;

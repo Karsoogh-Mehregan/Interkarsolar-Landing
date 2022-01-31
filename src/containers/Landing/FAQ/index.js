@@ -32,7 +32,7 @@ function Index() {
         <Typography variant="h1" gutterBottom>
           {'سوالات متداول'}
         </Typography>
-        <Grid container justify="space-between" alignItems='center' spacing={2}>
+        <Grid container justify="space-between" spacing={2}>
           <Grid item xs={12} md={6}>
             <According />
           </Grid>

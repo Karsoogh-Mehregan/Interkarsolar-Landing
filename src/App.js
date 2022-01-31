@@ -1,57 +1,24 @@
-import './Theme/Styles/App.css';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "react-multi-carousel/lib/styles.css";
 
 import { CssBaseline } from '@material-ui/core';
 import { StylesProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import { SnackbarProvider } from 'notistack';
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { IntlProvider } from 'react-redux-multilingual';
+import React from 'react';
 
-import Notifier from './components/Notifications/Notifications';
 import Root from './root';
-import MuiTheme from './Theme/MuiThemes/MuiTheme';
-import translations from './translations';
+import RTLMuiTheme from './Theme/MuiThemes/RTLMuiTheme';
 import jss from './utils/jssRTL';
 
-const ArticleApp = () => (
-  <SnackbarProvider>
-    <Notifier />
-    <CssBaseline />
-    <Root />
-  </SnackbarProvider>
-);
-
-const App = ({ dir }) => {
-  useEffect(() => {
-    document.body.dir = dir;
-  }, [dir]);
-
+const Index = () => {
   return (
-    <IntlProvider translations={translations}>
-      {dir === 'rtl' ? (
-        <>
-          <ThemeProvider theme={MuiTheme}>
-            <StylesProvider jss={jss}>
-              <ArticleApp />
-            </StylesProvider>
-          </ThemeProvider>
-        </>
-      ) : (
-        <>
-          <ThemeProvider theme={MuiTheme}>
-            <ArticleApp />
-          </ThemeProvider>
-        </>
-      )}
-    </IntlProvider>
+    <ThemeProvider theme={RTLMuiTheme}>
+      <StylesProvider jss={jss}>
+        <CssBaseline />
+        <Root />
+      </StylesProvider>
+    </ThemeProvider>
   );
 };
 
-const mapStateToProps = (state) => ({
-  dir: state.Intl.locale === 'fa' ? 'rtl' : 'ltr',
-});
-
-export default connect(mapStateToProps)(App);
+export default Index;

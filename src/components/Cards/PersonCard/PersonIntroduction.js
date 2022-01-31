@@ -1,17 +1,17 @@
 import {
   Dialog,
+  DialogContent,
   Grid,
   Hidden,
   makeStyles,
   Typography,
-  DialogContent,
 } from '@material-ui/core';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   image: (props) => ({
     height: '300px',
-    background: `url(${props.image})`,
+    background: `url(${props.picture})`,
     backgroundSize: 'cover !important',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
@@ -24,25 +24,26 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function MentorIntroduction({
+function Index({
   open,
   handleClose,
-  person
+  name,
+  description,
+  picture,
 }) {
-  const image = person.picture
-  const classes = useStyles({ image });
+  const classes = useStyles({ picture });
   return (
     <Dialog maxWidth="sm" fullWidth open={open} onClose={handleClose}>
       <Grid container justify='center' alignItems='center'>
         <Grid xs={12} sm={6} container item direction='column' justify='center'>
           <Grid item>
             <Typography gutterBottom variant="h4" align="center">
-              {person.name}
+              {name}
             </Typography>
           </Grid >
           <Grid item>
             <Typography variant="h6" className={classes.description}>
-              {person.description}
+              {description}
             </Typography>
           </Grid>
         </Grid>
@@ -55,4 +56,4 @@ function MentorIntroduction({
 }
 
 
-export default MentorIntroduction;
+export default Index;

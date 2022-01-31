@@ -1,21 +1,37 @@
 import '../Theme/Styles/OurTeam.css';
 
-import { Container, Grid } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  makeStyles,
+} from '@material-ui/core';
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 
+import Apis from '../axios';
 import ResponsiveAppBar from '../components/Appbar/ResponsiveAppBar';
 import PersonCard from '../components/Cards/PersonCard';
-import { getLandingDataAction } from '../redux/slices/landing';
 
-function OurTeam({ members = [], teams = [], getLandingData }) {
+const useStyles = makeStyles(() => ({
+  section: {
+    height: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+}));
+
+
+function Index({ members = [], teams = [], getLandingData }) {
+  const classes = useStyles();
+
   useEffect(() => {
-    getLandingData();
+    const response = Apis.GET('https://utility.rastaiha.ir/people/', {});
   }, []);
+
   return (
     <>
-      <ResponsiveAppBar mode="LANDING" />
-      <Container maxWidth="md" style={{ marginTop: 160, marginBottom: 50 }}>
+      <ResponsiveAppBar />
+      <Container maxWidth='lg' className={classes.section}>
         <div className="our-team-page">
           <div className="tab-wrap">
             {teams.map((team, index) => (
@@ -36,16 +52,8 @@ function OurTeam({ members = [], teams = [], getLandingData }) {
                   {members
                     .filter((member) => member.team.includes(team))
                     .map((member, index) => (
-                      <Grid
-                        container
-                        item
-                        key={index}
-                        xs={10}
-                        sm={4}
-                        md={3}
-                        alignItems="flex-start"
-                        justify="center">
-                        <PersonCard person={member} />
+                      <Grid container item key={index} xs={10} sm={4} md={3}>
+                        <PersonCard {...member} />
                       </Grid>
                     ))}
                 </Grid>
@@ -58,11 +66,5 @@ function OurTeam({ members = [], teams = [], getLandingData }) {
   );
 }
 
-const mapStatesToProps = (state) => ({
-  members: state.landing.members,
-  teams: state.landing.teams
-});
 
-export default connect(mapStatesToProps, {
-  getLandingData: getLandingDataAction,
-})(OurTeam);
+export default Index;

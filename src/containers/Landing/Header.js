@@ -6,7 +6,7 @@ import {
 import { React } from 'react';
 
 const useStyles = makeStyles((theme) => ({
-  titleSection: {
+  section: {
     height: '100vh',
     display: 'flex',
     alignItems: 'center',
@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
 function Index() {
   const classes = useStyles();
   return (
-    <section className={classes.titleSection}>
+    <section className={classes.section}>
       <div className={classes.landingBackground} />
       <Grid container alignItems="center" direction="column">
         <Grid item container justifyContent='center'>

@@ -2,7 +2,6 @@ import { Button, Card, Chip, Divider, Grid, Typography } from '@material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import React from 'react';
-import { useTranslate } from 'react-redux-multilingual/lib/context';
 import { Link } from 'react-router-dom';
 
 import { toPersianNumber } from '../../utils/translateNumber';
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   noPadding: {
     padding: '0px !important',
   },
-  eventImage: {
+  image: {
     height: '100%',
     width: '100%',
     objectFit: 'cover',
@@ -44,7 +43,6 @@ const Index = ({
   image = `${process.env.PUBLIC_URL}/default-profile.png`,
 }) => {
   const classes = useStyles();
-  const t = useTranslate();
 
   return (
     <Card className={classes.paper}>
@@ -57,7 +55,7 @@ const Index = ({
           alignItems="center"
           xs={12}
           sm={5}>
-          <img src={image} alt="" className={classes.eventImage} />
+          <img src={image} alt="" className={classes.image} />
         </Grid>
         <Grid
           item
