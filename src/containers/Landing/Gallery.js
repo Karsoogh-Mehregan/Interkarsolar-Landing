@@ -21,6 +21,11 @@ const images = [
     thumbnail: 'https://picsum.photos/id/1019/250/150/',
     description: 'سلام! من خوبم.',
   },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    description: 'سلام! من خوبم.',
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
