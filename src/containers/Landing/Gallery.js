@@ -9,22 +9,57 @@ import ImageGallery from 'react-image-gallery';
 
 const images = [
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-10.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-10.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-15.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-15.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-    description: 'سلام! من خوبم.',
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-42-00.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-42-00.jpg',
+
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-    description: 'سلام! من خوبم.',
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-18.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-18.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-21.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-21.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-24.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-24.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-29.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-29.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-32.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-32.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-35.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-35.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-37.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-37.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-48.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-48.jpg',
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-51.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-38-51.jpg'
+  },
+  {
+    original: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-41-56.jpg',
+    thumbnail: 'https://media.githubusercontent.com/media/Karsoogh-Mehregan/upload_center/main/Landing/Gallery/photo_2022-02-01_20-41-56.jpg',
   },
 ];
 
