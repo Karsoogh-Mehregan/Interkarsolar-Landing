@@ -69,7 +69,11 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 5,
     position: 'relative',
     background: '#EDEDED',
-  }
+  },
+
+  title: {
+    margin: theme.spacing(0, 0, 5, 0),
+  },
 }));
 
 function Index() {
@@ -78,7 +82,7 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'نگارخانه'}
         </Typography>
         <ImageGallery isRTL={true} showPlayButton={false} showBullets={true} showFullscreenButton={false} items={images} />

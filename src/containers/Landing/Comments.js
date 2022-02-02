@@ -39,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 400,
   },
+
+  title: {
+    margin: theme.spacing(0, 0, 5, 0),
+  },
 }));
 
 function Index() {
@@ -47,7 +51,7 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom style={{ color: '#FFFFFF' }}>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'نظر اینترکارسولاری‌های گذشته'}
         </Typography>
         <div dir='ltr'>

@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'justify',
     textJustify: 'inter-word',
   },
+
+  title: {
+    margin: theme.spacing(0, 0, 5, 0),
+  },
 }));
 
 function Index({
@@ -31,7 +35,7 @@ function Index({
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'دست‌اندر‌کارانِ اینترکارسولار'}
         </Typography>
         <Grid container justify="space-between" alignItems="center" spacing={2}>

@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
     },
   },
+
+  title: {
+    margin: theme.spacing(0, 0, 7, 0),
+  },
 }));
 
 
@@ -31,7 +35,7 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'چه کارهایی قراره کنیم؟'}
         </Typography>
 

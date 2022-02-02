@@ -41,6 +41,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'justify',
     textJustify: 'inter-word',
   },
+
+  title: {
+    margin: theme.spacing(0, 0, 5, 0),
+  },
 }));
 
 function Index() {
@@ -52,7 +56,7 @@ function Index() {
       </div> */}
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'اینجا چه خبره؟'}
         </Typography>
         <Grid container justify="space-between" alignItems="center" spacing={2}>
@@ -65,7 +69,7 @@ function Index() {
             <div className={classes.h_iframe_aparat_embed_frame}>
               <span></span>
               <iframe
-                title="مدرسه تابستانه رستا"
+                title="معرفی کارسوق ریاضی مهرگان"
                 src="https://www.aparat.com/video/video/embed/videohash/4twoM/vt/frame"
                 allowFullScreen
                 webkitallowfullscreen="true"

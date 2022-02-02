@@ -9,7 +9,7 @@ import React from 'react';
 const useStyles = makeStyles((theme) => ({
   container: {
     position: 'relative',
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     backgroundColor: '#bfdfff',
     maxWidth: '100%',
     color: 'rgba(0, 0, 0, 0.87)'

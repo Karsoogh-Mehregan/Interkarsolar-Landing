@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 400,
   },
+
+  title: {
+    margin: theme.spacing(0, 0, 5, 0),
+  },
 }));
 
 function Index() {
@@ -29,7 +33,7 @@ function Index() {
     <section className={classes.section}>
 
       <Container maxWidth='lg'>
-        <Typography variant="h1" gutterBottom>
+        <Typography className={classes.title} variant="h1" gutterBottom>
           {'سوالات متداول'}
         </Typography>
         <Grid container justify="space-between" spacing={2}>
