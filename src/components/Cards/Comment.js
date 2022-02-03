@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   content: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
   },
   noPadding: {
     padding: '0px !important',
@@ -46,8 +46,8 @@ const Index = ({
 
   return (
     <Card className={classes.paper}>
-      <Grid container justifyContent="space-between" alignItems='stretch' style={{ direction: 'rtl', height: '100%' }}>
-        <Grid
+      {/* <Grid container justifyContent="space-between" alignItems='stretch' style={{ direction: 'rtl', height: '100%' }}> */}
+        {/* <Grid
           className={classes.noPadding}
           item
           container
@@ -56,20 +56,20 @@ const Index = ({
           xs={12}
           sm={5}>
           <img src={image} alt="" className={classes.image} />
-        </Grid>
+        </Grid> */}
         <Grid
           item
           container
           xs={12}
-          sm={7}
+          sm={12}
           direction="column"
           spacing={2}
           className={classes.content}>
           <Grid item>
-            <Typography align='right' variant="h3" className={classes.notificationTitle} gutterBottom>
+            <Typography align='left' variant="h3" className={classes.notificationTitle} gutterBottom>
               {name}
             </Typography>
-            <Typography align='right' color="textSecondary">
+            <Typography align='left' color="textSecondary">
               {description}
             </Typography>
           </Grid>
@@ -77,12 +77,12 @@ const Index = ({
             <Divider />
           </Grid>
           <Grid item>
-            <Typography align='right' variant="body1">
+            <Typography align='left' variant="body1">
               {comment}
             </Typography>
           </Grid>
         </Grid>
-      </Grid>
+      {/* </Grid> */}
     </Card>
   );
 };
