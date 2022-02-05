@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
   whiteDescription: {
     fontSize: 22,
-    fontWeight: 380,
+    fontWeight: 400,
     // color: '#FFFFFF',
     textAlign: 'justify',
     textJustify: 'inter-word',
