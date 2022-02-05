@@ -9,9 +9,9 @@ import FAQ from './FAQ';
 import Footer from './Footer';
 import Galley from './Gallery';
 import Header from './Header';
-import Section from './Section';
 import Staff from './Staff';
 import Steps from './Steps';
+import WhatTheFuzz from './WhatTheFuzz';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,12 +24,12 @@ function Index() {
       <Appbar showBackOnScroll />
       <div id="back-to-top-anchor"></div>
       <Header />
-      <Section />
+      <WhatTheFuzz />
       <Steps />
       <FAQ />
       <Galley />
       <Comments />
-      <Staff />
+      {/* <Staff /> */}
       <Footer />
     </>
   );

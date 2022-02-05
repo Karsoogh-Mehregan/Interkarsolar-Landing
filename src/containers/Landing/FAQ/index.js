@@ -5,6 +5,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import { React } from 'react';
+
 import According from './According';
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(20, 0, 20, 0),
     zIndex: 5,
     position: 'relative',
-    background: 'linear-gradient(to top right, #FE94F5, #A7CFE6)',
+    background: '#ffc1f8',
   },
 
   image: {
@@ -42,7 +43,7 @@ function Index() {
           </Grid>
           <Grid item xs={12} md={5} container justifyContent='center'>
             <img
-              src={process.env.PUBLIC_URL + '/spaceman-behind-laptop.png'}
+              src={process.env.PUBLIC_URL + '/44.jpg'}
               alt="" className={classes.image}
             />
           </Grid>

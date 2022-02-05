@@ -29,9 +29,14 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(20, 0, 20, 0),
     zIndex: 5,
     position: 'relative',
-    background: 'linear-gradient(to top right, #FF44E0, #013D56)',
+    background: '#aa3394',
   },
 
+  title: {
+    color: '#FFFFFF',
+    textShadow: '-1px 1px #412C7D',
+    margin: theme.spacing(0, 0, 7, 0),
+  },
 
   manBehindLaptop: {
     height: '100%',
@@ -40,9 +45,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 400,
   },
 
-  title: {
-    margin: theme.spacing(0, 0, 5, 0),
-  },
 }));
 
 function Index() {

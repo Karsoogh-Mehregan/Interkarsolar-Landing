@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     filter: 'blur(5px)',
     webkitFilter: 'blur(5px)',
     opacity: 0.9,
-    transform: 'scale(1.1)',
+    transform: 'scale(1.2)',
     zIndex: -10,
   },
 
@@ -87,7 +87,7 @@ function Index() {
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant="h2" align='center'>
+          <Typography variant="h2" align='center' style={{ color: 'white' }}>
             {'سومین دوره رویداد برخط'}
           </Typography>
         </Grid>
