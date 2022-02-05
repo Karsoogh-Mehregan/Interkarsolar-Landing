@@ -15,8 +15,8 @@ export default function DashboardButton({ name, iconImage, to, ...props }) {
     <Button
       variant="contained"
       {...props}
-      component={Link}
-      to={to}
+      // component={Link}
+      href={to}
       startIcon={
         iconImage ? (
           <Icon>
