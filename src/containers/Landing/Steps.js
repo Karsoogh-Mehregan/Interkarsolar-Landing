@@ -57,7 +57,7 @@ function Index() {
               <Grid container spacing={2} alignItems="center" justify="center">
                 <Grid item xs={12} sm={4}>
                   <img
-                    src={process.env.PUBLIC_URL + '/11.jpg'}
+                    src={process.env.PUBLIC_URL + '/33.jpg'}
                     alt=""
                   />
                 </Grid>
@@ -81,7 +81,7 @@ function Index() {
                 direction="row-reverse"
                 alignItems="center">
                 <Grid item xs={12} sm={4}>
-                  <img src={process.env.PUBLIC_URL + '/22.jpg'} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/44.jpg'} alt="" />
                 </Grid>
                 <Grid item xs={12} sm={8}>
                   <Typography variant="h2" align="center" gutterBottom>
@@ -98,7 +98,7 @@ function Index() {
             <Paper className={classes.featuresSectionPaper}>
               <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={4}>
-                  <img src={process.env.PUBLIC_URL + '/33.jpg'} alt="" />
+                  <img src={process.env.PUBLIC_URL + '/11.jpg'} alt="" />
                 </Grid>
                 <Grid item xs={12} sm={8}>
                   <Typography variant="h2" align="center" gutterBottom>

@@ -15,6 +15,7 @@ export default function DashboardButton({ name, iconImage, to, ...props }) {
     <Button
       variant="contained"
       {...props}
+      size='large'
       // component={Link}
       href={to}
       startIcon={

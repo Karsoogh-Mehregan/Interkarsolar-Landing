@@ -43,7 +43,7 @@ function Index() {
           </Grid>
           <Grid item xs={12} md={5} container justifyContent='center'>
             <img
-              src={process.env.PUBLIC_URL + '/44.jpg'}
+              src={process.env.PUBLIC_URL + '/22.jpg'}
               alt="" className={classes.image}
             />
           </Grid>
