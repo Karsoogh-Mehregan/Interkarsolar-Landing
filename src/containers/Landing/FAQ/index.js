@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    height: '100%',
     maxHeight: 400,
     width: '100%',
     maxWidth: 400,
