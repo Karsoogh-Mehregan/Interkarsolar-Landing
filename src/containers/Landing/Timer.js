@@ -31,7 +31,7 @@ import {
   
     timerTextSpan: {
       display: 'block',
-      fontSize: '4rem',
+      fontSize: '3rem',
       marginBottom: theme.spacing(3),
     },
       
@@ -40,9 +40,9 @@ import {
     },
 
     image: {
-      maxHeight: 600,
+      maxHeight: 350,
       width: '100%',
-      maxWidth: 400,
+      maxWidth: 350,
     },
   }));
   
