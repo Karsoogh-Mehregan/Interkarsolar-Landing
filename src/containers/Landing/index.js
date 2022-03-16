@@ -11,6 +11,7 @@ import Galley from './Gallery';
 import Header from './Header';
 import Staff from './Staff';
 import Steps from './Steps';
+import Timer from './Timer'
 import WhatTheFuzz from './WhatTheFuzz';
 
 
@@ -30,6 +31,7 @@ function Index() {
       <Galley />
       <Comments />
       {/* <Staff /> */}
+      <Timer />
       <Footer />
     </>
   );
