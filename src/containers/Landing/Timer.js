@@ -6,6 +6,7 @@ import {
 } from '@material-ui/core';
 import React, { useEffect } from 'react';
 
+import { toPersianNumber } from '../../utils/translateNumber';
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -16,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   timerContainer: {
-    color: '#111',
+    color: '#FFFFFF',
+    textShadow: '-1px 1px #412C7D',
     margin: theme.spacing(11, 'auto', 1, 'auto'),
     textAlign: 'center',
     alignItems: 'center',
@@ -36,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
+    color: '#FFFFFF',
+    textShadow: '-1px 1px #412C7D',
     margin: theme.spacing(0, 0, 5, 0),
   },
 
@@ -65,10 +69,10 @@ function Index() {
     if (distance < 0) {
       distance = 0;
     }
-    document.getElementById("days").innerText = Math.floor(distance / (day));
-    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour));
-    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute));
-    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+    document.getElementById("days").innerText = toPersianNumber(Math.floor(distance / (day)));
+    document.getElementById("hours").innerText = toPersianNumber(Math.floor((distance % (day)) / (hour)));
+    document.getElementById("minutes").innerText = toPersianNumber(Math.floor((distance % (hour)) / (minute)));
+    document.getElementById("seconds").innerText = toPersianNumber(Math.floor((distance % (minute)) / second));
   }, 0);
 
   // clear interval
@@ -88,7 +92,7 @@ function Index() {
           <Grid item xs={12} md={6} container justifyContent='center'>
             <div className={classes.timerContainer}>
               <div id="countdown">
-                <ul>
+                <ul  style={{padding: '0'}}>
                   <Typography variant="h3" className={classes.timerText}><span id="seconds" className={classes.timerTextSpan}></span>ثانیه</Typography>
                   <Typography variant="h3" className={classes.timerText}><span id="minutes" className={classes.timerTextSpan}></span>دقیقه</Typography>
                   <Typography variant="h3" className={classes.timerText}><span id="hours" className={classes.timerTextSpan}></span>ساعت</Typography>
