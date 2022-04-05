@@ -62,7 +62,7 @@ function Index() {
   today = mm + "/" + dd + "/" + yyyy;
 
   //Enter the final time here
-  const countDown = new Date("April 22, 2022 08:00:00").getTime();
+  const countDown = new Date("May 6, 2022 08:00:00").getTime();
   const interval = setInterval(function () {
     const now = new Date().getTime();
     let distance = countDown - now;
