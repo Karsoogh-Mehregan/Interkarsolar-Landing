@@ -1,7 +1,10 @@
 import {
+  Box,
+  Button,
   Grid,
   makeStyles,
   Typography,
+  withWidth,
 } from '@material-ui/core';
 import { React } from 'react';
 
@@ -38,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       fontSize: 60,
-      lineHeight: '50px',
+      lineHeight: '65px',
       marginBottom: theme.spacing(1),
     },
     [theme.breakpoints.down('xs')]: {
@@ -49,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   manBehindLaptop: {
-    height: '80%',
     maxHeight: 400,
     width: '80%',
     maxWidth: 400,
@@ -74,40 +76,63 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-function Index() {
+function Index({ width }) {
   const classes = useStyles();
   return (
-    <section className={classes.section}>
+    <section className={classes.section} style={{ overflowX: 'hidden' }}>
       <div className={classes.landingBackground} />
-      <Grid container alignItems="center" direction="column">
-        <Grid item container justifyContent='center'>
-          <img
-            src={process.env.PUBLIC_URL + '/spaceman-behind-laptop.png'}
-            alt="" className={classes.manBehindLaptop}
-          />
+      <Grid container alignItems="center" justifyContent='center' spacing={4}>
+        <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6}>
+          {width != 'xs' &&
+            <Grid item container justifyContent='center'>
+              <img
+                src={process.env.PUBLIC_URL + '/spaceman-behind-laptop.png'}
+                alt="" className={classes.manBehindLaptop}
+              />
+            </Grid>
+          }
+          <Grid item>
+            <Typography variant="h1" className={classes.title} align='center'>
+              {'اینترکارسولار'}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h2" align='center' style={{ color: 'white' }}>
+              {'سومین دوره رویداد برخط'}
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography variant="h1" className={classes.title} align='center'>
-            {'اینترکارسولار'}
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="h2" align='center' style={{ color: 'white' }}>
-            {'سومین دوره رویداد برخط'}
-          </Typography>
-        </Grid>
-        <Grid item style={{ position: 'absolute', bottom: 0, right: 0 }}>
-          <Typography align='center' component='p' variant="h4" className={classes.arrowText}>
-            {'چه خبره؟'}
-          </Typography>
-          <img
-            src={process.env.PUBLIC_URL + '/scroll-bottom.gif'}
-            alt="" className={classes.arrowBottom}
-          />
+
+        <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
+          <Grid item>
+            <Typography variant="h1" className={classes.title} align='center'>
+              {'نتایج مرحله ۱ اومد!'}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h4" align='center' style={{ color: 'white' }}>
+              {'اسامی پذیرفته‌شدگان مرحله‌ی اول را می‌توانید در فایل زیر مشاهده کنید:'}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Button variant='contained' size='large' color='secondary' disabled>
+              {'بارگیری نتایج'}
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
+
+      {/* <div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+        <Typography align='center' component='p' variant="h4" className={classes.arrowText}>
+          {'چه خبره؟'}
+        </Typography>
+        <img
+          src={process.env.PUBLIC_URL + '/scroll-bottom.gif'}
+          alt="" className={classes.arrowBottom}
+        />
+      </div> */}
     </section>
   );
 }
 
-export default Index;
+export default withWidth()(Index);
