@@ -41,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: '50px',
       marginBottom: theme.spacing(1),
     },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 40,
+      lineHeight: '50px',
+      marginBottom: theme.spacing(1),
+    },
   },
 
   manBehindLaptop: {
