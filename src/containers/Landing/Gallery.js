@@ -9,49 +9,76 @@ import ImageGallery from 'react-image-gallery';
 
 const images = [
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559703/photo_2022-02-11_09-36-41_mgx9p3.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559703/photo_2022-02-11_09-36-41_mgx9p3.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559697/photo_2022-02-11_09-36-38_vpicoy.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559697/photo_2022-02-11_09-36-38_vpicoy.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/2.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/2.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559692/photo_2022-02-11_09-36-34_eniwla.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559692/photo_2022-02-11_09-36-34_eniwla.jpg',
-
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/3.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/3.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559685/photo_2022-02-11_09-36-28_vhomuj.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559685/photo_2022-02-11_09-36-28_vhomuj.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/4.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/4.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559678/photo_2022-02-11_09-36-22_m9yntk.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559678/photo_2022-02-11_09-36-22_m9yntk.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/5.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/5.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559669/photo_2022-02-11_09-36-18_r6zzk7.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559669/photo_2022-02-11_09-36-18_r6zzk7.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/6.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/6.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559663/photo_2022-02-11_09-36-15_xemvzr.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559663/photo_2022-02-11_09-36-15_xemvzr.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/7.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/7.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559655/photo_2022-02-11_09-36-13_rifurd.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559655/photo_2022-02-11_09-36-13_rifurd.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/8.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/8.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559646/photo_2022-02-11_09-36-09_kcicse.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559646/photo_2022-02-11_09-36-09_kcicse.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/9.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/9.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559639/photo_2022-02-11_09-36-05_mtnlqh.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559639/photo_2022-02-11_09-36-05_mtnlqh.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/10.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/10.jpg',
   },
   {
-    original: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559628/photo_2022-02-11_09-35-56_nr6div.jpg',
-    thumbnail: 'https://res.cloudinary.com/dvuazyamw/image/upload/v1644559628/photo_2022-02-11_09-35-56_nr6div.jpg',
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/11.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/11.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/12.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/12.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/13.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/13.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/14.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/14.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/15.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/15.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/16.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/16.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/17.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/17.jpg',
+  },
+  {
+    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/18.jpg',
+    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
   },
 ];
 
