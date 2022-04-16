@@ -9,76 +9,76 @@ import ImageGallery from 'react-image-gallery';
 
 const images = [
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
+    original: '/photos/1.jpg',
+    thumbnail: '/photos/1.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/2.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/2.jpg',
+    original: '/photos/2.jpg',
+    thumbnail: '/photos/2.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/3.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/3.jpg',
+    original: '/photos/3.jpg',
+    thumbnail: '/photos/3.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/4.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/4.jpg',
+    original: '/photos/4.jpg',
+    thumbnail: '/photos/4.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/5.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/5.jpg',
+    original: '/photos/5.jpg',
+    thumbnail: '/photos/5.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/6.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/6.jpg',
+    original: '/photos/6.jpg',
+    thumbnail: '/photos/6.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/7.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/7.jpg',
+    original: '/photos/7.jpg',
+    thumbnail: '/photos/7.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/8.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/8.jpg',
+    original: '/photos/8.jpg',
+    thumbnail: '/photos/8.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/9.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/9.jpg',
+    original: '/photos/9.jpg',
+    thumbnail: '/photos/9.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/10.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/10.jpg',
+    original: '/photos/10.jpg',
+    thumbnail: '/photos/10.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/11.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/11.jpg',
+    original: '/photos/11.jpg',
+    thumbnail: '/photos/11.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/12.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/12.jpg',
+    original: '/photos/12.jpg',
+    thumbnail: '/photos/12.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/13.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/13.jpg',
+    original: '/photos/13.jpg',
+    thumbnail: '/photos/13.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/14.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/14.jpg',
+    original: '/photos/14.jpg',
+    thumbnail: '/photos/14.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/15.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/15.jpg',
+    original: '/photos/15.jpg',
+    thumbnail: '/photos/15.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/16.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/16.jpg',
+    original: '/photos/16.jpg',
+    thumbnail: '/photos/16.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/17.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/17.jpg',
+    original: '/photos/17.jpg',
+    thumbnail: '/photos/17.jpg',
   },
   {
-    original: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/18.jpg',
-    thumbnail: 'https://karsoogh-mehregan.s3.ir-thr-at1.arvanstorage.com/photos/1.jpg',
+    original: '/photos/18.jpg',
+    thumbnail: '/photos/1.jpg',
   },
 ];
 
