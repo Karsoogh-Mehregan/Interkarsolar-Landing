@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
   arrowText: {
     color: '#FFFFFF',
-    fontSize: 30,
+    fontSize: 29,
     marginBottom: -20,
     [theme.breakpoints.down('xs')]: {
       fontSize: 20,
