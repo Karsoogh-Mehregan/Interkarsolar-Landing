@@ -131,6 +131,7 @@ function Index({ width }) {
           alt="" className={classes.arrowBottom}
         />
       </div> */}
+
     </section>
   );
 }
