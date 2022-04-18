@@ -115,7 +115,7 @@ function Index({ width }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Button variant='contained' size='large' color='secondary' disabled>
+            <Button variant='contained' size='large' color='secondary' href="https://iutbox.iut.ac.ir/index.php/s/cCKxS72NwTd7Mmf/download/results_first_round_optimized.pdf">
               {'بارگیری نتایج'}
             </Button>
           </Grid>
