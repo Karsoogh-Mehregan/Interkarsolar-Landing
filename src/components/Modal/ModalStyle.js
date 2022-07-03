@@ -22,7 +22,6 @@ const ModalContainer = styled.div`
     div {
         text-align: left;
         padding: 0 1vw;
-        padding-top:3vh;
         word-break: break-word;
         height: 20vh;
         overflow-y: auto;
@@ -45,7 +44,6 @@ const ModalContainer = styled.div`
           }
         @media screen and (max-width: 768px){
             height: 9vh;
-            padding-top:0;
         }
     }
 `
