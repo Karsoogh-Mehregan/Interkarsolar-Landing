@@ -6,6 +6,7 @@ import Landing from '../containers/Landing/';
 // import OurTeam from '../containers/OurTeam';
 import Signup from '../containers/SignUp/Signup'
 import Welcome from '../containers/SignUp/welcome'
+import PaymentVerification from '../containers/SignUp/PaymentVerification';
 
 const Root = () => {
   return (
@@ -16,6 +17,7 @@ const Root = () => {
         <Route exact path='/' element = {<Landing />} />
         <Route path='/sign_up' element = {<Signup />} />
         <Route path='/validation' element = {<Welcome />} />
+        <Route path='/paymentcallback' element = {<PaymentVerification />} />
       </Routes>
   </div>
   );
