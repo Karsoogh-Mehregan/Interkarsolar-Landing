@@ -7,7 +7,7 @@ import {
 } from "./PaymentVerificationStyle";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
-import QueryString from "qs";
+//import QueryString from "qs";
 
 const PaymentVerification = props => {
      const [paid, setPaid] = useState(0); //TODO: set it to -1
