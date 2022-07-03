@@ -8,7 +8,7 @@ import {
 import React from 'react'
 
 
-const Modal = ({ Title, Text, onConfirm }) => {
+const Modal = ({ Title, Text, onConfirm, btnText}) => {
     return (
         <BackDrop>
             <ModalContainer>
@@ -19,7 +19,7 @@ const Modal = ({ Title, Text, onConfirm }) => {
                     <ModalText>{Text}</ModalText>
                 </div>
                 <footer>
-                    <OkButton onClick={onConfirm}>ثبت نام</OkButton>
+                    <OkButton onClick={onConfirm}>{btnText}</OkButton>
                 </footer>
             </ModalContainer>
         </BackDrop>

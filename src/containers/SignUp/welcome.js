@@ -39,16 +39,19 @@ function Welcome(){
  
       const chceckAcceptance = () => {
         setAccepted(Id_array.includes(ID));
-        setShowModal(accepted);
-        //TODO: showmodal if not accepted
+        setShowModal(true);
     }
   
     const redirectToSignup = () => {
         navigate('/sign_up');
     }
+    const redirectToHome = () => {
+        navigate('/');
+    }
     return(
         <>
-        {showModal && <Modal Title="تبریک!" Text=" تبریک میگیم در مرحله دوم پذیرفته شدی, برای ادامه مراحل روی دکمه ثبت‌نام کلیک کنید :)" onConfirm={redirectToSignup}/>}
+         {showModal && accepted && <Modal Title="تبریک!" Text=" تبریک میگیم در مرحله دوم پذیرفته شدی, برای ادامه مراحل روی دکمه ثبت‌نام کلیک کنید :)" onConfirm={redirectToSignup} btnText="ثبت نام"/>}
+         {showModal && !accepted && <Modal Title="به امید دیدار!" Text="متاسفانه در این ایستگاه از سفر فضایی مون باید با شما خداحافظی کنیم." onConfirm={redirectToHome} btnText="بازگشت"/>}
         <BgContainer >
             <RightContainer>
                 <TextContainer>
