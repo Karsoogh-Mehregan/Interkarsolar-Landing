@@ -16,7 +16,7 @@ const ModalContainer = styled.div`
     }
     header {
         padding: 1vw;
-        background-color:#00af52;
+        background-color: #4895EF;
     }
 
     div {
@@ -83,7 +83,7 @@ const ModalText = styled.p`
 `
 
 const OkButton = styled.button`
-    background-color: #00af52;
+    background-color: #4895EF;
     margin: 0 auto;
     width: 12vw;
     margin-bottom: 2vw;
