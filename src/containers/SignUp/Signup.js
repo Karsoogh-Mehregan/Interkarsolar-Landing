@@ -5,35 +5,45 @@ import {
     InputLabel,
     Input,
     CenterContainer,
-    SubmitButton
-
+    SubmitButton,
+    Title,
+    ErrorText,
+    SubmitText,
 } from './SignupStyle.js'
+import { toPersianNumber } from '../../utils/translateNumber';
 import React, {useState, useEffect, useCallback} from 'react'
 function Signup(){
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:""});
     const [paymentUrl, setPaymentUrl] = useState();
+    const [errors, setErrors] = useState({});
 
     // useEffect(() => {
     //     console.log(value)
     //   },[value]);
 
     const handleChange = e => {
+        if (e.target.name === "ID" || e.target.name === "phone")
+        {
+            e.target.value = toPersianNumber(e.target.value);
+        }
         setValue({...value, [e.target.name]: e.target.value});
     }
     const verify = () => {
-        console.log(value)
+        // console.log(value)
+        let err = {};
         if(value['firstname']=="")
-            alert("فیلد نام نباید خالی باشه");
-        else if(value['lastname'] == "")
-            alert("فیلد نام خانوادگی نباید خالی باشه");
-        else if(value['ID'].length != 10)
-            alert("کد ملی باید 10 رقم باشه");
-        else if(value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')){
-            alert(" شماره همراه نامعتبر است ")
+            err["firstname"] = "فیلد نام نباید خالی باشه";
+        if (value['lastname'] == "")
+            err["lastname"] = "فیلد نام خانوادگی نباید خالی باشه";
+        if (value['ID'].length != 10)
+            err["ID"] = "کد ملی باید 10 رقم باشه";
+        if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')) {
+            err["phone"] = " شماره همراه نامعتبر است ";
         }
-        else
+        if(err.length==0)
             signupHandler();
-
+        
+        setErrors(err);
     }
     const signupHandler = useCallback(async () => {
         try {
@@ -63,27 +73,39 @@ function Signup(){
         return(
         <Bg>
             <CenterContainer>
-            <h1>ثبت نام مرحله سوم</h1>
+            <Title>ثبت نام مرحله سوم</Title>
             <FormContainer>
                 <InputContainer>
+                    <InputLabel> نام :</InputLabel>
                     <Input name='firstname' type ='text' onChange={handleChange}/>
-                    <InputLabel>: نام</InputLabel>
                 </InputContainer>
+                {errors["firstname"] && (
+                <ErrorText> {errors["firstname"]}</ErrorText>
+                )}
                 <InputContainer>
+                    <InputLabel>  نام‌خانوادگی :</InputLabel>
                     <Input name='lastname' type ='text' onChange={handleChange}/>
-                    <InputLabel> : نام خانوادگی</InputLabel>
                 </InputContainer>
+                {errors["lastname"] && (
+                <ErrorText> {errors["lastname"]}</ErrorText>
+                )}
+                <InputContainer >
+                    <InputLabel placeholder='09'> شماره تلفن :</InputLabel>
+                    <Input name='phone' type ='text' id="LEFT" onChange={handleChange} />
+                </InputContainer>
+                {errors["phone"] && (
+                <ErrorText> {errors["phone"]}</ErrorText>
+                )}       
                 <InputContainer>
-                    <Input name='phone' type ='text' onChange={handleChange}/>
-                    <InputLabel placeholder='09'> : شماره تلفن</InputLabel>
+                    <InputLabel>  کدملی :</InputLabel>
+                    <Input name='ID' type ='text' id="LEFT" onChange={handleChange}/>
                 </InputContainer>
-                <InputContainer>
-                    <Input name='ID' type ='text' onChange={handleChange}/>
-                    <InputLabel> : کدملی</InputLabel>
-                </InputContainer>
+                {errors["ID"] && (
+                <ErrorText> {errors["ID"]}</ErrorText>
+                )}      
             </FormContainer>
             <SubmitButton onClick={verify}>پرداخت</SubmitButton>
-            <h2>هزینه ثبت نام : 150 هزار تومان</h2>
+            <SubmitText>هزینه ثبت نام : ۱۵۰ هزار تومان</SubmitText>
             </CenterContainer>
         </Bg>
     );
