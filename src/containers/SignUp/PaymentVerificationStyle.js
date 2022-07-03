@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { OkButton } from '../Modal/ModalStyle'
+import { OkButton } from '../../components/Modal/ModalStyle'
 
 const Container = styled.div`
     background-color: #2A2929;
