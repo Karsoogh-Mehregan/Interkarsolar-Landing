@@ -1,17 +1,23 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 
-import AboutUs from '../containers/AboutUs';
+// import AboutUs from '../containers/AboutUs';
 import Landing from '../containers/Landing/';
-import OurTeam from '../containers/OurTeam';
+// import OurTeam from '../containers/OurTeam';
+import Signup from '../containers/SignUp/Signup'
+import Welcome from '../containers/SignUp/welcome'
 
 const Root = () => {
   return (
-    <Switch>
-      <Route path="/about_us" component={AboutUs} />
-      <Route path="/our_team" component={OurTeam} />
-      <Route path="/" component={Landing} />
-    </Switch>
+    <div className="App">
+      {/* <Route path="/about_us" component={AboutUs} /> */}
+      {/* <Route path="/our_team" component={OurTeam} /> */}
+      <Routes>
+        <Route exact path='/' element = {<Landing />} />
+        <Route path='/sign_up' element = {<Signup />} />
+        <Route path='/validation' element = {<Welcome />} />
+      </Routes>
+  </div>
   );
 };
 export default Root;
