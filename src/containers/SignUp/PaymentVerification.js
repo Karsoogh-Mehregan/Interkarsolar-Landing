@@ -6,7 +6,7 @@ import {
     BackButton
 } from "./PaymentVerificationStyle";
 import { Link } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 //import QueryString from "qs";
 
 const PaymentVerification = props => {
