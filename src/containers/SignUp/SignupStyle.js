@@ -3,7 +3,7 @@ import { OkButton } from '../../components/Modal/ModalStyle'
 export const Bg = styled.div`
     background-color: #650088;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;

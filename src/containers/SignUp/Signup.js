@@ -36,7 +36,7 @@ function Signup(){
         if (value['lastname'] == "")
             err["lastname"] = "فیلد نام خانوادگی نباید خالی باشه";
         if (value['ID'].length != 10)
-            err["ID"] = "کد ملی باید 10 رقم باشه";
+            err["ID"] = "کد ملی باید ۱۰ رقم باشه";
         if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')) {
             err["phone"] = " شماره همراه نامعتبر است ";
         }
