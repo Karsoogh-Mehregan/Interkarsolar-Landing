@@ -1,11 +1,12 @@
 import {
   Container,
   Grid,
-  makeStyles,
   Typography,
+  makeStyles,
 } from '@material-ui/core';
-import { React } from 'react';
+
 import PersonCard from '../../components/Cards/PersonCard';
+import { React } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   section: {

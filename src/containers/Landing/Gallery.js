@@ -1,11 +1,11 @@
 import {
   Container,
-  Grid,
-  makeStyles,
   Typography,
+  makeStyles,
 } from '@material-ui/core';
-import { React } from 'react';
+
 import ImageGallery from 'react-image-gallery';
+import { React } from 'react';
 
 const images = [
   {

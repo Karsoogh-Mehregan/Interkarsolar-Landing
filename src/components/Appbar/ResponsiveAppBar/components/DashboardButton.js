@@ -1,6 +1,6 @@
-import { Button, Icon, makeStyles, Typography } from '@material-ui/core';
+import { Button, Icon, makeStyles } from '@material-ui/core';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(() => ({
   iconImage: {

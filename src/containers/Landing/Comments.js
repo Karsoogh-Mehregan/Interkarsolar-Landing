@@ -1,13 +1,12 @@
 import {
   Container,
-  Grid,
-  makeStyles,
   Typography,
+  makeStyles,
 } from '@material-ui/core';
-import { React } from 'react';
-import Carousel from "react-multi-carousel";
 
+import Carousel from "react-multi-carousel";
 import Comment from '../../components/Cards/Comment';
+import { React } from 'react';
 
 const responsive = {
   desktop: {

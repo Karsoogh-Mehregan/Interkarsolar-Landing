@@ -1,11 +1,11 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core';
+import { Typography, makeStyles } from '@material-ui/core';
+
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
-import { withStyles } from '@material-ui/core/styles';
 import React from 'react';
-
 import questions from './Questions';
+import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   text: {

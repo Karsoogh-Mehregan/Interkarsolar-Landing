@@ -11,7 +11,7 @@ import {
     SubmitText,
 } from './SignupStyle.js'
 import { toPersianNumber } from '../../utils/translateNumber';
-import React, {useState, useEffect, useCallback} from 'react'
+import React, {useState, /*useEffect,*/ useCallback} from 'react'
 function Signup(){
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:""});
     const [paymentUrl, setPaymentUrl] = useState();

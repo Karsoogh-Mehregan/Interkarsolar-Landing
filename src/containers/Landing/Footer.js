@@ -3,7 +3,7 @@ import {
   Instagram as InstagramIcon,
   Telegram as TelegramIcon,
 } from '@material-ui/icons';
-import LanguageIcon from '@material-ui/icons/Language';
+// import LanguageIcon from '@material-ui/icons/Language';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({

@@ -1,10 +1,13 @@
-import { Button, Card, Chip, Divider, Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Card,
+  Divider,
+  Grid,
+  Typography
+} from '@material-ui/core';
 
-import { toPersianNumber } from '../../utils/translateNumber';
+// import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   notificationTitle: {
@@ -40,7 +43,7 @@ const Index = ({
   name,
   description,
   comment,
-  image = `${process.env.PUBLIC_URL}/default-profile.png`,
+  // image = `${process.env.PUBLIC_URL}/default-profile.png`,
 }) => {
   const classes = useStyles();
 

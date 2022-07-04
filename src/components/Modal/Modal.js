@@ -1,12 +1,12 @@
 import {
-    ModalContainer,
     BackDrop,
-    ModalTitle,
+    ModalContainer,
     ModalText,
-    OkButton
+    ModalTitle,
+    OkButton,
 } from "./ModalStyle";
-import React from 'react'
 
+import React from 'react'
 
 const Modal = ({ Title, Text, onConfirm, btnText}) => {
     return (

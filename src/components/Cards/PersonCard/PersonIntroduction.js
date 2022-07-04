@@ -1,14 +1,14 @@
 import {
   Dialog,
-  DialogContent,
   Grid,
   Hidden,
-  makeStyles,
   Typography,
+  makeStyles,
 } from '@material-ui/core';
+
 import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((/*theme*/) => ({
   image: (props) => ({
     height: '300px',
     background: `url(${props.picture})`,
