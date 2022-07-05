@@ -15,7 +15,7 @@ const PaymentVerification = props => {
     const verificationCheckHandler = useCallback(async () => {
         try {
             const response = await fetch("http://localhost:8000/api/p/successfull-payment/");
-            if (response.status === 200) {
+            if (response.status === 201) {
                 if(response['payment'] == 'successfull')
                     setPaid(1);
                 else
