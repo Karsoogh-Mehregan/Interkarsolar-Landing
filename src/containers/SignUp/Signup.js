@@ -13,7 +13,7 @@ import {
 import { toPersianNumber } from '../../utils/translateNumber';
 import React, {useState, /*useEffect,*/ useCallback} from 'react'
 function Signup(){
-    const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:""});
+    const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
 
@@ -27,6 +27,9 @@ function Signup(){
             e.target.value = toPersianNumber(e.target.value);
         }
         setValue({...value, [e.target.name]: e.target.value});
+    }
+    const set_username = () => {
+        setValue({...value, ['username']: ID });
     }
     const verify = () => {
         // console.log(value)
@@ -45,7 +48,10 @@ function Signup(){
         if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('۰۹')) {
             err["phone"] = " شماره همراه نامعتبر است. ";
         }
+
+        
         if (Object.keys(err).length == 0) {
+            set_username();
             signupHandler();  
         }
         else
@@ -55,7 +61,7 @@ function Signup(){
     }
     const signupHandler = useCallback(async () => {
         try {
-          const response = await fetch("https://interkarsolar.ir/backend", {
+          const response = await fetch("http://localhost:8000/api/u/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(value)
