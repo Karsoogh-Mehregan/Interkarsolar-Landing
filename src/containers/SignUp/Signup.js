@@ -70,7 +70,7 @@ function Signup(){
           const jsonRes = await response.json();
     
           if (response.status === 200) {
-            setPaymentUrl(jsonRes.url);
+            setPaymentUrl("http://localhost:8000/api/p/go-to-bank-gateway");
           } else {
             const errors = jsonRes;
             alert(errors);
