@@ -13,10 +13,12 @@ import {
 import { toPersianNumber } from '../../utils/translateNumber';
 import { toEnglishNumber } from '../../utils/translateNumber';
 import React, { useState, useEffect, useCallback } from 'react';
+import Modal from '../../components/Modal/Modal.js';
 function Signup() {
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
+    const [showModal,setShowModal] = useState(false);
 
     useEffect(() => {
         setValue({...value, ['username']: value["ID"] });
@@ -50,7 +52,7 @@ function Signup() {
             err["lastname"] = "فیلد نام‌خانوادگی نباید خالی باشه.";
         if (value['ID'].length != 10)
             err["ID"] = "کدملی باید ۱۰ رقم باشه.";
-        if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('۰۹')) {
+        if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')) {
             err["phone"] = " شماره همراه نامعتبر است. ";
         }
 
@@ -74,6 +76,7 @@ function Signup() {
           console.log(jsonRes);
           if (response.status === 201) {
             setPaymentUrl("http://localhost:8000/api/p/go-to-bank-gateway");
+            setShowModal(true);
           } else {
             const errors = jsonRes;
             alert(errors);
@@ -89,6 +92,7 @@ function Signup() {
    
         return(
         <Bg>
+            {showModal && <Modal Title={"موفق"} Text={" ثبت نام شما موفقیت آمیز بود. به درگاه پرداخت هدایت میشوید"} onConfirm ={redirectToPayment} btnText="ادامه"/>}
             <CenterContainer>
             <Title>ثبت‌نام مرحله سوم</Title>
             <FormContainer>
