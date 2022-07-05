@@ -13,8 +13,9 @@ export const BgContainer = styled.div`
 `
 export const Astronaut = styled.img`
     margin-bottom:1rem;
-    max-height : 73vh;
-    max-width : 35vw;
+    max-height : 83vh;
+    max-width : 40vw;
+    
     @media screen and (max-width:600px){
         display:none;
       }

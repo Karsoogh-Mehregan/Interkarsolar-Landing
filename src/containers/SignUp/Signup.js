@@ -11,6 +11,7 @@ import {
     SubmitText,
 } from './SignupStyle.js'
 import { toPersianNumber } from '../../utils/translateNumber';
+import { toEnglishNumber } from '../../utils/translateNumber';
 import React, {useState, /*useEffect,*/ useCallback} from 'react'
 function Signup(){
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
@@ -24,12 +25,15 @@ function Signup(){
     const handleChange = e => {
         if (e.target.name === "ID" || e.target.name === "phone")
         {
+            // setValue({...value, [e.target.name]: toEnglishNumber(e.target.value)});
             e.target.value = toPersianNumber(e.target.value);
         }
-        setValue({...value, [e.target.name]: e.target.value});
+        // else {
+            setValue({...value, [e.target.name]: e.target.value});
+        // }
     }
     const set_username = () => {
-        setValue({...value, ['username']: ID });
+        setValue({...value, ['username']: value["ID"] });
     }
     const verify = () => {
         // console.log(value)
@@ -61,14 +65,14 @@ function Signup(){
     }
     const signupHandler = useCallback(async () => {
         try {
-          const response = await fetch("http://localhost:8000/api/u/", {
+          const response = await fetch("http://localhost:8000/api/u/auth/users/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(value)
           });
-    
+          console.log(JSON.stringify(value));
           const jsonRes = await response.json();
-    
+          console.log(jsonRes);
           if (response.status === 200) {
             setPaymentUrl("http://localhost:8000/api/p/go-to-bank-gateway");
           } else {

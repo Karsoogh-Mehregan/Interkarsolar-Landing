@@ -66,7 +66,7 @@ function Welcome(){
     }
     return(
         <>
-         {showModal && accepted && <Modal Title="تبریک!" Text=" تبریک میگیم در مرحله دوم پذیرفته شدی, برای ادامه مراحل روی دکمه ثبت‌نام کلیک کنید :)" onConfirm={redirectToSignup} btnText="ثبت نام"/>}
+         {showModal && accepted && <Modal Title="تبریک!" Text=" تبریک میگیم در مرحله دوم پذیرفته شدی، برای ادامه مراحل روی دکمه ثبت‌نام کلیک کنید :)" onConfirm={redirectToSignup} btnText="ثبت نام"/>}
          {showModal && !accepted && <Modal Title="به امید دیدار!" Text="متاسفانه در این ایستگاه از سفر فضایی مون باید با شما خداحافظی کنیم." onConfirm={redirectToHome} btnText="بازگشت"/>}
         <BgContainer >
             <RightContainer>
@@ -79,7 +79,7 @@ function Welcome(){
                 <InputContainer id='stuID' type='text' onChange={handleChange}/>
                 <Btn onClick={verify} disabled = {!valid}>ارسال</Btn>
             </RightContainer>
-            <Astronaut src = {process.env.PUBLIC_URL + '/spaceman6.png'}/>
+            <Astronaut src = {process.env.PUBLIC_URL + '/RegistrationExtension.png'}/>
         </BgContainer >  
         </>
 
