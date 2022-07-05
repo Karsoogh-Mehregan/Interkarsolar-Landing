@@ -12,8 +12,8 @@ import {
 } from './SignupStyle.js'
 import { toPersianNumber } from '../../utils/translateNumber';
 import { toEnglishNumber } from '../../utils/translateNumber';
-import React, {useState, useEffect, useCallback} from 'react'
-function Signup(){
+import React, { useState, useEffect, useCallback } from 'react';
+function Signup() {
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
@@ -21,9 +21,7 @@ function Signup(){
     useEffect(() => {
         setValue({...value, ['username']: value["ID"] });
        },[value['ID']]);
-    // useEffect(() => {
-    //     console.log(value)
-    //   },[value]);
+
 
     const handleChange = e => {
         if (e.target.name === "ID" || e.target.name === "phone")
@@ -94,31 +92,31 @@ function Signup(){
         return(
         <Bg>
             <CenterContainer>
-            <Title>ثبت نام مرحله سوم</Title>
+            <Title>ثبت‌نام مرحله سوم</Title>
             <FormContainer>
                 <InputContainer>
-                    <InputLabel> نام :</InputLabel>
+                    <InputLabel> نام:</InputLabel>
                     <Input name='firstname' type ='text' onChange={handleChange}/>
                 </InputContainer>
                 {errors["firstname"] && (
                 <ErrorText> {errors["firstname"]}</ErrorText>
                 )}
                 <InputContainer>
-                    <InputLabel>  نام‌خانوادگی :</InputLabel>
+                    <InputLabel>  نام‌خانوادگی:</InputLabel>
                     <Input name='lastname' type ='text' onChange={handleChange}/>
                 </InputContainer>
                 {errors["lastname"] && (
                 <ErrorText> {errors["lastname"]}</ErrorText>
                 )}
                 <InputContainer >
-                    <InputLabel placeholder='۰۹'> شماره تلفن :</InputLabel>
+                    <InputLabel placeholder='۰۹'> شماره تلفن:</InputLabel>
                     <Input name='phone' type ='text' id="LEFT" onChange={handleChange} />
                 </InputContainer>
                 {errors["phone"] && (
                 <ErrorText> {errors["phone"]}</ErrorText>
                 )}       
                 <InputContainer>
-                    <InputLabel>  کدملی :</InputLabel>
+                    <InputLabel>  کدملی:</InputLabel>
                     <Input name='ID' type ='text' id="LEFT" onChange={handleChange}/>
                 </InputContainer>
                 {errors["ID"] && (
@@ -126,7 +124,7 @@ function Signup(){
                 )}      
             </FormContainer>
             <SubmitButton onClick={verify}>پرداخت</SubmitButton>
-            <SubmitText>هزینه ثبت نام : ۱۵۰ هزار تومان</SubmitText>
+            <SubmitText>هزینه ثبت‌نام: ۱۵۰ هزارتومان</SubmitText>
             </CenterContainer>
         </Bg>
     );
