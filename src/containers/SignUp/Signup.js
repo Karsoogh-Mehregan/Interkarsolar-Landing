@@ -54,15 +54,13 @@ function Signup() {
             err["phone"] = " شماره همراه نامعتبر است. ";
         }
 
+        setErrors(err);
         
         if (Object.keys(err).length == 0) {
             set_username();
             signupHandler();  
         }
-        else
-        {
-            setErrors(err);
-        }
+        
     }
     const signupHandler = useCallback(async () => {
         try {

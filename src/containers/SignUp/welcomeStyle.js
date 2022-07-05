@@ -71,3 +71,17 @@ export const Btn = styled.button`
         padding: 1.5% 8%;
     }
 `
+
+export const ErrorText = styled.div`
+    color: red;
+    font-size: 0.9vw;
+    font-weight:500;
+    margin: auto;
+    padding-right: 16vw;
+    text-align: right;
+    width: 95%;
+    @media screen and (max-width: 768px){
+    font-size: 2.5vw;
+    padding-right: 25vw;
+    }
+`;

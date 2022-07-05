@@ -1,23 +1,26 @@
 import {
-    BgContainer,
     Astronaut,
+    BgContainer,
+    Btn,
+    ErrorText,
+    InputContainer,
+    InputText,
     RightContainer,
     TextContainer,
-    InputText,
-    InputContainer,
-    Btn
 } from './welcomeStyle'
 import { toPersianNumber } from '../../utils/translateNumber';
 import Modal from '../../components/Modal/Modal';
 import React, { useState, useEffect, useCallback } from 'react'
 import {useNavigate} from 'react-router-dom'
+import { CodeSharp } from '@material-ui/icons';
 
 
 function Welcome(){
     const [valid,setValid] = useState(false);
     const [accepted, setAccepted] = useState(false);
     const [ID,setID] = useState('1111111111');
-    const [showModal,setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [errors, setErrors] = useState({});
     const navigate = useNavigate()
    
     const handleChange = event => {
@@ -53,10 +56,14 @@ function Welcome(){
       }, [ID]);   
   
     const verify = () => {
-        if(valid)
-            checkAcceptance();
-        else
-            alert("کد ملی باید 10 رقم باشه");
+      let err = {};
+
+      if (valid)
+      checkAcceptance();
+      else
+        err["ID"] = "کدملی باید ۱۰ رقم باشه.";
+
+      setErrors(err);
     }
     const redirectToSignup = () => {
         navigate('/sign_up');
@@ -76,7 +83,8 @@ function Welcome(){
                 <InputText>
                     کد ملی خود را وارد کنید:
                 </InputText>
-                <InputContainer id='stuID' type='text' onChange={handleChange}/>
+                <InputContainer id='stuID' type='text' onChange={handleChange} />
+                {errors["ID"] && (<ErrorText> {errors["ID"]}</ErrorText>)}
                 <Btn onClick={verify} disabled = {!valid}>ارسال</Btn>
             </RightContainer>
             <Astronaut src = {process.env.PUBLIC_URL + '/RegistrationExtension.png'}/>
