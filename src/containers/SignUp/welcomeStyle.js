@@ -34,7 +34,7 @@ export const TextContainer = styled.h1`
 `
 export const InputContainer = styled.input`
     background-color: transparent;
-    border-radius: 2vh;
+    border-radius: 13px;
     border:0.2vw solid white;
     bottom:25%;
     color: white;
@@ -52,6 +52,7 @@ export const InputText = styled.h2`
 export const Btn = styled.button`
     align-items: center;
     background-color: #B5179E; //primary color
+    border: none;
     border-radius: 0.8vw;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     color: white;
@@ -61,7 +62,7 @@ export const Btn = styled.button`
     line-height: 1.75;
     padding:0.5% 5%;
     &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition-duration: 0.1s;
     }
     @media screen and (max-width: 768px){
