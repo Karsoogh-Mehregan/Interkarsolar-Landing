@@ -31,19 +31,22 @@ function Signup(){
     const verify = () => {
         // console.log(value)
         let err = {};
-        if(value['firstname']=="")
-            err["firstname"] = "فیلد نام نباید خالی باشه";
+        if (value['firstname'] == "")
+            err["firstname"] = "فیلد نام نباید خالی باشه.";
         if (value['lastname'] == "")
-            err["lastname"] = "فیلد نام خانوادگی نباید خالی باشه";
+            err["lastname"] = "فیلد نام خانوادگی نباید خالی باشه.";
         if (value['ID'].length != 10)
-            err["ID"] = "کد ملی باید ۱۰ رقم باشه";
-        if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')) {
-            err["phone"] = " شماره همراه نامعتبر است ";
+            err["ID"] = "کد ملی باید ۱۰ رقم باشه.";
+        if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('۰۹')) {
+            err["phone"] = " شماره همراه نامعتبر است. ";
         }
-        if(err.length==0)
-            signupHandler();
-        
-        setErrors(err);
+        if (Object.keys(err).length == 0) {
+            signupHandler();  
+        }
+        else
+        {
+            setErrors(err);
+        }
     }
     const signupHandler = useCallback(async () => {
         try {
@@ -90,7 +93,7 @@ function Signup(){
                 <ErrorText> {errors["lastname"]}</ErrorText>
                 )}
                 <InputContainer >
-                    <InputLabel placeholder='09'> شماره تلفن :</InputLabel>
+                    <InputLabel placeholder='۰۹'> شماره تلفن :</InputLabel>
                     <Input name='phone' type ='text' id="LEFT" onChange={handleChange} />
                 </InputContainer>
                 {errors["phone"] && (
