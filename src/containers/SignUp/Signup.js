@@ -12,12 +12,15 @@ import {
 } from './SignupStyle.js'
 import { toPersianNumber } from '../../utils/translateNumber';
 import { toEnglishNumber } from '../../utils/translateNumber';
-import React, {useState, /*useEffect,*/ useCallback} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 function Signup(){
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
 
+    useEffect(() => {
+        setValue({...value, ['username']: value["ID"] });
+       },[value['ID']]);
     // useEffect(() => {
     //     console.log(value)
     //   },[value]);
@@ -25,12 +28,12 @@ function Signup(){
     const handleChange = e => {
         if (e.target.name === "ID" || e.target.name === "phone")
         {
-            // setValue({...value, [e.target.name]: toEnglishNumber(e.target.value)});
+            setValue({...value, [e.target.name]: toEnglishNumber(e.target.value)});
             e.target.value = toPersianNumber(e.target.value);
         }
-        // else {
+        else {
             setValue({...value, [e.target.name]: e.target.value});
-        // }
+        }
     }
     const set_username = () => {
         setValue({...value, ['username']: value["ID"] });
