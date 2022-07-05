@@ -9,7 +9,7 @@ import {
 } from './welcomeStyle'
 import { toPersianNumber } from '../../utils/translateNumber';
 import Modal from '../../components/Modal/Modal';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import {useNavigate} from 'react-router-dom'
 
 
@@ -20,12 +20,6 @@ function Welcome(){
     const [showModal,setShowModal] = useState(false);
     const navigate = useNavigate()
    
-    const Id_array = [
-        //TODO: complete the array
-        '۱۲۷۳۷۸۹۸۵۷',
-        '۱۲۷۳۸۵۰۵۱۳',
-        '۱۲۳۴۵۶۷۸۹۰'
-    ]
     const handleChange = event => {
         document.getElementById("stuID").value = toPersianNumber(event.target.value);
         setID(event.target.value);
@@ -34,14 +28,36 @@ function Welcome(){
     useEffect(() => {
         const len = ID.length;
         setValid(len == 10);
-        setAccepted(Id_array.includes(ID));
       },[ID]);
  
-      const chceckAcceptance = () => {
-        setAccepted(Id_array.includes(ID));
-        setShowModal(true);
-    }
+    const checkAcceptance = useCallback(async () => {
+        try {
+          const response = await fetch("http://localhost:8000/api/checker/", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({student_number: ID})
+          });
+
+          const jsonRes = await response.json();
+
+          if (jsonRes['status'] == 'true') {
+            setAccepted(true);
+            setShowModal(true);
+          } else {
+            setAccepted(false);
+            setShowModal(true);
+          }
+        } catch (error) {
+          console.log(error.message);
+        }
+      }, [ID]);   
   
+    const verify = () => {
+        if(valid)
+            checkAcceptance();
+        else
+            alert("کد ملی باید 10 رقم باشه");
+    }
     const redirectToSignup = () => {
         navigate('/sign_up');
     }
@@ -61,7 +77,7 @@ function Welcome(){
                     کد ملی خود را وارد کنید:
                 </InputText>
                 <InputContainer id='stuID' type='text' onChange={handleChange}/>
-                <Btn onClick={chceckAcceptance} disabled = {!valid}>ارسال</Btn>
+                <Btn onClick={verify} disabled = {!valid}>ارسال</Btn>
             </RightContainer>
             <Astronaut src = {process.env.PUBLIC_URL + '/spaceman6.png'}/>
         </BgContainer >  
