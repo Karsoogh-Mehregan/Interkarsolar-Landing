@@ -10,35 +10,29 @@ import React, { useState, useEffect, useCallback } from "react";
 //import QueryString from "qs";
 
 const PaymentVerification = props => {
-     const [paid, setPaid] = useState(0); //TODO: set it to -1
-    // const queries = QueryString.parse(props.location.search, { ignoreQueryPrefix: true });
-    // window.history.replaceState('', '', document.location.origin + "/paymentcallback");
+     const [paid, setPaid] = useState(-1);
 
-    // const verificationCheckHandler = useCallback(async () => {
-    //     try {
-    //         const response = await fetch("https://api.github.com", {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify(queries)
-    //         });
+    const verificationCheckHandler = useCallback(async () => {
+        try {
+            const response = await fetch("http://localhost:8000/api/p/successfull-payment/");
+            if (response.status === 201) {
+                if(response['payment'] == 'successfull')
+                    setPaid(1);
+                else
+                    setPaid(0);
+            } 
+            
+            else {
+                throw new Error('Something went wrong!');
+            }
+        } catch (error) {
+            console.log(error.message);
+        }
+    }, []);
 
-    //         if (response.status === 200) {
-    //             setPaid(1);
-    //         } else {
-    //             setPaid(0);
-    //         }
-    //     } catch (error) {
-    //         console.log(error.message);
-    //     }
-    // }, []);
-
-    // useEffect(() => {
-    //     if (queries.Status !== "NOK") {
-    //         verificationCheckHandler();
-    //     } else {
-    //         setPaid(0);
-    //     }
-    // }, [verificationCheckHandler])
+    useEffect(() => {
+            verificationCheckHandler();
+    }, [verificationCheckHandler])
 
     return (
         <Container>
