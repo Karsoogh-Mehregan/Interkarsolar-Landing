@@ -31,12 +31,17 @@ function Signup(){
     const verify = () => {
         // console.log(value)
         let err = {};
+        var persian = /^[\u0600-\u06FF\s]+$/;
+        if (!persian.test(value['firstname'])) 
+            err["firstname"] = "فیلد نام باید فارسی باشه.";
         if (value['firstname'] == "")
             err["firstname"] = "فیلد نام نباید خالی باشه.";
+        if (!persian.test(value['lastname'])) 
+            err["lastname"] = "فیلد نام‌خانوادگی باید فارسی باشه.";
         if (value['lastname'] == "")
-            err["lastname"] = "فیلد نام خانوادگی نباید خالی باشه.";
+            err["lastname"] = "فیلد نام‌خانوادگی نباید خالی باشه.";
         if (value['ID'].length != 10)
-            err["ID"] = "کد ملی باید ۱۰ رقم باشه.";
+            err["ID"] = "کدملی باید ۱۰ رقم باشه.";
         if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('۰۹')) {
             err["phone"] = " شماره همراه نامعتبر است. ";
         }
