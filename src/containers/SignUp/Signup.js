@@ -104,16 +104,16 @@ function Signup() {
                     })
                   });
                   const jsonRes2 = await response2.json();
-                //  if (response2.status === 201) {
+                  if (response2.status === 200) {
                     accessToken = jsonRes2.access
                     console.log(jsonRes2)
                     level2 = true;
-                // }
-                // else{             
-                //     const errors = jsonRes2;
-                //     alert(errors);
-                //     console.log(errors)
-                //   }
+                }
+                else{             
+                    const errors = jsonRes2.non_field_errors;
+                    alert(errors);
+                    console.log(errors)
+                  }
                 } catch (error) {
                   console.log(error.message);}
         }
@@ -129,11 +129,13 @@ function Signup() {
                 },
                   });
                   const jsonRes3 = await response3.json();
-                  if (response3.status === 201) {
-                    setPaymentUrl(jsonRes3.url)
+                  if (response3.status === 200) {
+                    setPaymentUrl(jsonRes3.payment_link)
+                    setShowModal(true)
+                    console.log(paymentUrl)
                 }
                 else{             
-                    const errors = jsonRes3;
+                    const errors = jsonRes3.non_field_errors;
                     alert(errors);
                   }
                 } catch (error) {
