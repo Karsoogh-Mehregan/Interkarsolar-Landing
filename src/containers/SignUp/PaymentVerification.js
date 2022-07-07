@@ -7,23 +7,25 @@ import {
 } from "./PaymentVerificationStyle";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useCallback } from "react";
-//import QueryString from "qs";
+import QueryString from "qs";
 
 const PaymentVerification = props => {
      const [paid, setPaid] = useState(-1);
-
-    const verificationCheckHandler = useCallback(async () => {
+     const queries = QueryString.parse(props.location.search, { ignoreQueryPrefix: true });
+     window.history.replaceState('', '', document.location.origin + "/paymentcallback");
+     
+     const verificationCheckHandler = useCallback(async () => {
         try {
-            const response = await fetch("http://localhost:8000/api/p/successfull-payment/");
+            const response = await fetch("http://localhost:8000/api/purchase/", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(queries)
+            });
+
             if (response.status === 201) {
-                if(response['payment'] == 'successfull')
-                    setPaid(1);
-                else
-                    setPaid(0);
-            } 
-            
-            else {
-                throw new Error('Something went wrong!');
+                setPaid(1);
+            } else {
+                setPaid(0);
             }
         } catch (error) {
             console.log(error.message);
@@ -31,7 +33,11 @@ const PaymentVerification = props => {
     }, []);
 
     useEffect(() => {
+        if (queries.Status !== "NOK") {
             verificationCheckHandler();
+        } else {
+            setPaid(0);
+        }
     }, [verificationCheckHandler])
 
     return (
