@@ -120,12 +120,12 @@ function Signup() {
         console.log(accessToken)
         if(level2){
             try{
-                const response3 = await fetch("http://localhost:8000/api/purchase", {
+                const response3 = await fetch("http://localhost:8000/api/purchase/", {
                     method: 'POST',
                     headers: { 
                               'Authorization': `JWT ${accessToken}`,
                               'Accept' : 'application/json',             
-                               'Content-Type': 'application/json',
+                              'Content-Type': 'application/json',
                 },
                   });
                   const jsonRes3 = await response3.json();
