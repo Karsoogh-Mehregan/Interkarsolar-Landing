@@ -2,20 +2,15 @@ import styled from "styled-components";
 import { OkButton } from '../../components/Modal/ModalStyle'
 
 const Container = styled.div`
-    background-color: #2A2929;
-    background-image: url(${process.env.PUBLIC_URL + '/background5.png'});
-    width: 100%;
-    min-height: 85vh;
-    padding-top: 15vh;
-    display: flex;
-    flex-direction: row;
-    background-size: cover;
-    justify-content: center;
-
-  @media screen and (max-width:600px){
-    padding: 0;
-    align-items: center;
-  }
+  align-items: center;
+  background-color: #2A2929;
+  background-image: url(${process.env.PUBLIC_URL + '/background5.png'});
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  padding:0 5vw;
+  width: 100%;
 `;
 
 const CenterContainer = styled.div`
@@ -36,6 +31,7 @@ const CenterContainer = styled.div`
   @media screen and (max-width:600px){
     width: 70%;
     margin: 13vh auto;
+    border: 3px solid black;
   }
 `;
 
@@ -54,6 +50,7 @@ const HeadingText = styled.h1`
 
   @media screen and (max-width:600px){
     font-size: 4.8vw;
+    border-bottom: 3px solid black;
   }
 `;
 

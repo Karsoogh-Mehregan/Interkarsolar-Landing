@@ -12,7 +12,6 @@ import { toPersianNumber } from '../../utils/translateNumber';
 import Modal from '../../components/Modal/Modal';
 import React, { useState, useEffect, useCallback } from 'react'
 import {useNavigate} from 'react-router-dom'
-import { CodeSharp } from '@material-ui/icons';
 
 
 function Welcome(){
