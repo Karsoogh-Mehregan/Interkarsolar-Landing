@@ -3,10 +3,11 @@ import {Route, Routes} from 'react-router-dom';
 
 // import AboutUs from '../containers/AboutUs';
 import Landing from '../containers/Landing/';
+import PaymentVerification1 from '../containers/SignUp/PaymentVerification1';
+import PaymentVerification2 from '../containers/SignUp/PaymentVerification2';
 // import OurTeam from '../containers/OurTeam';
 import Signup from '../containers/SignUp/Signup'
 import Welcome from '../containers/SignUp/welcome'
-import PaymentVerification from '../containers/SignUp/PaymentVerification';
 
 const Root = () => {
   return (
@@ -17,7 +18,9 @@ const Root = () => {
         <Route exact path='/' element = {<Landing />} />
         <Route path='/sign_up' element = {<Signup />} />
         <Route path='/validation' element = {<Welcome />} />
-        <Route path='/paymentcallback' element = {<PaymentVerification />} />
+        <Route path='/payment_successful' element = {<PaymentVerification1 />} />
+        <Route path='/payment_failed' element = {<PaymentVerification2 />} />;
+        
       </Routes>
   </div>
   );

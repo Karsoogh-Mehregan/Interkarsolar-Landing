@@ -15,14 +15,21 @@ import { toEnglishNumber } from '../../utils/translateNumber';
 import React, { useState, useEffect, useCallback } from 'react';
 import Modal from '../../components/Modal/Modal.js';
 function Signup() {
-    const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:""});
+    const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:"", password:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
     const [showModal,setShowModal] = useState(false);
+    //const [accessToken,setAccessToken] = useState();
+    
+    let level1 = false;
+    let level2 = false;
+    let accessToken;
 
     useEffect(() => {
-        setValue({...value, ['username']: value["ID"] });
+        setValue({...value, ['username']: value["ID"], ['password']: value['ID']});
        },[value['ID']]);
+
+   
 
 
     const handleChange = e => {
@@ -36,7 +43,7 @@ function Signup() {
         }
     }
     const set_username = () => {
-        setValue({...value, ['username']: value["ID"] });
+        setValue({...value, ['username']: value["ID"], ['password']: value['ID']});
     }
     const verify = () => {
         // console.log(value)
@@ -71,19 +78,68 @@ function Signup() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(value)
           });
-          console.log(JSON.stringify(value));
+
           const jsonRes = await response.json();
-          console.log(jsonRes);
+          console.log(JSON.stringify(value))
           if (response.status === 201) {
-            setPaymentUrl("http://localhost:8000/api/p/go-to-bank-gateway");
-            setShowModal(true);
-          } else {
-            const errors = jsonRes;
-            alert(errors);
+            level1 = true;
+        }
+        else{
+            const errors = jsonRes.non_field_errors;
+            console.log(jsonRes)
+            alert(errors);           
           }
         } catch (error) {
           console.log(error.message);
         }
+
+        if(level1){
+            try{
+                const response2 = await fetch("http://localhost:8000/api/u/auth/jwt/create/", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        "username": value['username'],
+                        "password": value['username']
+                    })
+                  });
+                  const jsonRes2 = await response2.json();
+                //  if (response2.status === 201) {
+                    accessToken = jsonRes2.access
+                    console.log(jsonRes2)
+                    level2 = true;
+                // }
+                // else{             
+                //     const errors = jsonRes2;
+                //     alert(errors);
+                //     console.log(errors)
+                //   }
+                } catch (error) {
+                  console.log(error.message);}
+        }
+        console.log(accessToken)
+        if(level2){
+            try{
+                const response3 = await fetch("http://localhost:8000/api/purchase", {
+                    method: 'POST',
+                    headers: { 
+                              'Authorization': `JWT ${accessToken}`,
+                              'Accept' : 'application/json',             
+                               'Content-Type': 'application/json',
+                },
+                  });
+                  const jsonRes3 = await response3.json();
+                  if (response3.status === 201) {
+                    setPaymentUrl(jsonRes3.url)
+                }
+                else{             
+                    const errors = jsonRes3;
+                    alert(errors);
+                  }
+                } catch (error) {
+                  console.log(error.message);}
+        }
+
       }, [value]);
   
       const redirectToPayment = useCallback(
