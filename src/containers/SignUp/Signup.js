@@ -38,7 +38,6 @@ function Signup() {
     }
    
 
-
     const handleChange = e => {
         if (e.target.name === "ID" || e.target.name === "phone")
         {
@@ -75,12 +74,12 @@ function Signup() {
     }
     const signupHandler = useCallback(async () => {
         try {
-          const response = await fetch("http://37.152.181.75:9393/api/u/auth/users/", {
+          const response = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(value)
           });
-
+          console.log(JSON.stringify(value))
           const jsonRes = await response.json();
           if (response.status === 201) {
             level1 = true;
@@ -95,7 +94,7 @@ function Signup() {
 
         if(level1){
             try{
-                const response2 = await fetch("http://37.152.181.75:9393/api/u/auth/jwt/create/", {
+                const response2 = await fetch(process.env.REACT_APP_URL + "/api/u/auth/jwt/create/", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -118,7 +117,7 @@ function Signup() {
 
         if(level2){
             try{
-                const response3 = await fetch("http://37.152.181.75:9393/api/purchase/", {
+                const response3 = await fetch(process.env.REACT_APP_URL + "/api/purchase/", {
                     method: 'POST',
                     headers: { 
                               'Authorization': `JWT ${accessToken}`,

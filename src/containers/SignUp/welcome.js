@@ -9,6 +9,7 @@ import {
     TextContainer,
 } from './welcomeStyle'
 import { toPersianNumber } from '../../utils/translateNumber';
+import { toEnglishNumber } from '../../utils/translateNumber';
 import Modal from '../../components/Modal/Modal';
 import React, { useState, useEffect, useCallback } from 'react'
 import {useNavigate} from 'react-router-dom'
@@ -22,6 +23,8 @@ function Welcome(){
     const [errors, setErrors] = useState({});
     const navigate = useNavigate()
    
+    const { REACT_APP_API_ENDPOINT } = process.env;
+
     const handleChange = event => {
         document.getElementById("stuID").value = toPersianNumber(event.target.value);
         setID(event.target.value);
@@ -34,7 +37,7 @@ function Welcome(){
  
     const checkAcceptance = useCallback(async () => {
         try {
-          const response = await fetch("http://37.152.181.75:9393/api/checker/", {
+          const response = await fetch(process.env.REACT_APP_URL + "/api/checker/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({student_number: ID})
