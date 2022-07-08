@@ -34,7 +34,7 @@ function Welcome(){
  
     const checkAcceptance = useCallback(async () => {
         try {
-          const response = await fetch("http://localhost:8000/api/checker/", {
+          const response = await fetch("http://37.152.181.75:9393/api/checker/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({student_number: ID})
