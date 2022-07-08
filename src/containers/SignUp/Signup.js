@@ -75,7 +75,7 @@ function Signup() {
     }
     const signupHandler = useCallback(async () => {
         try {
-          const response = await fetch("http://37.152.181.75:9393/api/u/auth/users/", {
+          const response = await fetch("https://vpe1.ir/api/u/auth/users/", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(value)
@@ -95,7 +95,7 @@ function Signup() {
 
         if(level1){
             try{
-                const response2 = await fetch("http://37.152.181.75:9393/api/u/auth/jwt/create/", {
+                const response2 = await fetch("https://vpe1.ir/api/u/auth/jwt/create/", {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -118,7 +118,7 @@ function Signup() {
 
         if(level2){
             try{
-                const response3 = await fetch("http://37.152.181.75:9393/api/purchase/", {
+                const response3 = await fetch("https://vpe1.ir/api/purchase/", {
                     method: 'POST',
                     headers: { 
                               'Authorization': `JWT ${accessToken}`,
