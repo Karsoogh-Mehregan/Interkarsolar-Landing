@@ -14,20 +14,28 @@ import { toPersianNumber } from '../../utils/translateNumber';
 import { toEnglishNumber } from '../../utils/translateNumber';
 import React, { useState, useEffect, useCallback } from 'react';
 import Modal from '../../components/Modal/Modal.js';
+import {useLocation} from 'react-router-dom'
+
 function Signup() {
     const [value, setValue] = useState({firstname: "", lastname: "", phone: "", ID:"", username:"", password:""});
     const [paymentUrl, setPaymentUrl] = useState();
     const [errors, setErrors] = useState({});
     const [showModal,setShowModal] = useState(false);
+
+    const location = useLocation();
+    const IDCode = location.state.IDCode;
     
     let level1 = false;
     let level2 = false;
     let accessToken;
 
     useEffect(() => {
-        setValue({...value, ['username']: value["ID"], ['password']: value['ID']});
-       },[value['ID']]);
-
+        set_ID()
+      }, []);
+   
+      const set_ID = () => {
+        setValue({...value,["ID"]: IDCode, ['username']: IDCode, ['password']: IDCode});
+    }
    
 
 
@@ -41,11 +49,7 @@ function Signup() {
             setValue({...value, [e.target.name]: e.target.value});
         }
     }
-    const set_username = () => {
-        setValue({...value, ['username']: value["ID"], ['password']: value['ID']});
-    }
     const verify = () => {
-        // console.log(value)
         let err = {};
         var persian = /^[\u0600-\u06FF\s]+$/;
         if (!persian.test(value['firstname'])) 
@@ -65,7 +69,6 @@ function Signup() {
         setErrors(err);
         
         if (Object.keys(err).length == 0) {
-            set_username();
             signupHandler();  
         }
         
@@ -112,7 +115,7 @@ function Signup() {
                 } catch (error) {
                   console.log(error.message);}
         }
-        console.log(accessToken)
+
         if(level2){
             try{
                 const response3 = await fetch("http://localhost:8000/api/purchase/", {
@@ -171,7 +174,7 @@ function Signup() {
                 )}       
                 <InputContainer>
                     <InputLabel>  کدملی:</InputLabel>
-                    <Input name='ID' type ='text' id="LEFT" onChange={handleChange}/>
+                    <Input name='ID' type ='text' id="LEFT" readOnly value={value['ID']}/>
                 </InputContainer>
                 {errors["ID"] && (
                 <ErrorText> {errors["ID"]}</ErrorText>
