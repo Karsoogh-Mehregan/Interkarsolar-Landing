@@ -68,7 +68,7 @@ function Welcome(){
       setErrors(err);
     }
     const redirectToSignup = () => {
-        navigate('/sign_up', {state:{IDCode: ID}});
+      navigate('/sign_up', {state:{IDCode: toEnglishNumber(ID)}});
     }
     const redirectToHome = () => {
         navigate('/');
