@@ -9,6 +9,7 @@ import {
     TextContainer,
 } from './welcomeStyle'
 import { toPersianNumber } from '../../utils/translateNumber';
+import { toEnglishNumber } from '../../utils/translateNumber';
 import Modal from '../../components/Modal/Modal';
 import React, { useState, useEffect, useCallback } from 'react'
 import {useNavigate} from 'react-router-dom'
@@ -65,7 +66,7 @@ function Welcome(){
       setErrors(err);
     }
     const redirectToSignup = () => {
-        navigate('/sign_up', {state:{IDCode: ID}});
+      navigate('/sign_up', {state:{IDCode: toEnglishNumber(ID)}});
     }
     const redirectToHome = () => {
         navigate('/');
