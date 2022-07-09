@@ -34,7 +34,7 @@ function Signup() {
       }, []);
    
       const set_ID = () => {
-        setValue({...value,["ID"]: IDCode, ['username']: IDCode, ['password']: IDCode});
+        setValue({...value,["ID"]: toPersianNumber(IDCode), ['username']: IDCode, ['password']: IDCode});
     }
    
 
@@ -86,7 +86,9 @@ function Signup() {
         }
         else{
             const errors = jsonRes.non_field_errors;
-            alert(errors);           
+            let err = {};
+            err["last"] = errors;
+            setErrors(err);           
           }
         } catch (error) {
           console.log(error.message);
@@ -109,7 +111,9 @@ function Signup() {
                 }
                 else{             
                     const errors = jsonRes2.non_field_errors;
-                    alert(errors);
+                    let err = {};
+                    err["last"] = errors;
+                    setErrors(err); 
                   }
                 } catch (error) {
                   console.log(error.message);}
@@ -181,6 +185,9 @@ function Signup() {
             </FormContainer>
             <SubmitButton onClick={verify}>پرداخت</SubmitButton>
             <SubmitText>هزینه ثبت‌نام: ۱۵۰ هزارتومان</SubmitText>
+            {errors["last"] && (
+                <ErrorText> {errors["last"]}</ErrorText>
+            )}
             </CenterContainer>
         </Bg>
     );
