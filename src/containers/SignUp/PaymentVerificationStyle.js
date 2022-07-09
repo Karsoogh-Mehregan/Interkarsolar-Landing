@@ -17,7 +17,7 @@ const CenterContainer = styled.div`
   width: 50%;
   margin: auto;
   border-radius: 2vw;
-  background:rgba(220, 219, 220, 0.2);
+  background:rgba(220, 219, 220, 0.3);
   border: 5px solid black;
   padding: 0;
   max-width: 1400px;

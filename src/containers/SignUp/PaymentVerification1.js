@@ -19,10 +19,10 @@ const PaymentVerification1 = props => {
                 </HeadingText>
                 <InfoText>
                     {paid === 1 && "ثبت نام با موفقیت انجام شد"}
-                    {paid === 0 && "در ثبت نام شما مشکلی به وجود اومده"}
+                    {paid === 0 && "در ثبت نام شما مشکلی به وجود اومده."}
                 </InfoText>
                 <InfoText>
-                    {paid === 1 && " !با آرزوی موفقیت شما در مرحله بعد"}
+                    {paid === 1 && " با آرزوی موفقیت شما در مرحله بعد!"}
                 </InfoText>
                 {paid !== -1 && <Link to="/"><BackButton paid={paid}> صفحه اصلی</BackButton></Link>}
             </CenterContainer>
