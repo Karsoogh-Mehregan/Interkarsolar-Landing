@@ -23,7 +23,7 @@ function Welcome(){
     const [errors, setErrors] = useState({});
     const navigate = useNavigate()
    
-    const { REACT_APP_API_ENDPOINT } = process.env;
+    // const { REACT_APP_API_ENDPOINT } = process.env;
 
     const handleChange = event => {
         document.getElementById("stuID").value = toPersianNumber(event.target.value);

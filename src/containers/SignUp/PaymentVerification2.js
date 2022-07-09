@@ -6,10 +6,11 @@ import {
     BackButton
 } from "./PaymentVerificationStyle";
 import { Link } from "react-router-dom";
-import React, { useState} from "react";
+import React/*, { useState}*/ from "react";
 
 function PaymentVerification2(){
-     const [paid, setPaid] = useState(0);
+    //  const [paid, setPaid] = useState(0);
+    const paid = 0
     return (
         <Container>
             <CenterContainer>
