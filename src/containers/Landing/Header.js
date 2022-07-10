@@ -106,12 +106,12 @@ function Index({ width }) {
         <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
           <Grid item>
             <Typography variant="h1" className={classes.title} align='center'>
-              {'نتایج مرحله ۱ اومد!'}
+              {'نتایج مرحله ۲ اومد!'}
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="h3" align='center' style={{ color: 'white' }}>
-              {'اسامی پذیرفته‌شدگان مرحله‌ی اول را می‌توانید در فایل زیر مشاهده کنید:'}
+              {'اسامی پذیرفته‌شدگان مرحله‌ی دوم را می‌توانید در فایل زیر مشاهده کنید:'}
             </Typography>
           </Grid>
           <Grid item>
@@ -120,7 +120,7 @@ function Index({ width }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Button variant='contained' size='large' color='secondary' href="https://iutbox.iut.ac.ir/index.php/s/sqpppDgKbgnzSYw/download/Interkarsolar_Stage2_Results.pdf">
+            <Button variant='contained' size='large' color='secondary' disabled href="https://iutbox.iut.ac.ir/index.php/s/sqpppDgKbgnzSYw/download/Interkarsolar_Stage2_Results.pdf">
               {'بارگیری نتایج'}
             </Button>
           </Grid>
