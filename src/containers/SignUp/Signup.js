@@ -27,6 +27,7 @@ function Signup() {
     
     let level1 = false;
     let level2 = false;
+    let level3 = false;
     let accessToken;
 
     useEffect(() => {
@@ -86,7 +87,7 @@ function Signup() {
               if (response2.status === 200) {
                 if(jsonRes2['access']){
                     accessToken = jsonRes2.access
-                    level2 = true; // go to purchase directly
+                    level3 = true; // go to purchase directly
                 }
             }
                 else if(response2.status === 401){
@@ -99,7 +100,7 @@ function Signup() {
             } catch (error) {
               console.log(error.message);}
               
-              if(level1){
+            if(level1){ //create account
                   try {
                     const response = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/", {
                       method: 'POST',
@@ -120,7 +121,31 @@ function Signup() {
                   }
             }
             
-            if(level2){
+            if(level2){ //access key
+                    try{
+                        const response_2 = await fetch(process.env.REACT_APP_URL + "/api/u/auth/jwt/create/", {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                "username": value['username'],
+                                "password": value['password']
+                            })
+                          });
+                          const jsonRes_2 = await response_2.json();
+                          if(response_2.status === 200) {
+                            accessToken = jsonRes_2.access
+                            level3 = true;
+                          }
+                          else{
+                              const errors = jsonRes_2.non_field_errors;
+                              alert(errors);
+                            }
+                        } catch (error) {
+                          console.log(error.message);}
+                
+                
+                        }
+            if(level3){
                 try{
                 const response3 = await fetch(process.env.REACT_APP_URL + "/api/purchase/", {
                     method: 'POST',
@@ -141,7 +166,7 @@ function Signup() {
                   }
                 } catch (error) {
                   console.log(error.message);}
-        }
+            }
 
       }, [value]);
   
