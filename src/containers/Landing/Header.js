@@ -116,7 +116,7 @@ function Index({ width }) {
           </Grid>
           <Grid item>
             <Typography variant="h4" align='center' style={{ color: 'white' }}>
-              {'راستی حواست باشه اگر در مرحله سوم قبول شدی، حتما باید دوباره ثبت‌نام کنی :)'}
+              {'راستی حواست باشه اگر در مرحله دوم قبول شدی، حتما باید دوباره ثبت‌نام کنی :)'}
             </Typography>
           </Grid>
           <Grid item>
