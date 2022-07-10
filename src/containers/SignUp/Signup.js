@@ -34,7 +34,7 @@ function Signup() {
       }, []);
    
       const set_ID = () => {
-        setValue({...value,["ID"]: toPersianNumber(IDCode), ['username']: IDCode, ['password']: IDCode});
+        setValue({...value,["ID"]: IDCode, ['username']: IDCode, ['password']: IDCode});
     }
    
 
@@ -150,7 +150,7 @@ function Signup() {
    
         return(
         <Bg>
-            {showModal && <Modal Title={"موفق"} Text={" ثبت نام شما موفقیت آمیز بود. به درگاه پرداخت هدایت میشوید"} onConfirm ={redirectToPayment} btnText="ادامه"/>}
+            {showModal && <Modal Title={"موفق"} Text={"ثبت‌نام شما موفقیت‌آمیز بود. به درگاه پرداخت هدایت می‌شوید."} onConfirm ={redirectToPayment} btnText="ادامه" color="#00af52"/>}
             <CenterContainer>
             <Title>ثبت‌نام مرحله سوم</Title>
             <FormContainer>
@@ -177,7 +177,7 @@ function Signup() {
                 )}       
                 <InputContainer>
                     <InputLabel>  کدملی:</InputLabel>
-                    <Input name='ID' type ='text' id="LEFT" readOnly value={value['ID']}/>
+                    <Input name='ID' type ='text' id="LEFT" readOnly value={toPersianNumber(value['ID'])}/>
                 </InputContainer>
                 {errors["ID"] && (
                 <ErrorText> {errors["ID"]}</ErrorText>
