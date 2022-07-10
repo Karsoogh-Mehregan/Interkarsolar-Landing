@@ -151,7 +151,7 @@ function Signup() {
    
         return(
         <Bg>
-            {showModal && <Modal Title={"موفق"} Text={" ثبت نام شما موفقیت آمیز بود. به درگاه پرداخت هدایت میشوید"} onConfirm ={redirectToPayment} btnText="ادامه"/>}
+            {showModal && <Modal Title={"موفق"} Text={"ثبت‌نام شما موفقیت‌آمیز بود. به درگاه پرداخت هدایت می‌شوید."} onConfirm ={redirectToPayment} btnText="ادامه" color="#00af52"/>}
             <CenterContainer>
             <Title>ثبت‌نام مرحله سوم</Title>
             <FormContainer>
@@ -178,7 +178,7 @@ function Signup() {
                 )}       
                 <InputContainer>
                     <InputLabel>  کدملی:</InputLabel>
-                    <Input name='ID' type ='text' id="LEFT" readOnly value={value['ID']}/>
+                    <Input name='ID' type ='text' id="LEFT" readOnly value={toPersianNumber(value['ID'])}/>
                 </InputContainer>
                 {errors["ID"] && (
                 <ErrorText> {errors["ID"]}</ErrorText>
@@ -186,6 +186,9 @@ function Signup() {
             </FormContainer>
             <SubmitButton onClick={verify}>پرداخت</SubmitButton>
             <SubmitText>هزینه ثبت‌نام: ۱۵۰ هزارتومان</SubmitText>
+            {errors["last"] && (
+                <ErrorText> {errors["last"]}</ErrorText>
+            )}
             </CenterContainer>
         </Bg>
     );

@@ -8,10 +8,10 @@ import {
 
 import React from 'react'
 
-const Modal = ({ Title, Text, onConfirm, btnText}) => {
+const Modal = ({ Title, Text, onConfirm, btnText, color}) => {
     return (
         <BackDrop>
-            <ModalContainer>
+            <ModalContainer cl={color}>
                 <header>
                     <ModalTitle>{Title}</ModalTitle>
                 </header>
@@ -19,7 +19,7 @@ const Modal = ({ Title, Text, onConfirm, btnText}) => {
                     <ModalText>{Text}</ModalText>
                 </div>
                 <footer>
-                    <OkButton onClick={onConfirm}>{btnText}</OkButton>
+                    <OkButton onClick={onConfirm} cl={color}>{btnText}</OkButton>
                 </footer>
             </ModalContainer>
         </BackDrop>

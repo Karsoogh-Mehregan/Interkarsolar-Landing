@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: '3vw',
   },
 
   landingBackground: {
@@ -105,16 +106,21 @@ function Index({ width }) {
         <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
           <Grid item>
             <Typography variant="h1" className={classes.title} align='center'>
-              {'نتایج مرحله ۱ اومد!'}
+              {'نتایج مرحله ۲ اومد!'}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h3" align='center' style={{ color: 'white' }}>
+              {'اسامی پذیرفته‌شدگان مرحله‌ی دوم را می‌توانید در فایل زیر مشاهده کنید:'}
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="h4" align='center' style={{ color: 'white' }}>
-              {'اسامی پذیرفته‌شدگان مرحله‌ی اول را می‌توانید در فایل زیر مشاهده کنید:'}
+              {'راستی حواست باشه اگر در مرحله سوم قبول شدی، حتما باید دوباره ثبت‌نام کنی :)'}
             </Typography>
           </Grid>
           <Grid item>
-            <Button variant='contained' size='large' color='secondary' href="https://iutbox.iut.ac.ir/index.php/s/cCKxS72NwTd7Mmf/download/results_first_round_optimized.pdf">
+            <Button variant='contained' size='large' color='secondary' disabled href="https://iutbox.iut.ac.ir/index.php/s/sqpppDgKbgnzSYw/download/Interkarsolar_Stage2_Results.pdf">
               {'بارگیری نتایج'}
             </Button>
           </Grid>

@@ -6,10 +6,11 @@ import {
     BackButton
 } from "./PaymentVerificationStyle";
 import { Link } from "react-router-dom";
-import React, { useState} from "react";
+import React/*, { useState}*/ from "react";
 
-const PaymentVerification1 = props => {
-     const [paid, setPaid] = useState(1);
+function PaymentVerification1 () {
+    //  const [paid, setPaid] = useState(1);
+    const paid = 1
     return (
         <Container>
             <CenterContainer>
@@ -18,11 +19,11 @@ const PaymentVerification1 = props => {
                     {paid === 0 && ":("}
                 </HeadingText>
                 <InfoText>
-                    {paid === 1 && "ثبت نام با موفقیت انجام شد"}
-                    {paid === 0 && "در ثبت نام شما مشکلی به وجود اومده"}
+                    {paid === 1 && "ثبت‌نام با موفقیت انجام شد."}
+                    {paid === 0 && "در ثبت‌نام شما مشکلی به وجود اومده."}
                 </InfoText>
                 <InfoText>
-                    {paid === 1 && " !با آرزوی موفقیت شما در مرحله بعد"}
+                    {paid === 1 && " با آرزوی موفقیت شما در مرحله بعد!"}
                 </InfoText>
                 {paid !== -1 && <Link to="/"><BackButton paid={paid}> صفحه اصلی</BackButton></Link>}
             </CenterContainer>

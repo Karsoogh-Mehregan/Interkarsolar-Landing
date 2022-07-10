@@ -17,7 +17,7 @@ const CenterContainer = styled.div`
   width: 50%;
   margin: auto;
   border-radius: 2vw;
-  background:rgba(220, 219, 220, 0.2);
+  background:rgba(220, 219, 220, 0.3);
   border: 5px solid black;
   padding: 0;
   max-width: 1400px;
@@ -72,9 +72,9 @@ const InfoText = styled.h3`
 
 const BackButton = styled(OkButton)`
   width: 30%;
-  margin-top: 1rem;
-  margin-bottom: 2vw;
   margin: 0 auto;
+  margin-top: 2.5vw;
+  margin-bottom: 2vw;
   color:black;
   font:bold;
   background-color: ${props => (props.paid === 1 && "#00af52") || (props.paid === 0 && "#AF0029")};
