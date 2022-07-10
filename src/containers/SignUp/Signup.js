@@ -73,50 +73,55 @@ function Signup() {
         
     }
     const signupHandler = useCallback(async () => {
-        try {
-          const response = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/", {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(value)
-          });
-          console.log(JSON.stringify(value))
-          const jsonRes = await response.json();
-          if (response.status === 201) {
-            level1 = true;
-        }
-        else{
-            const errors = jsonRes.non_field_errors;
-            alert(errors);           
-          }
-        } catch (error) {
-          console.log(error.message);
-        }
-
-        if(level1){
-            try{
-                const response2 = await fetch(process.env.REACT_APP_URL + "/api/u/auth/jwt/create/", {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        "username": value['username'],
-                        "password": value['username']
-                    })
-                  });
-                  const jsonRes2 = await response2.json();
-                  if (response2.status === 200) {
+        try{
+            const response2 = await fetch(process.env.REACT_APP_URL + "/api/u/auth/jwt/create/", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "username": value['username'],
+                    "password": value['password']
+                })
+              });
+              const jsonRes2 = await response2.json();
+              if (response2.status === 200) {
+                if(jsonRes2['access']){
                     accessToken = jsonRes2.access
-                    level2 = true;
+                    level2 = true; // go to purchase directly
                 }
-                else{             
-                    const errors = jsonRes2.non_field_errors;
-                    alert(errors);
+                else{
+                    level1 = true;
+                }
+            }
+            else{             
+                const errors = jsonRes2.non_field_errors;
+                alert(errors);
+              }
+            } catch (error) {
+              console.log(error.message);}
+              
+              if(level1){
+                  try {
+                    const response = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/", {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(value)
+                    });
+                    console.log(JSON.stringify(value))
+                    const jsonRes = await response.json();
+                    if (response.status === 201) {
+                      level2 = true;
                   }
-                } catch (error) {
-                  console.log(error.message);}
-        }
-
-        if(level2){
-            try{
+                  else{
+                      const errors = jsonRes.non_field_errors;
+                      alert(errors);           
+                    }
+                  } catch (error) {
+                    console.log(error.message);
+                  }
+            }
+            
+            if(level2){
+                try{
                 const response3 = await fetch(process.env.REACT_APP_URL + "/api/purchase/", {
                     method: 'POST',
                     headers: { 
