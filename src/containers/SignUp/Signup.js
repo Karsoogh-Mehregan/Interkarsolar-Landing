@@ -88,14 +88,14 @@ function Signup() {
                     accessToken = jsonRes2.access
                     level2 = true; // go to purchase directly
                 }
-                else{
+            }
+                else if(response2.status === 401){
                     level1 = true;
                 }
-            }
-            else{             
-                const errors = jsonRes2.non_field_errors;
-                alert(errors);
-              }
+                else{
+                    const errors = jsonRes2.non_field_errors;
+                    alert(errors);
+                }
             } catch (error) {
               console.log(error.message);}
               
