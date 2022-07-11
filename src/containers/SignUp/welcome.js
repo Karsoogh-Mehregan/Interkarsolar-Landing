@@ -32,7 +32,8 @@ function Welcome(){
  
     useEffect(() => {
         const len = ID.length;
-        setValid(len == 10);
+        //setValid(len == 10);
+        //setValid(1);
       },[ID]);
  
     const checkAcceptance = useCallback(async () => {
