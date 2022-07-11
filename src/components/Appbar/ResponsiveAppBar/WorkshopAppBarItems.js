@@ -4,8 +4,8 @@ import DashboardButton from './components/DashboardButton';
 
 const WorkshopAppBarItems = () => {
 
-  const registerButton = <DashboardButton name={'ثبت‌نام '} disabled color='secondary' to={'/validation'} />;
-  const loginButton = <DashboardButton name={'ورود'}  color='primary' to={'//kamva.academy/login?private_event_enter=6'} />;
+  const registerButton = <DashboardButton name={'ثبت‌نام '} color='secondary' to={'/validation'} />;
+  const loginButton = <DashboardButton name={'ورود'} disabled color='primary' to={'//kamva.academy/login?private_event_enter=6'} />;
 
   const desktopLeftItems = [registerButton, loginButton];
   const desktopRightItems = [];
