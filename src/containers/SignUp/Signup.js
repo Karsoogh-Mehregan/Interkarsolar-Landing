@@ -60,8 +60,6 @@ function Signup() {
             err["lastname"] = "فیلد نام‌خانوادگی باید فارسی باشه.";
         if (value['lastname'] == "")
             err["lastname"] = "فیلد نام‌خانوادگی نباید خالی باشه.";
-        if (value['ID'].length != 10)
-            err["ID"] = "کدملی باید ۱۰ رقم باشه.";
         if (value['phone'] == "" || value['phone'].length != 11 || !value['phone'].startsWith('09')) {
             err["phone"] = " شماره همراه نامعتبر است. ";
         }
