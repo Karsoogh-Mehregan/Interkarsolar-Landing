@@ -23,7 +23,7 @@ const ModalContainer = styled.div`
         text-align: left;
         padding: 0 1vw;
         word-break: break-word;
-        height: 20vh;
+        height: 24vh;
         overflow-y: auto;
         ::-webkit-scrollbar {
             width: 0.7em;
@@ -74,7 +74,7 @@ const ModalTitle = styled.h2`
 const ModalText = styled.p`
     margin-left: 1.3vw;
     margin-right: 1.3vw;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     color: white;
     @media screen and (max-width: 500px){
         font-size: 3vw;

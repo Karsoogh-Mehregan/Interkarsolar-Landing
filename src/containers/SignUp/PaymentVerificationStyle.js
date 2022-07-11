@@ -57,7 +57,7 @@ const HeadingText = styled.h1`
 const InfoText = styled.h3`
   color: black;
   margin: 1.5vw auto;
-  font-size: 2.3vw;
+  font-size: 2vw;
 
   @media screen and (max-width:860px){
     font-size: 3.2vw;

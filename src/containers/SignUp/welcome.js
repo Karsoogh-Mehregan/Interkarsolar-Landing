@@ -31,7 +31,7 @@ function Welcome(){
     }
  
     useEffect(() => {
-        const len = ID.length;
+        // const len = ID.length;
         //setValid(len == 10);
         setValid(1);
       },[ID]);
@@ -76,7 +76,7 @@ function Welcome(){
     }
     return(
         <>
-         {showModal && accepted && <Modal Title="تبریک!" Text=" تبریک میگیم در مرحله دوم پذیرفته شدی، برای ادامه مراحل روی دکمه ثبت‌نام کلیک کنید :)" onConfirm={redirectToSignup} btnText="ثبت نام" color="#00af52"/>}
+         {showModal && accepted && <Modal Title="تبریک!" Text="خسته نباشی، مسیر سختی را پشت سر گذاشتی و خوشحالیم که الان می‌بینیمت. تو دوره تابستونه قراره با هم در یک عالمه کارگاه مختلف شرکت و بازی کنیم و یاد بگیریم. ثبت‌نام یادت نره که تازه قسمت هیجان‌انگیز ماجرا شروع شده :)" onConfirm={redirectToSignup} btnText="ثبت نام" color="#00af52"/>}
          {showModal && !accepted && <Modal Title="به امید دیدار!" Text="متاسفانه در این ایستگاه از سفر فضایی‌مون باید باهات خداحافظی کنیم." onConfirm={redirectToHome} btnText="بازگشت" color="#AF0029"/>}
         <BgContainer >
             <RightContainer>
