@@ -120,7 +120,7 @@ function Index({ width }) {
             </Typography>
           </Grid>
           <Grid item>
-            <Button variant='contained' size='large' color='secondary' disabled href="https://iutbox.iut.ac.ir/index.php/s/nRpPX5Xca3wrqHf/download/Interkarsolar_Stage2_Results%20%282%29.pdf">
+            <Button variant='contained' size='large' color='secondary' href="https://iutbox.iut.ac.ir/index.php/s/nRpPX5Xca3wrqHf/download/Interkarsolar_Stage2_Results%20%282%29.pdf">
               {'بارگیری نتایج'}
             </Button>
           </Grid>
