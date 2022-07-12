@@ -208,7 +208,7 @@ function Signup() {
                 )}      
             </FormContainer>
             <SubmitButton onClick={verify}>پرداخت</SubmitButton>
-            <SubmitText>هزینه ثبت‌نام: ۱۵۰ هزارتومان</SubmitText>
+            <SubmitText>برای شرکت در کارگاه‌های تابستانه و مسابقات دوره‌نهایی هزینه ۱۵۰ هزار تومان باید پرداخت کنید.</SubmitText>
             {errors["last"] && (
                 <ErrorText> {errors["last"]}</ErrorText>
             )}

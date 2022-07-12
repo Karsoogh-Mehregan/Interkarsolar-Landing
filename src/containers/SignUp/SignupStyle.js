@@ -77,7 +77,7 @@ export const Input = styled.input`
 
 export const SubmitButton = styled(OkButton)`
     background-color: #04C477;
-    margin-bottom:1vh;
+    margin-bottom:2vh;
     @media screen and (max-width: 768px){
         font-size: 5vw;
     }
@@ -111,8 +111,10 @@ export const ErrorText = styled.div`
 export const SubmitText = styled.h2`
     color: #650485;
     font-size: 1vw;
-    margin-top: 0;
+    margin 0 auto;
+    width:40%;
     @media screen and (max-width: 768px){
         font-size: 2.5vw;
+        width:63%;
     }
 `
