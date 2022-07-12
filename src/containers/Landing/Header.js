@@ -106,7 +106,7 @@ function Index({ width }) {
         <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
           <Grid item>
             <Typography variant="h1" className={classes.title} align='center'>
-              {'نتایج مرحله ۲ اومد!'}
+              {'نتایج مرحله۲ اومد!'}
             </Typography>
           </Grid>
           <Grid item>
