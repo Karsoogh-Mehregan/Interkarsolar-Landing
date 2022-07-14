@@ -6,10 +6,12 @@ const WorkshopAppBarItems = () => {
 
   const registerButton = <DashboardButton name={'ثبت‌نام '} color='secondary' to={'/validation'} />;
   const loginButton = <DashboardButton name={'ورود'} disabled color='primary' to={'//kamva.academy/login?private_event_enter=6'} />;
+  const resultButton = <DashboardButton name={'مسافرین‌نهایی'} color='primary' to={'/teams'} />;
 
-  const desktopLeftItems = [registerButton, loginButton];
+
+  const desktopLeftItems = [registerButton, resultButton, loginButton];
   const desktopRightItems = [];
-  const mobileLeftItems = [registerButton, loginButton];
+  const mobileLeftItems = [registerButton, resultButton, loginButton];
   const mobileRightItems = [];
   const mobileMenuListItems = [];
 

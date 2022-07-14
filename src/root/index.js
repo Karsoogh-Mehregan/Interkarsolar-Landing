@@ -8,6 +8,7 @@ import PaymentVerification2 from '../containers/SignUp/PaymentVerification2';
 // import OurTeam from '../containers/OurTeam';
 import Signup from '../containers/SignUp/Signup'
 import Welcome from '../containers/SignUp/welcome'
+import Teams from '../containers/Teams/Teams'
 
 const Root = () => {
   return (
@@ -16,7 +17,8 @@ const Root = () => {
       {/* <Route path="/our_team" component={OurTeam} /> */}
       <Routes>
         <Route exact path='/' element = {<Landing />} />
-        <Route path='/sign_up' element = {<Signup />} />
+        <Route path='/sign_up' element={<Signup />} />
+        <Route path='/teams' element = {<Teams />} />
         <Route path='/validation' element = {<Welcome />} />
         <Route path='/payment_successful' element = {<PaymentVerification1 />} />
         <Route path='/payment_failed' element = {<PaymentVerification2 />} />;
