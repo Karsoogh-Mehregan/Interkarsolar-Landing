@@ -9,6 +9,7 @@ import PaymentVerification2 from '../containers/SignUp/PaymentVerification2';
 import Signup from '../containers/SignUp/Signup'
 import Welcome from '../containers/SignUp/welcome'
 import Teams from '../containers/Teams/Teams'
+import Login from '../containers/Login/Login'
 
 const Root = () => {
   return (
@@ -21,7 +22,8 @@ const Root = () => {
         <Route path='/teams' element = {<Teams />} />
         <Route path='/validation' element = {<Welcome />} />
         <Route path='/payment_successful' element = {<PaymentVerification1 />} />
-        <Route path='/payment_failed' element = {<PaymentVerification2 />} />;
+        <Route path='/payment_failed' element = {<PaymentVerification2 />} />
+        <Route path='/login' element = {<Login />} />;
         
       </Routes>
   </div>
