@@ -1,7 +1,6 @@
 
 import decode from "jwt-decode";
 import axios from "axios";
-
 class Auth {
   async checkLogin() {
     const access = this.getToken("access");

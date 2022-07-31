@@ -16,6 +16,7 @@
     "chart.js": "^3.3.0",
     "jalali-moment": "^3.3.10",
     "jss-rtl": "^0.3.0",
+    "jwt-decode": "^3.1.2",
     "konva": "^8.0.2",
     "normalizr": "^3.6.1",
     "notistack": "^1.0.9",
@@ -39,7 +40,8 @@
     "redux-undo": "^1.0.1",
     "styled-components": "^5.3.5",
     "tinymce": "^5.8.1",
-    "use-image": "^1.0.7"
+    "use-image": "^1.0.7",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
