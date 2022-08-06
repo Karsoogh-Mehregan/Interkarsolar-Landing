@@ -11,6 +11,7 @@ import Header from './Header';
 import Steps from './Steps';
 import Timer from './Timer'
 import WhatTheFuzz from './WhatTheFuzz';
+import Discord from './Discord';
 
 
 function Index() {
@@ -20,6 +21,7 @@ function Index() {
       <Appbar showBackOnScroll />
       <div id="back-to-top-anchor"></div>
       <Header />
+      <Discord/>
       <WhatTheFuzz />
       <Steps />
       <FAQ />
