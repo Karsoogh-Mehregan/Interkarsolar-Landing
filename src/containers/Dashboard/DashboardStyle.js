@@ -18,11 +18,12 @@ export const RightContainer = styled.div`
     flex-direction: column;
     flex: 9;
     text-align: center;
+    
 }`
 export const TabCard = styled.button`
     background-color: #6B2181;
     width: 30vw;
-    padding: 15px;
+    padding: 12px;
     padding-left: 20px;
     margin: 2vh 1vw 2vh 2vw;
     border:none;
@@ -43,3 +44,15 @@ export const TabCard = styled.button`
         padding-left: 10px;
     }
 `;
+export const LeftContainer=styled.div`
+    flex: 9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15vw 0px;
+    align-items: center;
+    border: 3.5px solid #EF9B93;
+    border-radius: 15px;
+    width: 10vw;
+    margin: 2vh 1vw 2vh 5vw;
+`
