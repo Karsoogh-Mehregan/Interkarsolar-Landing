@@ -10,6 +10,7 @@ import Signup from '../containers/SignUp/Signup'
 import Welcome from '../containers/SignUp/welcome'
 import Teams from '../containers/Teams/Teams'
 import Login from '../containers/Login/Login'
+import Dashboard from '../containers/Dashboard/Dashboard';
 
 const Root = () => {
   return (
@@ -24,6 +25,7 @@ const Root = () => {
         <Route path='/payment_successful' element = {<PaymentVerification1 />} />
         <Route path='/payment_failed' element = {<PaymentVerification2 />} />
         <Route path='/login' element = {<Login />} />;
+        <Route path='/panel' element = {<Dashboard/>}/>
         
       </Routes>
   </div>
