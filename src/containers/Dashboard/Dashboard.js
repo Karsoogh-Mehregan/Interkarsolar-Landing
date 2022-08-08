@@ -16,13 +16,57 @@ const Dashboard = () => {
     //         });
     //     }, []);
     const [tab,setTab] = useState(1)
+    const [userInfo, setUserInfo] = useState({firstname: "", lastname: "", phone: "", ID:""});
+    let workshop = {name:"", timeBegin:"", timeEnd:""};
+    let schedule = []
+    const handleUserInfo = async() => {
+        setTab(1)
+        //request data
+        try{
+            const token = await auth.checkLogin();
+            const resUser = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/me", {
+                method: 'GET',
+                headers: { 
+                          'Authorization': `JWT ${token}`,
+                          'Accept' : 'application/json',             
+                          'Content-Type': 'application/json',
+            },
+              });
+            const userData = await resUser.json();
+            if (resUser.status === 200) {
+                setUserInfo({
+                    firstname: userData.firstname,
+                    lastname: userData.lastname,
+                    ID: userData.ID,
+                    phone: userData.phone
+                })
+                console.log(userInfo)
+            }
+            else{             
+                const errors = resUser.non_field_errors;
+                alert(errors);
+              }
+            } catch (error) {
+              console.log(error.message);}
+
+    }
+    const handleSchedule = () => {
+        setTab(2)
+        //request data 
+        //store in array of objects
+    }
+    const handleEntrance = () => {
+        setTab(3)
+        //request data
+        //store in object
+    }
         return (
         <BgContainer>
             <NavBar onConfirm={auth.logout} />
             <RightContainer>
-                <TabCard onClick={()=>setTab(1)}>اطلاعات فضانورد</TabCard>
-                <TabCard onClick={()=>setTab(2)}>برنامه کارگاه ها</TabCard>
-                <TabCard onClick={()=>setTab(3)}>ورود به کلاس</TabCard>
+                <TabCard onClick={handleUserInfo}>اطلاعات فضانورد</TabCard>
+                <TabCard onClick={handleSchedule}>برنامه کارگاه ها</TabCard>
+                <TabCard onClick={handleEntrance}>ورود به کلاس</TabCard>
             </RightContainer>
             <LeftContainer />
             {tab == 1 && <UserInfo />}

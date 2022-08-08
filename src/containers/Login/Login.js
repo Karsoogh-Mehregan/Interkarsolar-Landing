@@ -28,8 +28,8 @@ function Login() {
     useEffect(() => {
         auth.checkLogin().then((access) => {
           if (access) {
-            //auth.logout();
-            window.location.href = `/`;
+            auth.logout();
+            //window.location.href = `/panel`;
           }
         });
       }, []);
@@ -55,7 +55,7 @@ function Login() {
             if(res.status == 200){
                 auth.setAccessToken(res.data.access);
                 auth.setRefreshToken(res.data.refresh);
-                window.location.href = `/`;
+                window.location.href = `/panel`;
             }
             else{
                 setShowModal(true)
