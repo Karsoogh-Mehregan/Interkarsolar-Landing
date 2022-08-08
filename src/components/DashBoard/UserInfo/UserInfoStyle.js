@@ -6,6 +6,17 @@ export const Div = styled.div`
     position: relative;
     width: 47vW;
     margin-left: 9vw;
+    @media screen and (max-width: 770px)
+    {
+        bottom: 25vh;
+        right: 21vw;
+    }
+
+    @media screen and (max-width: 500px)
+    {
+        bottom: 25vh;
+        right: 11vw;
+    }
 `
 
 export const Div2 = styled.div`
@@ -15,6 +26,41 @@ export const Div2 = styled.div`
     height: 30.5vw;
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
+    @media screen and (max-width: 770px)
+    {
+        height: 30vw;
+        width: 60vw;
+    }
+
+    @media screen and (max-width: 700px)
+    {
+        height: 35vw;
+        width: 60vw;
+    }
+
+    @media screen and (max-width: 600px)
+    {
+        height: 43vw;
+        width: 60vw;
+    }
+
+    @media screen and (max-width: 500px)
+    {
+        height: 46vw;
+        width: 80vw;
+    }
+
+    @media screen and (max-width: 450px)
+    {
+        height: 55vw;
+        width: 80vw;
+    }
+
+    @media screen and (max-width: 390px)
+    {
+        height: 65vw;
+        width: 80vw;
+    }
 `
 
 export const Top = styled.div`
@@ -31,6 +77,16 @@ export const Top = styled.div`
         font-size: 1.4rem;
         height: 3rem;
     }
+
+    @media screen and (max-width: 770px)
+    {
+        width: 60vw;
+    }
+
+    @media screen and (max-width: 500px)
+    {
+        width: 80vw;
+    }
 `
 
 export const Table = styled.table`
@@ -41,7 +97,6 @@ export const Table = styled.table`
     border-collapse: separate;
     border-spacing: 15px 25px;
     @media screen and (max-width: 1050px) {
-        width: 90%;
         border-spacing: 10px 15px;
         margin: 8px;
     }
@@ -57,6 +112,12 @@ export const TableData = styled.td`
         font-size: 1rem;
         padding: 5px 8px;
     }
+
+    @media screen and (max-width: 400px)
+    {
+        font-size: 0.75rem;
+        padding: 5px 8px;
+    }
 `
 
 export const TableHead = styled.th`
@@ -68,6 +129,12 @@ export const TableHead = styled.th`
     border-radius: 10px;
     @media screen and (max-width: 1050px) {
         font-size: 1rem;
+        padding: 5px 8px;
+    }
+
+    @media screen and (max-width: 400px)
+    {
+        font-size: 0.75rem;
         padding: 5px 8px;
     }
 `

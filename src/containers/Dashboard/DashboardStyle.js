@@ -18,8 +18,18 @@ export const RightContainer = styled.div`
     flex-direction: column;
     flex: 9;
     text-align: center;
-    
-}`
+    @media screen and (max-width: 770px) {
+        position: absolute;
+        top: 55vh;
+        right: 35vw;
+    }
+
+    @media screen and (max-width: 500px) {
+        position: absolute;
+        top: 55vh;
+        right: 30vw;
+    }
+`
 export const TabCard = styled.button`
     background-color: #6B2181;
     width: 30vw;
@@ -35,13 +45,32 @@ export const TabCard = styled.button`
     font-size: 20px;
     &:hover {
         transform: scale(1.05);
-        transition-duration: 0.1s;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        cursor: pointer;
         }
+
+    &:active {
+        transform: scale(0.95);
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        }
+    
     @media screen and (max-width: 1050px) {
         width: 22vw;
         margin-top: 1vh;
         margin-bottom: 1vh;
         padding-left: 10px;
+        font-size: 17px;
+    }
+
+    @media screen and (max-width: 770px) {
+        width: 28vw;
+        font-size: 17px;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 40vw;
         font-size: 17px;
     }
 `

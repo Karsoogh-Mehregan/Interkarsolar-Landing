@@ -21,6 +21,12 @@ export const NavBtn = styled.nav`
         transform: scale(1.05);
         transition-duration: 0.1s;
         }
+
+    &:active {
+        transform: scale(0.95);
+        transition-duration: 0.1s;
+        }
+
     @media screen and (max-width:768px){
         margin-left:20px;
     }

@@ -1,10 +1,21 @@
 import React from 'react'
-
+import {
+    Div,
+    Div2,
+    Top,
+}
+from "./ScheduleStyle.js";
 const Schedule = () => {
     return (
-        <h>
-            برنامه زمانی
-        </h>
+        <Div>
+            <Top>
+                کلاس های فعال
+            </Top>
+
+            <Div2>
+                
+            </Div2>
+        </Div>
     );
 };
 
