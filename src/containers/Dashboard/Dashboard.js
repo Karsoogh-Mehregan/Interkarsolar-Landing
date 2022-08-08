@@ -2,6 +2,9 @@ import React,{useState, useEffect} from 'react'
 import NavBar from '../../components/DashBoard/NavBar/NavBar.js'
 import {BgContainer, RightContainer, TabCard, LeftContainer} from './DashboardStyle'
 import auth from "../Login/auth";
+import UserInfo from '../../components/DashBoard/UserInfo/UserInfo.js'
+import Entrance from '../../components/DashBoard/ClassEntrance/Entrance.js'
+import Schedule from '../../components/DashBoard/Schedule/Schedule.js'
 
 const Dashboard = () => {
     //TODO: uncomment it after test
@@ -22,6 +25,9 @@ const Dashboard = () => {
                 <TabCard onClick={()=>setTab(3)}>ورود به کلاس</TabCard>
             </RightContainer>
             <LeftContainer />
+            {tab == 1 && <UserInfo />}
+            {tab == 2 && <Schedule />}
+            {tab == 3 && <Entrance />}
         </BgContainer>
     );
 };
