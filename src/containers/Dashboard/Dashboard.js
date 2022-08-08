@@ -68,7 +68,7 @@ const Dashboard = () => {
                 <TabCard onClick={handleSchedule}>برنامه کارگاه ها</TabCard>
                 <TabCard onClick={handleEntrance}>ورود به کلاس</TabCard>
             </RightContainer>
-            {tab == 1 && <UserInfo />}
+            {tab == 1 && <UserInfo user = {userInfo}/>}
             {tab == 2 && <Schedule />}
             {tab == 3 && <Entrance />}
         </BgContainer>
