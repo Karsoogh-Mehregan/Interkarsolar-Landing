@@ -24,7 +24,7 @@ const Dashboard = () => {
         //request data
         try{
             const token = await auth.checkLogin();
-            const resUser = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/me", {
+            const resUser = await fetch(process.env.REACT_APP_URL + "/api/u/auth/users/me/", {
                 method: 'GET',
                 headers: { 
                           'Authorization': `JWT ${token}`,
