@@ -38,21 +38,10 @@ export const TabCard = styled.button`
         transition-duration: 0.1s;
         }
     @media screen and (max-width: 1050px) {
-        width: 62vw;
+        width: 22vw;
         margin-top: 1vh;
         margin-bottom: 1vh;
         padding-left: 10px;
+        font-size: 17px;
     }
-`;
-export const LeftContainer=styled.div`
-    flex: 9;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 15vw 0px;
-    align-items: center;
-    border: 3.5px solid #EF9B93;
-    border-radius: 15px;
-    width: 10vw;
-    margin: 2vh 1vw 2vh 5vw;
 `
