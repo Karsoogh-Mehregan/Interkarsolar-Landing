@@ -8,7 +8,7 @@ import {
     TableHead,
 }
 from "./UserInfoStyle.js";
-const UserInfo = () => {
+const UserInfo = ({user}) => {
     return (
         <Div>
             <Top>
@@ -19,22 +19,22 @@ const UserInfo = () => {
                 <Table>
                     <tr>
                         <TableHead>نام</TableHead>
-                        <TableData>آرش</TableData>
+                        <TableData>{user.firstname}</TableData>
                     </tr>
                    
                     <tr>
                         <TableHead>نام خانوادگی</TableHead>
-                        <TableData>آذرپور</TableData>
+                        <TableData>{user.lastname}</TableData>
                     </tr>
 
                     <tr>
                         <TableHead>کد ملی</TableHead>
-                        <TableData>1273925602</TableData>
+                        <TableData>{user.ID}</TableData>
                     </tr>
 
                     <tr>
                         <TableHead>شماره همراه</TableHead>
-                        <TableData>09162854011</TableData>
+                        <TableData>{user.phone}</TableData>
                     </tr>
                 </Table>
             </Div2>
