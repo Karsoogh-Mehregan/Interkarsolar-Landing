@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {
     Div,
     Div2,
@@ -8,7 +8,8 @@ import {
     Button,
 }
 from "./EntranceStyle.js";
-const Entrance = () => {
+const Entrance = ({workshop}) => {
+    let workshop_OFF = workshop.link == '';
     return (
         <Div>
             <Top>
@@ -17,8 +18,9 @@ const Entrance = () => {
 
             <Div2>
                 <Img></Img>
-                <Par>کارگاه فلان <br></br> در حال برگزاری است.</Par>
-                <Button href=''>ورود به کلاس</Button>
+                { workshop_OFF && <Par>کارگاهی در این لحظه فعال نیست.</Par>}
+                { !workshop_OFF && <Par>در حال برگزاری است.</Par>}
+                { !workshop_OFF && <Button href={workshop.link}>ورود به کلاس</Button>}
             </Div2>
         </Div>
     );

@@ -15,9 +15,9 @@ const Dashboard = () => {
     //             }
     //         });
     //     }, []);
-    const [tab,setTab] = useState(1)
+    const [tab,setTab] = useState(0)
     const [userInfo, setUserInfo] = useState({firstname: "", lastname: "", phone: "", ID:""});
-    let workshop = {name:"", timeBegin:"", timeEnd:""};
+    const [nowWorkshop,setNowWorkshop] = useState({link:""})
     let schedule = []
     const handleUserInfo = async() => {
         setTab(1)
@@ -42,8 +42,8 @@ const Dashboard = () => {
                 })
                 console.log(userInfo)
             }
-            else{             
-                const errors = resUser.non_field_errors;
+            else {             
+                const errors = resUser.error;
                 alert(errors);
               }
             } catch (error) {
@@ -55,10 +55,31 @@ const Dashboard = () => {
         //request data 
         //store in array of objects
     }
-    const handleEntrance = () => {
+    const handleEntrance = async() => {
         setTab(3)
         //request data
-        //store in object
+        try{
+            const token = await auth.checkLogin();
+            const resEntrance = await fetch(process.env.REACT_APP_URL + "/api/workshop/schedules/now/", {
+                method: 'GET',
+                headers: { 
+                          'Authorization': `JWT ${token}`,
+                          'Accept' : 'application/json',             
+                          'Content-Type': 'application/json',
+            },
+              });
+            if (resEntrance.status === 200) {
+                setNowWorkshop({
+                    link:resEntrance.link
+                });
+                console.log(nowWorkshop)
+            }
+            else if(resEntrance.status !== 404){             
+                const errors = resEntrance.error;
+                alert(errors);
+              }
+            } catch (error) {
+              console.log(error.message);}
     }
         return (
         <BgContainer>
@@ -70,7 +91,7 @@ const Dashboard = () => {
             </RightContainer>
             {tab == 1 && <UserInfo user = {userInfo}/>}
             {tab == 2 && <Schedule />}
-            {tab == 3 && <Entrance />}
+            {tab == 3 && <Entrance workshop = {nowWorkshop}/>}
         </BgContainer>
     );
 };
