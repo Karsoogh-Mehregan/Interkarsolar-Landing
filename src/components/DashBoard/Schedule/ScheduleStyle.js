@@ -26,6 +26,7 @@ export const Div2 = styled.div`
     height: 28vw;
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
+    overflow: auto;
     @media screen and (max-width: 770px)
     {
         height: 30vw;
@@ -74,5 +75,108 @@ export const Top = styled.div`
     @media screen and (max-width: 500px)
     {
         width: 80vw;
+    }
+`
+export const InnerWrapperDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 2vh 3vw 8vh 0;
+
+    @media screen and (max-width: 1050px) {
+        width: 95%;
+        margin: 2vh 1vw 8vh 0;
+    }
+`
+
+export const HeadDiv = styled.div`
+    width: 100%;
+    background: rgb(44, 17, 63);
+    color: azure;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 10px;
+    @media screen and (max-width: 1050px) {
+        font-size: 1.7vw;
+    }
+
+    @media screen and (max-width: 770px) {
+        font-size: 2.2vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 3vw;
+    }
+`
+
+export const DataWrapperDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 6vh;
+`
+
+export const Data = styled.div`
+    width: 33%;
+    height: 100%;
+    background: rgb(255, 219, 219);
+    font-size: 1.4vw;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    padding: 8px 0;
+    border-radius: 10px;
+    margin: 10px;
+    @media screen and (max-width: 1050px) {
+        font-size: 1.6vw;
+    }
+
+    @media screen and (max-width: 770px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 2.4vw;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size: 2.9vw;
+    }
+`
+
+export const ClockImage = styled.div`
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+    background: url(${process.env.PUBLIC_URL + '/clock.png'});
+    background-position: center;
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1050px) {
+        background-size: 2.6vw;
+        width: 25%;
+    }
+`
+export const CalenderImage = styled.div`
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+    background: url(${process.env.PUBLIC_URL + '/calendar.png'});
+    background-position: center;
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 1050px) {
+        background-size: 2.6vw;
+        width: 25%;
     }
 `
