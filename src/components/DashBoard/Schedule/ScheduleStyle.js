@@ -6,6 +6,7 @@ export const Div = styled.div`
     position: relative;
     width: 47vW;
     margin-left: 9vw;
+
     @media screen and (max-width: 770px)
     {
         bottom: 25vh;
@@ -27,6 +28,34 @@ export const Div2 = styled.div`
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
     overflow: auto;
+
+    ::-webkit-scrollbar
+    {
+        width: 8px;
+        transition: all 0.4s ease;
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    ::-webkit-scrollbar-thumb:hover
+    {
+        background: #beddea;
+    }
+
+    ::-webkit-scrollbar-track
+    {
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb:window-inactive
+    {
+        background: rgba(100, 100, 100, 0.4);
+    }
+
     @media screen and (max-width: 770px)
     {
         height: 30vw;
@@ -126,7 +155,7 @@ export const Data = styled.div`
     width: 33%;
     height: 100%;
     background: rgb(255, 219, 219);
-    font-size: 1.4vw;
+    font-size: 1.3vw;
     font-weight: bold;
     text-align: center;
     color: black;
@@ -134,7 +163,8 @@ export const Data = styled.div`
     border-radius: 10px;
     margin: 10px;
     @media screen and (max-width: 1050px) {
-        font-size: 1.6vw;
+        font-size: 1.4vw;
+        width: 33.5%;
     }
 
     @media screen and (max-width: 770px) {
@@ -158,10 +188,10 @@ export const ClockImage = styled.div`
     margin-left: 10px;
     background: url(${process.env.PUBLIC_URL + '/clock.png'});
     background-position: center;
-    background-size: 2vw;
+    background-size: 1.7vw;
     background-repeat: no-repeat;
     @media screen and (max-width: 1050px) {
-        background-size: 2.6vw;
+        background-size: 2vw;
         width: 25%;
     }
 `
@@ -179,4 +209,9 @@ export const CalenderImage = styled.div`
         background-size: 2.6vw;
         width: 25%;
     }
+`
+
+export const Link = styled.a`
+    text-decoration: none;
+    color: black
 `

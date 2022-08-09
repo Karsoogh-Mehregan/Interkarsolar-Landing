@@ -9,6 +9,7 @@ import {
     Data,
     ClockImage,
     CalenderImage,
+    Link,
 }
 from "./ScheduleStyle.js";
 const Schedule = () => {
@@ -29,7 +30,21 @@ const Schedule = () => {
                         <Data>
                             زمان<ClockImage></ClockImage>
                         </Data>
-                        <Data>لینک کلاس</Data>
+                        <Data><Link href='' target='_blank'>لینک کلاس</Link></Data>
+                    </DataWrapperDiv>
+                </InnerWrapperDiv>
+
+                <InnerWrapperDiv>
+                    <HeadDiv>
+                        اسم کارگاه
+                    </HeadDiv>
+                    <DataWrapperDiv>
+                        <Data>
+                            تاریخ<CalenderImage></CalenderImage></Data>
+                        <Data>
+                            زمان<ClockImage></ClockImage>
+                        </Data>
+                        <Data><Link href='' target='_blank'>لینک کلاس</Link></Data>
                     </DataWrapperDiv>
                 </InnerWrapperDiv>
             </Div2>

@@ -23,7 +23,7 @@ export const Div2 = styled.div`
     outline: none;
     display: block;
     width: 47.4vW;
-    height: 30.5vw;
+    height: 28vw;
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
     @media screen and (max-width: 770px)
@@ -108,6 +108,11 @@ export const TableData = styled.td`
     font-weight: 800;
     padding: 8px 15px;
     border-radius: 10px;
+    @media screen and (max-width: 1150px) {
+        font-size: 1.1rem;
+        padding: 5px 8px;
+    }
+
     @media screen and (max-width: 1050px) {
         font-size: 1rem;
         padding: 5px 8px;
@@ -127,6 +132,11 @@ export const TableHead = styled.th`
     font-weight: 800;
     padding: 8px 15px;
     border-radius: 10px;
+    @media screen and (max-width: 1150px) {
+        font-size: 1.1rem;
+        padding: 5px 8px;
+    }
+
     @media screen and (max-width: 1050px) {
         font-size: 1rem;
         padding: 5px 8px;
