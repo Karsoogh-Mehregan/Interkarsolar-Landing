@@ -26,9 +26,9 @@ const Schedule = () => {
                     </HeadDiv>
                     <DataWrapperDiv>
                         <Data>
-                            تاریخ<CalenderImage></CalenderImage></Data>
+                            تاریخ<CalenderImage/></Data>
                         <Data>
-                            زمان<ClockImage></ClockImage>
+                            زمان<ClockImage/>
                         </Data>
                         <Data><Link href='' target='_blank'>لینک کلاس</Link></Data>
                     </DataWrapperDiv>
@@ -40,9 +40,9 @@ const Schedule = () => {
                     </HeadDiv>
                     <DataWrapperDiv>
                         <Data>
-                            تاریخ<CalenderImage></CalenderImage></Data>
+                            تاریخ<CalenderImage/></Data>
                         <Data>
-                            زمان<ClockImage></ClockImage>
+                            زمان<ClockImage/>
                         </Data>
                         <Data><Link href='' target='_blank'>لینک کلاس</Link></Data>
                     </DataWrapperDiv>

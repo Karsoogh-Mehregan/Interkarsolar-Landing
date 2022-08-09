@@ -20,13 +20,13 @@ export const RightContainer = styled.div`
     text-align: center;
     @media screen and (max-width: 770px) {
         position: absolute;
-        top: 55vh;
+        top: 10vh;
         right: 35vw;
     }
 
     @media screen and (max-width: 500px) {
         position: absolute;
-        top: 55vh;
+        top: 9vh;
         right: 30vw;
     }
 `

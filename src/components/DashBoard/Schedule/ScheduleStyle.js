@@ -9,13 +9,13 @@ export const Div = styled.div`
 
     @media screen and (max-width: 770px)
     {
-        bottom: 25vh;
+        bottom: -5vh;
         right: 21vw;
     }
 
     @media screen and (max-width: 500px)
     {
-        bottom: 25vh;
+        bottom: -5vh;
         right: 11vw;
     }
 `
@@ -182,10 +182,10 @@ export const Data = styled.div`
 
 export const ClockImage = styled.div`
     display: inline-block;
-    width: 20%;
-    height: 100%;
+    width: 2vw;
+    height: 4vh;
     float: left;
-    margin-left: 10px;
+    margin-left: 0.7vw;
     background: url(${process.env.PUBLIC_URL + '/clock.png'});
     background-position: center;
     background-size: 1.7vw;
@@ -197,10 +197,10 @@ export const ClockImage = styled.div`
 `
 export const CalenderImage = styled.div`
     display: inline-block;
-    width: 20%;
-    height: 100%;
+    width: 2vw;
+    height: 4vh;
     float: left;
-    margin-left: 10px;
+    margin-left: 0.7vw;
     background: url(${process.env.PUBLIC_URL + '/calendar.png'});
     background-position: center;
     background-size: 2vw;

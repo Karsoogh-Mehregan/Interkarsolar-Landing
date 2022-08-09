@@ -6,15 +6,16 @@ export const Div = styled.div`
     position: relative;
     width: 47vW;
     margin-left: 9vw;
+
     @media screen and (max-width: 770px)
     {
-        bottom: 25vh;
+        bottom: -5vh;
         right: 21vw;
     }
 
     @media screen and (max-width: 500px)
     {
-        bottom: 25vh;
+        bottom: -5vh;
         right: 11vw;
     }
 `
