@@ -8,6 +8,9 @@ export const Nav = styled.nav`
     position:absolute;
     width:100vw;
     top:0;
+    display: flex;
+    flex-direction: row;
+
     //can not select link
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
@@ -16,6 +19,7 @@ export const Nav = styled.nav`
 `
 export const NavBtn = styled.nav`
     float:left;
+    margin:auto;
     margin-left:100px;
     &:hover {
         transform: scale(1.05);
@@ -27,8 +31,8 @@ export const NavBtn = styled.nav`
         transition-duration: 0.1s;
         }
 
-    @media screen and (max-width:768px){
-        margin-left:20px;
+    @media screen and (max-width:1024px){
+        margin-left:25px;
     }
 `
 
@@ -60,9 +64,10 @@ export const NavBtnLink = styled(LinkR)`
         color: #000000;
         transition: all 0.2s ease-in-out;
     }
-    @media screen and (max-width:768px){
+    @media screen and (max-width:1024px){
         width: 14vw;
         font-size:2.2vw;
+        border-radius: 10px;
     }
    
 `

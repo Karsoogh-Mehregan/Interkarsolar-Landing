@@ -1,34 +1,22 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 47vW;
-    margin-left: 9vw;
-
-    @media screen and (max-width: 770px)
-    {
-        bottom: -5vh;
-        right: 21vw;
+    @media screen and (min-width: 1024px) {
+        margin-left: 5vw;
     }
-
-    @media screen and (max-width: 500px)
-    {
-        bottom: -5vh;
-        right: 11vw;
+    @media screen and (max-width: 1024px) {
+        padding-top: 4vh;
     }
 `
 
 export const Div2 = styled.div`
     outline: none;
-    display: block;
-    width: 47.4vW;
-    height: 28vw;
+    width: 70vw;
+    margin:auto;
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
     overflow: auto;
-
+    padding: 2vh 2vw;
     ::-webkit-scrollbar
     {
         width: 8px;
@@ -56,60 +44,31 @@ export const Div2 = styled.div`
         background: rgba(100, 100, 100, 0.4);
     }
 
-    @media screen and (max-width: 770px)
+    @media screen and (min-width: 1024px)
     {
-        height: 30vw;
-        width: 60vw;
-    }
-
-    @media screen and (max-width: 700px)
-    {
-        height: 35vw;
-        width: 60vw;
-    }
-
-    @media screen and (max-width: 600px)
-    {
-        height: 43vw;
-        width: 60vw;
-    }
-
-    @media screen and (max-width: 500px)
-    {
-        height: 46vw;
-        width: 80vw;
+        width: 55vw;
     }
 `
 
 export const Top = styled.div`
     background: #ef9b93;
     border-radius: 15px 15px 0 0;
-    width: 47.4vW;
+    width: 70vw;
     height: 4rem;
-    top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align:center;
     padding-top: 0.8rem;
-    @media screen and (max-width: 1050px) {
+    margin:auto;
+    @media screen and (min-width: 1024px) {
         font-size: 1.4rem;
-        height: 3rem;
-    }
-
-    @media screen and (max-width: 770px)
-    {
-        width: 60vw;
-    }
-
-    @media screen and (max-width: 500px)
-    {
-        width: 80vw;
+        width:55vw;
     }
 `
 export const InnerWrapperDiv = styled.div`
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     margin: 2vh 3vw 8vh 0;
 
     @media screen and (max-width: 1050px) {
@@ -127,19 +86,7 @@ export const HeadDiv = styled.div`
     text-align: center;
     padding: 8px 0;
     border-radius: 10px;
-    @media screen and (max-width: 1050px) {
-        font-size: 1.7vw;
-    }
-
-    @media screen and (max-width: 770px) {
-        font-size: 2.2vw;
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 2.5vw;
-    }
-
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 1024px) {
         font-size: 3vw;
     }
 `
@@ -159,54 +106,42 @@ export const Data = styled.div`
     font-weight: bold;
     text-align: center;
     color: black;
-    padding: 8px 0;
+    padding: 1.5vh 0;
     border-radius: 10px;
     margin: 10px;
-    @media screen and (max-width: 1050px) {
-        font-size: 1.4vw;
+    @media screen and (max-width: 1024px) {
+        font-size: 2.5vw;
         width: 33.5%;
-    }
-
-    @media screen and (max-width: 770px) {
-        font-size: 2vw;
-    }
-
-    @media screen and (max-width: 600px) {
-        font-size: 2.4vw;
-    }
-
-    @media screen and (max-width: 500px) {
-        font-size: 2.9vw;
     }
 `
 
 export const ClockImage = styled.div`
     display: inline-block;
     width: 2vw;
-    height: 4vh;
+    height: 100%;
     float: left;
     margin-left: 0.7vw;
     background: url(${process.env.PUBLIC_URL + '/clock.png'});
     background-position: center;
-    background-size: 1.7vw;
+    background-size: 1.5vw;
     background-repeat: no-repeat;
     @media screen and (max-width: 1050px) {
-        background-size: 2vw;
+        background-size: 3vw;
         width: 25%;
     }
 `
 export const CalenderImage = styled.div`
     display: inline-block;
     width: 2vw;
-    height: 4vh;
+    height: 100%;
     float: left;
     margin-left: 0.7vw;
     background: url(${process.env.PUBLIC_URL + '/calendar.png'});
     background-position: center;
-    background-size: 2vw;
+    background-size: 1.5vw;
     background-repeat: no-repeat;
     @media screen and (max-width: 1050px) {
-        background-size: 2.6vw;
+        background-size: 3vw;
         width: 25%;
     }
 `

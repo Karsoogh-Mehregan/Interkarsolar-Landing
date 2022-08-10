@@ -5,35 +5,27 @@ export const BgContainer = styled.div`
     background-image: url(${process.env.PUBLIC_URL + '/bgpanel.png'});
     background-position: center;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     padding-top: 15vh;
-    display: flex;
-    flex-direction: row;
-
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+    }
 `
 export const RightContainer = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin: auto;
+    text-align: center;
     flex: 9;
     text-align: center;
-    @media screen and (max-width: 770px) {
-        position: absolute;
-        top: 10vh;
-        right: 35vw;
-    }
-
-    @media screen and (max-width: 500px) {
-        position: absolute;
-        top: 9vh;
-        right: 30vw;
-    }
 `
 export const TabCard = styled.button`
     background-color: #6B2181;
     width: 30vw;
-    padding: 12px;
+    padding: 15px;
     padding-left: 20px;
     margin: 2vh 1vw 2vh 2vw;
     border:none;
@@ -55,22 +47,9 @@ export const TabCard = styled.button`
         transition-duration: 0.2s;
         transition-timing-function: ease;
         }
-    
-    @media screen and (max-width: 1050px) {
-        width: 22vw;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        padding-left: 10px;
-        font-size: 17px;
-    }
 
-    @media screen and (max-width: 770px) {
-        width: 28vw;
-        font-size: 17px;
-    }
-
-    @media screen and (max-width: 500px) {
-        width: 40vw;
+    @media screen and (max-width: 768px) {
+        width: 65vw;
         font-size: 17px;
     }
 `
