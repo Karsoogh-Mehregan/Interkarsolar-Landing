@@ -15,8 +15,9 @@ from "./ScheduleStyle.js";
 const Schedule = ({workshopList}) => {
     const createTable = () => {
         const table = []
-        console.log(workshopList.length)
+        console.log(workshopList[0])
         for (let i = 0; i < workshopList.length; i += 1) {
+            console.log("test")
             let [date_begin, time_begin] = workshopList[i].time_begin.split('T')
             let [date_end, time_end] = workshopList[i].time_end.split('T')
 
