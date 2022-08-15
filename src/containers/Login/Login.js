@@ -28,8 +28,8 @@ function Login() {
     useEffect(() => {
         auth.checkLogin().then((access) => {
           if (access) {
-            auth.logout();
-            //window.location.href = `/panel`;
+            console.log(access)
+            window.location.href = `/panel`;
           }
         });
       }, []);
@@ -44,7 +44,6 @@ function Login() {
                 "username": value['username'],
                 "password": value['password']
             })
-        console.log(dataBody)
         axios
           .post(process.env.REACT_APP_URL + "/api/u/auth/jwt/create/", dataBody, {
             headers: {
@@ -52,6 +51,7 @@ function Login() {
             },
           })
           .then((res) => {
+            console.log(res)
             if(res.status == 200){
                 auth.setAccessToken(res.data.access);
                 auth.setRefreshToken(res.data.refresh);
