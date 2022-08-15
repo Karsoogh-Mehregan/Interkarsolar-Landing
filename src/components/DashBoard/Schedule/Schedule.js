@@ -26,7 +26,7 @@ const Schedule = ({workshopList}) => {
             const time_end_array = time_end.split(':')
             time_end = time_end_array[0] + ':' + time_end_array[1]
 
-            if(date_begin == "2022-08-17" || date_begin == "2022-08-13")
+            if(date_begin == "2022-08-17")
                 shamsi_date = "۲۷ مرداد"
             else if(date_begin == "2022-08-18")
                 shamsi_date = "۲۸ مرداد"
