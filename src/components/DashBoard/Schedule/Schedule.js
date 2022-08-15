@@ -28,13 +28,13 @@ const Schedule = ({workshopList}) => {
             table.push(
                 <InnerWrapperDiv>
                     <HeadDiv>
-                        workshopList[i].workshop.name
+                        {workshopList[i].workshop.name}
                     </HeadDiv>
                     <DataWrapperDiv>
                         <Data>
                             {date_begin}<CalenderImage></CalenderImage></Data>
                         <Data>
-                            {time_begin} - {time_end}<ClockImage></ClockImage>
+                            {time_end} - {time_begin}<ClockImage></ClockImage>
                         </Data>
                         <Data><Link href={workshopList[i].link} target='_blank'>لینک کلاس</Link></Data>
                     </DataWrapperDiv>
