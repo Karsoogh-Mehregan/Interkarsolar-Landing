@@ -45,9 +45,9 @@ const Schedule = ({workshopList}) => {
                     </DataWrapperDiv>
                 </InnerWrapperDiv>
             );
-
+            }
         return table;
-    }}
+    }
     return (
         <Div>
             <Top>
