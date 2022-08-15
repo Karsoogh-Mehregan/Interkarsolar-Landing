@@ -15,13 +15,14 @@ export const CenterContainer = styled.div`
     box-shadow: 0px 10px 10px -2px rgb(50 1 66 / 50%);
     color: white;
     margin: auto;
-    padding: 4vh 1vw;
+    padding: 6vh 1vw;
     text-align: center;
-    width: 50%;
+    width: 40%;
     word-break:break-all;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1024px){
         border-radius: 10px;
         border: 1px solid #C500FF;
+        padding: 4vh 1vw;
         width: 80%;
     } 
 
@@ -39,7 +40,7 @@ export const InputContainer = styled.div`
     margin-right: 3vw;
     margin-top:1vw;
     margin:2.5vh 3vw 1vh;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1024px){
         margin-bottom: 0.1vw;
         margin-top:1vh;
   }
@@ -51,8 +52,8 @@ export const InputLabel = styled.div`
     font-weight: 600;
     margin: auto;
     text-align: right;
-    @media screen and (max-width: 768px){
-        font-size: 2.8vw;
+    @media screen and (max-width: 1024px){
+        font-size: 3vw;
     }
 `;
 
@@ -67,7 +68,7 @@ export const Input = styled.input`
     outline: none;
     padding: 6px 15px;
     text-align : ${props => props.id==="LEFT"?"left":"right"};
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1024px){
         font-size: 2.4vw;
     }
     &:placeholder { /* Most modern browsers support this now. */
@@ -78,8 +79,11 @@ export const Input = styled.input`
 export const SubmitButton = styled(OkButton)`
     background-color: #04C477;
     margin-bottom:2vh;
-    @media screen and (max-width: 768px){
+    width: 14vw;
+    @media screen and (max-width: 1024px){
         font-size: 5vw;
+        margin-top:5vh;
+        width: 30vw;
     }
 `
 export const Title = styled.p`
@@ -88,10 +92,11 @@ export const Title = styled.p`
     font-weight: 900;
     letter-spacing: -0.01562em;
     line-height: 40px;
-    margin: 0px 0px 56px 0px;
+    margin: 10px 0px 40px 0px;
     text-shadow: 1px 1px #9906c9;
-    @media screen and (max-width: 768px){
-        font-size: 4vw;
+    @media screen and (max-width: 1024px){
+        font-size: 6vw;
+        margin: 10px 0px 20px 0px;
     }
 `
 export const ErrorText = styled.div`
@@ -102,7 +107,7 @@ export const ErrorText = styled.div`
     padding-right: 16vw;
     text-align: right;
     width: 95%;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1024px){
     font-size: 2.5vw;
     padding-right: 25vw;
     }
@@ -113,7 +118,7 @@ export const SubmitText = styled.h2`
     font-size: 1vw;
     margin 0 auto;
     width:40%;
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1024px){
         font-size: 2.5vw;
         width:63%;
     }

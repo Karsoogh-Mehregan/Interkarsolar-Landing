@@ -100,7 +100,7 @@ function Login() {
                 <InputContainer >
                     <InputLabel> رمز عبور:</InputLabel>
                     <Input name='password' type ='password' id="LEFT" onChange={handleChange} />
-                    0{/*TODO: toggle password visiblity*/}
+                    {/*TODO: toggle password visiblity*/}
                 </InputContainer>
                 {errors["password"] && (
                 <ErrorText> {errors["password"]}</ErrorText>
