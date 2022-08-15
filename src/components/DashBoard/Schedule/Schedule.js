@@ -49,7 +49,7 @@ const Schedule = ({workshopList}) => {
             </Top>
 
             <Div2>
-                {createTable}
+                {createTable()}
             </Div2>
         </Div>
     );
