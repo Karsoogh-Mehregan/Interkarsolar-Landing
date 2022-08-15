@@ -12,12 +12,12 @@ import {
     Link,
 }
 from "./ScheduleStyle.js";
-const Schedule = ({workshops}) => {
+const Schedule = ({workshopList}) => {
     const createTable = () => {
         const table = []
-        for (let i = 0; i < workshops.length; i += 1) {
-            let [date_begin, time_begin] = workshops[i].time_begin.split('T')
-            let [date_end, time_end] = workshops[i].time_end.split('T')
+        for (let i = 0; i < workshopList.length; i += 1) {
+            let [date_begin, time_begin] = workshopList[i].time_begin.split('T')
+            let [date_end, time_end] = workshopList[i].time_end.split('T')
 
             const time_begin_array = time_begin.split(':')
             time_begin = time_begin_array[0] + ':' + time_begin_array[1]
@@ -28,7 +28,7 @@ const Schedule = ({workshops}) => {
             table.push(
                 <InnerWrapperDiv>
                     <HeadDiv>
-                        workshops[i].workshop.name
+                        workshopList[i].workshop.name
                     </HeadDiv>
                     <DataWrapperDiv>
                         <Data>
@@ -36,7 +36,7 @@ const Schedule = ({workshops}) => {
                         <Data>
                             {time_begin} - {time_end}<ClockImage></ClockImage>
                         </Data>
-                        <Data><Link href={workshops[i].link} target='_blank'>لینک کلاس</Link></Data>
+                        <Data><Link href={workshopList[i].link} target='_blank'>لینک کلاس</Link></Data>
                     </DataWrapperDiv>
                 </InnerWrapperDiv>
             );
