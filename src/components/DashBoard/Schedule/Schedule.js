@@ -18,6 +18,7 @@ const Schedule = ({workshopList}) => {
         for (let i = 0; i < workshopList.length; i += 1) {
             let [date_begin, time_begin] = workshopList[i].time_begin.split('T')
             let [date_end, time_end] = workshopList[i].time_end.split('T')
+            let shamsi_date;
 
             const time_begin_array = time_begin.split(':')
             time_begin = time_begin_array[0] + ':' + time_begin_array[1]
@@ -25,6 +26,10 @@ const Schedule = ({workshopList}) => {
             const time_end_array = time_end.split(':')
             time_end = time_end_array[0] + ':' + time_end_array[1]
 
+            if(date_begin == "2022-08-17" || date_begin == "2022-08-13")
+                shamsi_date = "۲۷ مرداد"
+            else if(date_begin == "2022-08-18")
+                shamsi_date = "۲۸ مرداد"
             table.push(
                 <InnerWrapperDiv>
                     <HeadDiv>
@@ -32,7 +37,7 @@ const Schedule = ({workshopList}) => {
                     </HeadDiv>
                     <DataWrapperDiv>
                         <Data>
-                            {date_begin}<CalenderImage></CalenderImage></Data>
+                            {shamsi_date}<CalenderImage></CalenderImage></Data>
                         <Data>
                             {time_end} - {time_begin}<ClockImage></ClockImage>
                         </Data>
