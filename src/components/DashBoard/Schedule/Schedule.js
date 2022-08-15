@@ -16,8 +16,8 @@ const Schedule = ({workshops}) => {
     const createTable = () => {
         const table = []
         for (let i = 0; i < workshops.length; i += 1) {
-            const [date_begin, time_begin] = workshops[i].time_begin.split('T')
-            const [date_end, time_end] = workshops[i].time_end.split('T')
+            let [date_begin, time_begin] = workshops[i].time_begin.split('T')
+            let [date_end, time_end] = workshops[i].time_end.split('T')
 
             const time_begin_array = time_begin.split(':')
             time_begin = time_begin_array[0] + ':' + time_begin_array[1]
