@@ -7,14 +7,13 @@ import Entrance from '../../components/DashBoard/ClassEntrance/Entrance.js'
 import Schedule from '../../components/DashBoard/Schedule/Schedule.js'
 
 const Dashboard = () => {
-    //TODO: uncomment it after test
-    // useEffect(() => {
-    //     auth.checkLogin().then((access) => {
-    //         if (!access) {
-    //               window.location.href = "/login";
-    //             }
-    //         });
-    //     }, []);
+    useEffect(() => {
+        auth.checkLogin().then((access) => {
+            if (!access) {
+                  window.location.href = "/login";
+                }
+            });
+        }, []);
     const [tab,setTab] = useState(0)
     const [userInfo, setUserInfo] = useState({firstname: "", lastname: "", phone: "", ID:""});
     const [nowWorkshop,setNowWorkshop] = useState({link:""})
@@ -40,7 +39,6 @@ const Dashboard = () => {
                     ID: userData.ID,
                     phone: userData.phone
                 })
-                console.log(userInfo)
             }
             else {             
                 const errors = resUser.error;
@@ -66,7 +64,6 @@ const Dashboard = () => {
             const workshopsData = await resWorkshops.json();
             if (resWorkshops.status === 200) {
                 setWorkshops(workshopsData);
-                console.log(workshops)
             }
             else{             
                 const errors = resWorkshops.error;
@@ -92,7 +89,6 @@ const Dashboard = () => {
                 setNowWorkshop({
                     link:resEntrance.link
                 });
-                console.log(nowWorkshop)
             }
             else if(resEntrance.status !== 404){             
                 const errors = resEntrance.error;
