@@ -69,6 +69,7 @@ class Auth {
   logout() {
     this.setAccessToken("");
     this.setRefreshToken("");
+    localStorage.clear()
     window.location.reload();
   }
 }

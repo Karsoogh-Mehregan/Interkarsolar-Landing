@@ -65,7 +65,7 @@ const Dashboard = () => {
               });
             if (resWorkshops.status === 200) {
                 setWorkshops(resWorkshops.json());
-                console.log(resWorkshops)
+                console.log(workshops)
             }
             else{             
                 const errors = resWorkshops.error;
