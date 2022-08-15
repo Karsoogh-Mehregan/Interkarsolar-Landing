@@ -7,14 +7,13 @@ import Entrance from '../../components/DashBoard/ClassEntrance/Entrance.js'
 import Schedule from '../../components/DashBoard/Schedule/Schedule.js'
 
 const Dashboard = () => {
-    //TODO: uncomment it after test
-    // useEffect(() => {
-    //     auth.checkLogin().then((access) => {
-    //         if (!access) {
-    //               window.location.href = "/login";
-    //             }
-    //         });
-    //     }, []);
+    useEffect(() => {
+        auth.checkLogin().then((access) => {
+            if (!access) {
+                  window.location.href = "/login";
+                }
+            });
+        }, []);
     const [tab,setTab] = useState(0)
     const [userInfo, setUserInfo] = useState({firstname: "", lastname: "", phone: "", ID:""});
     const [nowWorkshop,setNowWorkshop] = useState({link:""})
