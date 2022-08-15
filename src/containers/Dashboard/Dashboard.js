@@ -63,8 +63,9 @@ const Dashboard = () => {
                           'Content-Type': 'application/json',
             },
               });
+            const workshopsData = await resWorkshops.json();
             if (resWorkshops.status === 200) {
-                setWorkshops(resWorkshops.json());
+                setWorkshops(workshopsData);
                 console.log(workshops)
             }
             else{             
