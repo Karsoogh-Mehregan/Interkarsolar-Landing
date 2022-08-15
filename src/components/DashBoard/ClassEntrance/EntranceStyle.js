@@ -10,6 +10,7 @@ export const Div = styled.div`
 `
 
 export const Div2 = styled.div`
+    overflow: auto;
     outline: none;
     width: 70vw;
     border: 4px solid #ef9b93;
@@ -48,6 +49,11 @@ export const Img = styled.div`
     background-repeat: no-repeat;
     margin:auto;
 
+    @media screen and (max-width: 1024px)
+    {
+        margin-top: -2rem;
+    }
+
     @media screen and (max-width: 770px)
     {
         width: 11vw;
@@ -74,6 +80,11 @@ export const Par = styled.p`
     width: 20vw;
     text-align: center;
     margin:auto;
+
+    @media screen and (max-width: 1024px)
+    {
+        margin-top: -1rem;
+    }
 
     @media screen and (max-width: 770px)
     {
