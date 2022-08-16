@@ -29,7 +29,7 @@ function Login() {
         auth.checkLogin().then((access) => {
           if (access) {
             console.log(access)
-            window.location.href = `/panel`;
+            // window.location.href = `/panel`;
           }
         });
       }, []);
