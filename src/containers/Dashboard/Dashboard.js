@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 import NavBar from '../../components/DashBoard/NavBar/NavBar.js'
 import {BgContainer, RightContainer, TabCard,} from './DashboardStyle'
 import auth from "../Login/auth";
@@ -18,7 +18,6 @@ const Dashboard = () => {
     const [tab,setTab] = useState(0)
     const [userInfo, setUserInfo] = useState({firstname: "", lastname: "", phone: "", ID:""});
     const [nowWorkshop,setNowWorkshop] = useState({link:""})
-    let schedule = []
     const handleUserInfo = async() => {
         setTab(1)
         //request data
