@@ -9,22 +9,23 @@ import {
     Data,
     ClockImage,
     CalenderImage,
-    Link,
+    // Link,
 }
-from "./ScheduleStyle.js";
-const Schedule = ({workshopList}) => {
+    from "./ScheduleStyle.js";
+import { toPersianNumber } from '../../../utils/translateNumber';
+const Schedule = ({ workshopList }) => {
     const createTable = () => {
         const table = []
         for (let i = 0; i < workshopList.length; i += 1) {
             let [date_begin, time_begin] = workshopList[i].time_begin.split('T')
-            let [date_end, time_end] = workshopList[i].time_end.split('T')
+            let [, time_end] = workshopList[i].time_end.split('T')
             let shamsi_date;
 
             const time_begin_array = time_begin.split(':')
-            time_begin = time_begin_array[0] + ':' + time_begin_array[1]
+            time_begin = toPersianNumber(time_begin_array[0]) + ':' + toPersianNumber(time_begin_array[1])
         
             const time_end_array = time_end.split(':')
-            time_end = time_end_array[0] + ':' + time_end_array[1]
+            time_end = toPersianNumber(time_end_array[0]) + ':' + toPersianNumber(time_end_array[1])
 
             if(date_begin == "2022-08-17")
                 shamsi_date = "۲۷ مرداد"
@@ -41,7 +42,7 @@ const Schedule = ({workshopList}) => {
                         <Data>
                             {time_end} - {time_begin}<ClockImage></ClockImage>
                         </Data>
-                        <Data><Link href={workshopList[i].link} target='_blank'>لینک کلاس</Link></Data>
+                        {/* <Data><Link href={workshopList[i].link} target='_blank'>لینک کلاس</Link></Data> */}
                     </DataWrapperDiv>
                 </InnerWrapperDiv>
             );

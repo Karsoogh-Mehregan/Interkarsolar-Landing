@@ -13,6 +13,7 @@ export const Div2 = styled.div`
     outline: none;
     width: 70vw;
     margin:auto;
+    max-height:35vh;
     border: 4px solid #ef9b93;
     border-radius: 0 0 15px 15px;
     overflow: auto;
@@ -41,7 +42,8 @@ export const Div2 = styled.div`
 
     @media screen and (min-width: 1024px)
     {
-        width: 55vw;
+        width: 50vw;
+        max-height:40vh;
     }
 `
 
@@ -57,7 +59,7 @@ export const Top = styled.div`
     margin:auto;
     @media screen and (min-width: 1024px) {
         font-size: 1.4rem;
-        width:55vw;
+        width:50vw;
     }
 `
 export const InnerWrapperDiv = styled.div`
@@ -68,7 +70,7 @@ export const InnerWrapperDiv = styled.div`
 
     @media screen and (max-width: 1050px) {
         width: 95%;
-        margin: 2vh 1vw 8vh 0;
+        margin: 2vh 1vw 5vh 0;
     }
 `
 
@@ -103,10 +105,12 @@ export const Data = styled.div`
     color: black;
     padding: 1.5vh 0;
     border-radius: 10px;
-    margin: 10px;
+    margin: auto;
+    margin-top:10px;
     @media screen and (max-width: 1024px) {
         font-size: 2vw;
         width: 33.5%;
+        height: 70%;
     }
 `
 

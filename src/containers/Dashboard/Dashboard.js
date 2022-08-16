@@ -84,10 +84,13 @@ const Dashboard = () => {
                           'Accept' : 'application/json',             
                           'Content-Type': 'application/json',
             },
-              });
+            });
+            const resEntranceData = await resEntrance.json();
+            console.log(resEntranceData)
             if (resEntrance.status === 200) {
                 setNowWorkshop({
-                    link:resEntrance.link
+                    link: resEntranceData.link,
+                    name: resEntranceData.wsh_name
                 });
             }
             else if(resEntrance.status !== 404){             

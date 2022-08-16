@@ -8,6 +8,7 @@ import {
     TableHead,
 }
 from "./UserInfoStyle.js";
+import { toPersianNumber } from '../../../utils/translateNumber';
 const UserInfo = ({user}) => {
     return (
         <Div>
@@ -29,12 +30,12 @@ const UserInfo = ({user}) => {
 
                     <tr>
                         <TableHead>کد ملی</TableHead>
-                        <TableData>{user.ID}</TableData>
+                        <TableData>{toPersianNumber(user.ID)}</TableData>
                     </tr>
 
                     <tr>
                         <TableHead>شماره همراه</TableHead>
-                        <TableData>{user.phone}</TableData>
+                        <TableData>{toPersianNumber(user.phone)}</TableData>
                     </tr>
                 </Table>
             </Div2>

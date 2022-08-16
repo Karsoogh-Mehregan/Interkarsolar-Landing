@@ -55,7 +55,7 @@ function Login() {
             if(res.status == 200){
                 auth.setAccessToken(res.data.access);
                 auth.setRefreshToken(res.data.refresh);
-                // window.location.href = `/panel`;
+                window.location.href = `/panel`;
             }
             else{
                 setShowModal(true)
