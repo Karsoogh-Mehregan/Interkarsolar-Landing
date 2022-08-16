@@ -39,11 +39,6 @@ export const Div2 = styled.div`
         border-radius: 8px;
     }
 
-    ::-webkit-scrollbar-thumb:window-inactive
-    {
-        background: rgba(100, 100, 100, 0.4);
-    }
-
     @media screen and (min-width: 1024px)
     {
         width: 55vw;
@@ -110,7 +105,7 @@ export const Data = styled.div`
     border-radius: 10px;
     margin: 10px;
     @media screen and (max-width: 1024px) {
-        font-size: 2.5vw;
+        font-size: 2vw;
         width: 33.5%;
     }
 `
@@ -126,7 +121,7 @@ export const ClockImage = styled.div`
     background-size: 1.5vw;
     background-repeat: no-repeat;
     @media screen and (max-width: 1050px) {
-        background-size: 3vw;
+        background-size: 2.1vw;
         width: 25%;
     }
 `
@@ -141,7 +136,7 @@ export const CalenderImage = styled.div`
     background-size: 1.5vw;
     background-repeat: no-repeat;
     @media screen and (max-width: 1050px) {
-        background-size: 3vw;
+        background-size: 2.2vw;
         width: 25%;
     }
 `
