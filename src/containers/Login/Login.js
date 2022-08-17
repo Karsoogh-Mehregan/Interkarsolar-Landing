@@ -29,7 +29,7 @@ function Login() {
         auth.checkLogin().then((access) => {
           if (access) {
             console.log(access)
-            // window.location.href = `/panel`;
+            window.location.href = `/panel`;
           }
         });
       }, []);
@@ -86,7 +86,7 @@ function Login() {
     }
         return(
         <Bg>
-            {showModal && <Modal Title={":("} Text={"یه چیزی اشتباه اس."} onConfirm ={redirectToHome} btnText="بازگشت" color="#AF0029"/>}
+            {showModal && <Modal Title={":("} Text={"این حساب کاربری موجود نمی‌باشد."} onConfirm ={redirectToHome} btnText="بازگشت" color="#AF0029"/>}
             <CenterContainer>
             <Title>ورود </Title>
             <FormContainer>

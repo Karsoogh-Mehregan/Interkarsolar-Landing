@@ -17,6 +17,7 @@ export const Div2 = styled.div`
     border-radius: 0 0 15px 15px;
     margin:auto;
     padding: 3vh 2vw;
+    justify-content: center;
     @media screen and (min-width: 1024px)
     {
         width: 55vw;
@@ -74,60 +75,32 @@ export const Img = styled.div`
 `
 
 export const Par = styled.p`
-    font-size: 2.1vw;
+    font-size: 1.9vw;
     font-weight: 800;
     color: azure;
     width: 20vw;
     text-align: center;
-    margin:auto;
+    margin: 3vh auto;
 
     @media screen and (max-width: 1024px)
     {
-        margin-top: -1rem;
-    }
-
-    @media screen and (max-width: 770px)
-    {
-        font-size: 2.4vw;
-        width: 25vw;
-    }
-
-    @media screen and (max-width: 500px)
-    {
-        font-size: 3vw;
-        width: 30vw;
-    }
-
-    @media screen and (max-width: 400px)
-    {
-        font-size: 3.4vw;
-        width: 35vw;
+        margin: 2vh auto 2vh;
     }
 `
 
 export const Button = styled.a`
-    position: relative;
     color: azure;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 1.9vw;
     font-weight: 800;
-    right: 9vw;
     background: rgb(69,31,88);
-    padding: 0.4vw 8vw;
+    padding: 0.4vw 7vw;
     border-radius: 20px;
-    @media screen and (max-width: 1050px) {
-        bottom: 7vh;
-    }
-
-    @media screen and (max-width: 770px) {
-        bottom: 20vh;
-        right: 25vw;
+    margin: auto;
+    display: block;
+    max-width:50%;
+    @media screen and (max-width: 1024px) {
         font-size: 2.4vw;
     }
 
-    @media screen and (max-width: 400px) {
-        bottom: 22vh;
-        right: 30vw;
-        font-size: 3vw;
-    }
 `
