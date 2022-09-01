@@ -7,10 +7,13 @@ export const BgContainer = styled.div`
     background-size: cover;
     width: 100vw;
     min-height: 100vh;
-    padding-top: 15vh;
+    padding-top: 12vh;
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
+    }
+    @media screen and (max-width: 1024px) {
+        padding-top: 45vh;
     }
 `
 export const RightContainer = styled.div`

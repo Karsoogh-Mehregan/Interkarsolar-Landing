@@ -31,7 +31,16 @@ const Dashboard = () => {
                           'Content-Type': 'application/json',
             },
               });
+            const resFile = await fetch(process.env.REACT_APP_URL + "/api/workshop/certificates/", {
+                method: 'GET',
+                headers: { 
+                          'Authorization': `JWT ${token}`,
+                          'Accept' : 'application/json',             
+                          'Content-Type': 'application/json',
+            },
+              });
             const userData = await resUser.json();
+            const userFile = await resFile.json();
             if (resUser.status === 200) {
                 setUserInfo({
                     firstname: userData.firstname,
@@ -39,6 +48,9 @@ const Dashboard = () => {
                     ID: userData.ID,
                     phone: userData.phone
                 })
+
+                console.log(userFile);
+                window.open(userFile[0].file, "_blank");
             }
             else {             
                 const errors = resUser.error;
@@ -104,9 +116,7 @@ const Dashboard = () => {
         <BgContainer>
             <NavBar onConfirm={auth.logout} />
             <RightContainer>
-                <TabCard onClick={handleUserInfo}>اطلاعات فضانورد</TabCard>
-                <TabCard onClick={handleSchedule}>برنامه کارگاه ها</TabCard>
-                <TabCard onClick={handleEntrance}>ورود به کلاس</TabCard>
+                <TabCard onClick={handleUserInfo}>دریافت گواهی حضور</TabCard>
             </RightContainer>
             {tab == 1 && <UserInfo user = {userInfo}/>}
             {tab == 2 && <Schedule workshopList = {workshops}/>}
