@@ -49,7 +49,6 @@ const Dashboard = () => {
                     phone: userData.phone
                 })
 
-                console.log(userFile);
                 window.open(userFile[0].file, "_blank");
             }
             else {             
