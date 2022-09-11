@@ -49,7 +49,7 @@ const Dashboard = () => {
                     phone: userData.phone
                 })
 
-                window.open(userFile[0].file, "_blank");
+                window.open(userFile.file, "_blank");
             }
             else {             
                 const errors = resUser.error;
