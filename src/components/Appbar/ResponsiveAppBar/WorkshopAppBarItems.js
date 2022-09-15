@@ -5,13 +5,13 @@ import DashboardButton from './components/DashboardButton';
 const WorkshopAppBarItems = () => {
 
   const registerButton = <DashboardButton name={'ثبت‌نام '} disabled color='secondary' to={'/validation'} />;
-  const loginButton = <DashboardButton name={'ورود'} color='primary' to={'/login'} />;
-  const resultButton = <DashboardButton name={'مسافرین‌نهایی'} color='primary' to={'/teams'} />;
+  const loginButton = <DashboardButton name={'ورود'} color='primary' to={'https://kamva.academy/login?private_event_enter=6'} />;
+  // const resultButton = <DashboardButton name={'مسافرین‌نهایی'} color='primary' to={'/teams'} />;
 
 
-  const desktopLeftItems = [registerButton, resultButton, loginButton];
+  const desktopLeftItems = [loginButton];
   const desktopRightItems = [];
-  const mobileLeftItems = [registerButton, resultButton, loginButton];
+  const mobileLeftItems = [loginButton];
   const mobileRightItems = [];
   const mobileMenuListItems = [];
 
