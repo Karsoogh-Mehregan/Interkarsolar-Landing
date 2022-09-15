@@ -15,6 +15,15 @@ import {
 import { toPersianNumber } from '../../../utils/translateNumber';
 const Schedule = ({ workshopList }) => {
     const createTable = () => {
+        workshopList.sort(function (a, b) {
+            let [date_begin1, time_begin1] = a.time_begin.split('T')
+            let [date_begin2, time_begin2] = b.time_begin.split('T')
+            if ( date_begin1 <  date_begin2) {return -1;}
+            else if (date_begin1 > date_begin2) { return 1; }
+            else if (time_begin1 < time_begin2) { return -1; }
+            else if (time_begin1 > time_begin2) { return 1; }
+
+        });
         const table = []
         for (let i = 0; i < workshopList.length; i += 1) {
             let [date_begin, time_begin] = workshopList[i].time_begin.split('T')
@@ -31,6 +40,8 @@ const Schedule = ({ workshopList }) => {
                 shamsi_date = "۲۷ مرداد"
             else if(date_begin == "2022-08-18")
                 shamsi_date = "۲۸ مرداد"
+            else if(date_begin == "2022-08-19")
+                shamsi_date = "۲۹ مرداد"
             table.push(
                 <InnerWrapperDiv>
                     <HeadDiv>
