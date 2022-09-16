@@ -62,7 +62,7 @@ function Index() {
   today = mm + "/" + dd + "/" + yyyy;
 
   //Enter the final time here
-  const countDown = new Date("August 17, 2022 08:00:00").getTime();
+  const countDown = new Date("january 21, 2023 08:00:00").getTime();
   const interval = setInterval(function () {
     const now = new Date().getTime();
     let distance = countDown - now;
@@ -86,7 +86,7 @@ function Index() {
     <section className={classes.section}>
       <Container maxWidth='lg'>
         <Typography className={classes.title} variant="h1" gutterBottom>
-          {'تا دوره تابستانه چقدر مونده؟'}
+          {'تا مرحله اول کارسوق چقدر مونده؟'}
         </Typography>
         <Grid container >
           <Grid item xs={12} md={6} container justifyContent='center'>

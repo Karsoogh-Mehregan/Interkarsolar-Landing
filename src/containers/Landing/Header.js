@@ -103,7 +103,7 @@ function Index({ width }) {
           </Grid>
         </Grid>
 
-        <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
+        {/* <Grid container item alignItems="center" justifyContent='center' direction="column" xs={12} sm={6} spacing={2}>
           <Grid item>
             <Typography variant="h1" className={classes.title} align='center'>
               {'نتایج مرحله۲ اومد!'}
@@ -124,8 +124,8 @@ function Index({ width }) {
               {'بارگیری نتایج'}
             </Button>
           </Grid>
-        </Grid>
-      </Grid>
+        </Grid>*/}
+      </Grid> 
 
       {/* <div style={{ position: 'absolute', bottom: 0, right: 0 }}>
         <Typography align='center' component='p' variant="h4" className={classes.arrowText}>
