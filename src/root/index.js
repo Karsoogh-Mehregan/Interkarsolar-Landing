@@ -3,6 +3,7 @@ import {Route, Routes} from 'react-router-dom';
 
 // import AboutUs from '../containers/AboutUs';
 import Landing from '../containers/Landing/';
+import Redirect from '../components/Redirect';
 // import PaymentVerification1 from '../containers/SignUp/PaymentVerification1';
 // import PaymentVerification2 from '../containers/SignUp/PaymentVerification2';
 // import OurTeam from '../containers/OurTeam';
@@ -18,14 +19,14 @@ const Root = () => {
       {/* <Route path="/about_us" component={AboutUs} /> */}
       {/* <Route path="/our_team" component={OurTeam} /> */}
       <Routes>
-        <Route exact path='/' element = {<Landing />} />
+        <Route path='/' element = {<Redirect url={"https://karsooghmehregan.ir"} />} />
         {/* <Route path='/sign_up' element={<Signup />} /> */}
-        <Route path='/teams' element = {<Teams />} />
+        {/* <Route path='/teams' element = {<Teams />} /> */}
         {/* <Route path='/validation' element = {<Welcome />} /> */}
         {/* <Route path='/payment_successful' element = {<PaymentVerification1 />} /> */}
         {/* <Route path='/payment_failed' element = {<PaymentVerification2 />} /> */}
-        <Route path='/login' element = {<Login />} />;
-        <Route path='/panel' element = {<Dashboard/>}/>
+        {/* <Route path='/login' element = {<Login />} />;
+        <Route path='/panel' element = {<Dashboard/>}/> */}
         
       </Routes>
   </div>
